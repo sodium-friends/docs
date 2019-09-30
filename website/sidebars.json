@@ -1,10 +1,10 @@
 {
   "docs": {
-    "Docusaurus": ["doc1", "doc9"],
-    "First Category": ["doc2"],
+    "Get Started": ["doc1"],
+    "API Reference": ["doc4"],
     "Second Category": ["doc3"]
   },
   "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "First Category": ["doc5"]
   }
 }
