@@ -1,7 +1,8 @@
 {
   "docs": {
     "Get Started": ["doc1"],
-    "API Reference": ["doc4"],
+    "API Reference": ["doc4", "memoryprotection", "generatingrandomdata", "helpers", "padding", "signing", "generichashing",
+    "keyboxencryption", "sealedbooxencryption", "secretkeyboxencryption", "aead", "nonauthstreamingencryption", "authentication", "streamencryption", "onetimeauthentication", "passwordhashing", "keyexchange", "diffiehellman", "finitefieldarithmetic", "shorthashes", "keyderivation", "sha"],
     "Second Category": ["doc3"]
   },
   "docs-other": {
