@@ -31,17 +31,24 @@ const siteConfig = {
 
   // Used for publishing and more
   projectName: 'docusaurus',
-  organizationName: 'AmalieDue',
+  organizationName: 'Hyperdivision',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
+
+  algolia: {
+    apiKey: 'my-api-key',
+    indexName: 'my-index-name',
+    algoliaOptions: {}
+  },
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'doc1', label: 'Get Started'},
     {doc: 'doc4', label: 'API'},
+    {href: "https://github.com/sodium-friends/sodium-native/", label: src='img/git_logo.png', external: true},
     {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {search: true}
   ],
 
   // If you have users set above, you add it here:
@@ -51,6 +58,7 @@ const siteConfig = {
   headerIcon: 'img/favicon.ico',
   footerIcon: 'img/favicon.ico',
   favicon: 'img/favicon.ico',
+  GitHub: 'img/git_logo.png',
 
   /* Colors for website */
   colors: {

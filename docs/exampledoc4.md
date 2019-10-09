@@ -9,8 +9,3 @@ title: API
 var sodium = require('sodium-native')
 ```
 Loads the bindings. If you get a module version error, you probably need to reinstall the module because you switched node versions.
-
-## License
-
-
-
