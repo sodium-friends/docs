@@ -46,7 +46,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'doc1', label: 'Get Started'},
     {doc: 'doc4', label: 'API'},
-    {href: "https://github.com/sodium-friends/sodium-native/", label: src='img/git_logo.png', external: true},
+    {href: "https://github.com/sodium-friends/sodium-native/", label: 'Github'},
     {page: 'help', label: 'Help'},
     {search: true}
   ],
@@ -62,9 +62,13 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#995040',
-    secondaryColor: '#6b382c',
+    primaryColor: '#B9459A',
+    secondaryColor: '#8A3373',
+    myColor: '#B9459A',
   },
+
+  // Old primaryColor: '#995040'
+  // Old secondaryColor: '#6b382c'
 
   /* Custom fonts for website */
   /*

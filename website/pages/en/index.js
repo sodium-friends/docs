@@ -60,7 +60,6 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
@@ -144,19 +143,25 @@ class Index extends React.Component {
     );
 
     const Features = () => (
-      <Block layout="fourColumn">
+      <Block layout="fourColumn" background="dark">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
-          },
-          {
-            content: 'The content of my second feature',
+            content: 'See the [Libsodium docs](https://libsodium.gitbook.io/doc/) for more information',
             image: `${baseUrl}img/undraw_operating_system.svg`,
             imageAlign: 'top',
-            title: 'Feature Two',
+            title: 'Libsodium',
+          },
+          {
+            content: 'Learn cryptographic engineering through a set of exercises [here](https://github.com/sodium-friends/learntocrypto)',
+            image: `${baseUrl}img/undraw_react.svg`,
+            imageAlign: 'top',
+            title: 'Learn to crypto workshop',
+          },
+          {
+            content: 'See sodium-native on Github [here](https://github.com/sodium-friends/sodium-native)',
+            image: `${baseUrl}img/github-brands.svg`,
+            imageAlign: 'top',
+            title: 'Github'
           },
         ]}
       </Block>
@@ -196,11 +201,6 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase />
         </div>
       </div>
     );
