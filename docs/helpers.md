@@ -48,6 +48,6 @@ Increments `buf` as a little-endian number. This operation is **constant-time** 
 var bool = sodium.sodium_is_zero(buf, len)
 ```
 Tests whether `buf` is all zero for `len` bytes. This operation is **constant-time** for `len`.
-* `len` must be integer at most the length of `buf`
+* `len` must be an integer at most `buf.length`
 
 Returns `true` if all `len` bytes are zero, otherwise `false`.

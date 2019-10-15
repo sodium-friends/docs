@@ -16,7 +16,7 @@ The generated short hash is stored in `output`.
 ``` js
 var instance = crypto_hash_sha256_instance()
 ```
-Create an instance that has stream of input data to sha256.
+Create an instance that has stream of input data to `sha256`.
 
 ``` js
 instance.update(input)
@@ -44,7 +44,7 @@ The generated short hash is stored in `output`.
 ``` js
 var instance = crypto_hash_sha512_instance()
 ```
-Create an instance that has stream of input data to sha512.
+Create an instance that has stream of input data to `sha512`.
 
 ``` js
 instance.update(input)

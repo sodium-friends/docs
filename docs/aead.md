@@ -20,7 +20,7 @@ Currently only `crypto_aead_xchacha20poly1305_ietf` is exposed.
 crypto_aead_xchacha20poly1305_ietf_keygen(key)
 ```
 Generate a new encryption key.
-* `key` should be a buffer of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`.
+* `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`.
 
 The generated key is stored in `key`.
 
@@ -30,9 +30,9 @@ var clen = crypto_aead_xchacha20poly1305_ietf_encrypt(ciphertext, message, [ad],
 Encrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `ciphertext` should be a `buffer` of size `message.length + crypto_aead_xchacha20poly1305_ietf_ABYTES`
 * `message` should be a `buffer`
-* `ad` is optional and should be null or `buffer`. Included in the computation of authentication tag appended to the message
+* `ad` is optional and should be `null` or `buffer`. Included in the computation of authentication tag appended to the message
 * `null` is in the position of the unused `nsec` argument. This should always be `null`
-* `npub` should be `buffer` of length `crypto_aead_xchacha20poly1305_ietf_NPUBBYTES`
+* `npub` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_NPUBBYTES`
 * `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`
 
 Returns how many bytes were written to `ciphertext`. Note that in-place encryption is possible.
@@ -44,7 +44,7 @@ Decrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `message` should be a `buffer` of size `ciphertext.length - crypto_aead_xchacha20poly1305_ietf_ABYTES`
 * `null` is in the position of the unused `nsec` argument. This should always be `null`
 * `ciphertext` should be a `buffer`
-* `ad` is optional and should be null or `buffer`. Included in the computation of authentication tag appended to the message
+* `ad` is optional and should be `null` or `buffer`. Included in the computation of authentication tag appended to the message
 * `npub` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_NPUBBYTES`
 * `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`
 
@@ -58,7 +58,7 @@ Encrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `mac` should be a `buffer` of size `crypto_aead_xchacha20poly1305_ietf_ABYTES`
 * `message` should be a `buffer`
 * `ad` is optional and should be `null` or `buffer`. Included in the computation of authentication tag appended to the message
-* `null` is in the position of the unused `nsec` argument. This should always be null
+* `null` is in the position of the unused `nsec` argument. This should always be `null`
 * `npub` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_NPUBBYTES`
 * `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`
 

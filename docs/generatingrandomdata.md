@@ -24,4 +24,4 @@ Fill `buffer` with random data.
 ``` js
 sodium.randombytes_buf_deterministic(buffer, seed)
 ```
-Fill `buffer` with random data, generated from `seed`. `seed` must be a buffer of at least `sodium.randombytes_SEEDBYTES` length.
+Fill `buffer` with random data, generated from `seed`. `seed` must be a `buffer` of at least `sodium.randombytes_SEEDBYTES` length.

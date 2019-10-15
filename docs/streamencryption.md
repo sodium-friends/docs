@@ -38,7 +38,7 @@ crypto_secretstream_xchacha20poly1305_init_push(state, header, key)
 ```
 Initialise `state` from the writer side with message `header` and encryption key `key`. The `header` must be sent or stored with the stream. The `key` must be exchanged securely with the receiving / reading side.
 * `state` should be an opaque state object
-* `header` should be a `buffer` of size `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
+* `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 
 ``` js
@@ -46,7 +46,7 @@ var mlen = crypto_secretstream_xchacha20poly1305_push(state, ciphertext, message
 ```
 Encrypt a message with a certain tag and optional additional data `ad`.
 * `state` should be an opaque state object
-* `ciphertext` should be a `buffer` of size `message.length + crypto_secretstream_xchacha20poly1305_ABYTES`
+* `ciphertext` should be a `buffer` of length `message.length + crypto_secretstream_xchacha20poly1305_ABYTES`
 * `message` should be a `buffer`
 * `ad` is optional and should be `null` or `buffer`. Included in the computation of authentication tag appended to the message
 * `tag` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_TAGBYTES`
@@ -58,7 +58,7 @@ crypto_secretstream_xchacha20poly1305_init_pull(state, header, key)
 ```
 Initialise `state` from the reader side with message `header` and encryption key `key`. The `header` must be retrieved from somewhere. The `key` must be exchanged securely with the sending / writing side.
 * `state` should be an opaque state object
-* `header` should be a `buffer` of size `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
+* `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 
 ``` js
@@ -66,8 +66,8 @@ var clen = crypto_secretstream_xchacha20poly1305_pull(state, message, tag, ciphe
 ```
 Decrypt a message with optional additional data `ad`, and write message tag to `tag`. Make sure to check this!
 * `state` should be an opaque state object
-* `message` should be a `buffer` of size `ciphertext.length - crypto_secretstream_xchacha20poly1305_ABYTES`
-* `tag` should be a `buffer` of `crypto_secretstream_xchacha20poly1305_TAGBYTES`
+* `message` should be a `buffer` of length `ciphertext.length - crypto_secretstream_xchacha20poly1305_ABYTES`
+* `tag` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_TAGBYTES`
 * `ad` is optional and should be `null` or `buffer`. Included in the computation of the authentication tag appended to the message
 
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of decrypted bytes written to `message`.

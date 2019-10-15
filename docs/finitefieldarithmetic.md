@@ -21,7 +21,7 @@ var bool = crypto_core_ed25519_is_valid_point(p)
 
 * `p` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 
-Returns `true` or `false``
+Returns `true` or `false`
 
 ``` js
 crypto_core_ed25519_from_uniform(p, r)

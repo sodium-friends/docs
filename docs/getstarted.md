@@ -1,6 +1,6 @@
 ---
-id: doc1
-title: Get started
+id: getstarted
+title: Get Started
 sidebar_label: Introduction
 ---
 
@@ -10,9 +10,9 @@ Low level bindings for [libsodium](https://github.com/jedisct1/libsodium).
 
 The goal of this project is to be thin, stable, unopionated wrapper around libsodium.
 
-All methods exposed are more or less a direct translation of the libsodium c-api. This means that most data types are buffers, and you have to manage allocating return values and passing them in as arguments instead of receiving them as return values.
+All methods exposed are more or less a direct translation of the libsodium c-api. This means that most data types are `buffers`, and you have to manage allocating return values and passing them in as arguments instead of receiving them as return values.
 
-This makes this API harder to use than other libsodium wrappers out there, but also means that you will be able to get a lot of perf/memory improvements as you can do stuff like inline encryption/decryption, re-use buffers etc.
+This makes this API harder to use than other [libsodium](https://github.com/jedisct1/libsodium) wrappers out there, but also means that you will be able to get a lot of perf/memory improvements as you can do stuff like inline encryption/decryption, re-use `buffers` etc.
 
 This also makes this library useful as a foundation for more high level crypto abstractions that you want to make.
 

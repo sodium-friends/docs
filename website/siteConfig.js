@@ -22,8 +22,8 @@ const users = [
 
 const siteConfig = {
   title: 'sodium-native', // Title for your website.
-  tagline: 'Low level bindings for libsodium',
-  url: 'AmalieDue.github.io', // Your website URL
+  tagline: 'Low level bindings for Libsodium',
+  url: 'Hyperdivision.github.io', // Your website URL
   baseUrl: '/docusaurus/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -44,10 +44,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Get Started'},
-    {doc: 'doc4', label: 'API'},
+    {doc: 'getstarted', label: 'Get Started'},
+    {doc: 'api', label: 'API'},
     {href: "https://github.com/sodium-friends/sodium-native/", label: 'Github'},
-    {page: 'help', label: 'Help'},
     {search: true}
   ],
 
@@ -63,8 +62,7 @@ const siteConfig = {
   /* Colors for website */
   colors: {
     primaryColor: '#B9459A',
-    secondaryColor: '#8A3373',
-    myColor: '#B9459A',
+    secondaryColor: '#6b382c',
   },
 
   // Old primaryColor: '#995040'
@@ -85,7 +83,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Amalie Due Jensen and Hyperdivision`,
+  copyright: `Copyright © ${new Date().getFullYear()} Hyperdivision`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

@@ -36,7 +36,7 @@ class HomeSplash extends React.Component {
     );
 
     const ProjectTitle = () => (
-      <h2 className="projectTitle">
+      <h2 className="projectTitle inverse">
         {siteConfig.title}
         <small>{siteConfig.tagline}</small>
       </h2>
@@ -63,7 +63,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl('doc1.html')}>Get started</Button>
+            <Button href={docUrl('getstarted')}>Get started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -143,7 +143,7 @@ class Index extends React.Component {
     );
 
     const Features = () => (
-      <Block layout="fourColumn" background="dark">
+      <Block layout="fourColumn">
         {[
           {
             content: 'See the [Libsodium docs](https://libsodium.gitbook.io/doc/) for more information',
@@ -208,3 +208,6 @@ class Index extends React.Component {
 }
 
 module.exports = Index;
+
+
+

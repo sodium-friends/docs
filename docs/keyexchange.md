@@ -16,7 +16,7 @@ Create a key exchange key pair.
 ``` js
 crypto_kx_seed_keypair(publicKey, secretKey, seed)
 ```
-Create a key exchange key pair based on a seed.
+Create a key exchange key pair based on a `seed`.
 * `publicKey` should be a `buffer` of length `crypto_kx_PUBLICKEYBYTES`
 * `secretKey` should be a `buffer` of length `crypto_kx_SECRETKEYBYTES`
 * `seed` should be a `buffer` of length `crypto_kx_SEEDBYTES`
