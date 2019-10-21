@@ -1,7 +1,7 @@
 ---
 id: nonauthstreamingencryption
-title: Non-authenticated streaming encryption
-sidebar_label: Non-authenticated streaming encryption
+title: Non-Authenticated Streaming Encryption
+sidebar_label: Non-Authenticated Streaming Encryption
 ---
 
 Bindings for the crypto_stream API. [See the libsodium crypto_stream docs for more information](https://download.libsodium.org/doc/advanced/stream_ciphers/xsalsa20).
@@ -23,7 +23,7 @@ or
 ``` js
 crypto_stream_chacha20_xor(ciphertext, message, nonce, key)
 ```
-Encrypt, but not authenticate, a `message` based on a `nonce` and `key`
+Encrypt, but *not* authenticate, a `message` based on a `nonce` and `key`
 * `ciphertext` should be a `buffer` of length `message.length`
 * `message` should be a `buffer` of any size
 * `nonce` should be a `buffer` of length `crypto_stream_NONCEBYTES`

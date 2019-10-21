@@ -1,7 +1,7 @@
 ---
 id: passwordhashing
-title: Password hashing
-sidebar_label: Password hashing
+title: Password Hashing
+sidebar_label: Password Hashing
 ---
 
 Bindings for the crypto_pwhash API. [See the libsodium crypto_pwhash docs for more information](https://download.libsodium.org/doc/password_hashing/).

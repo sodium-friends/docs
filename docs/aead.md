@@ -1,7 +1,7 @@
 ---
 id: aead
-title: aead (Authenticated Encryption with Additional Data)
-sidebar_label: aead (Authenticated Encryption with Additional Data)
+title: AEAD (Authenticated Encryption with Additional Data)
+sidebar_label: AEAD (Authenticated Encryption with Additional Data)
 ---
 
 Bindings for the crypto_aead_* APIs. [See the libsodium AEAD docs for more information](https://download.libsodium.org/doc/secret-key_cryptography/aead).

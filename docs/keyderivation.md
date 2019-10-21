@@ -1,7 +1,7 @@
 ---
 id: keyderivation
-title: Key derivation
-sidebar_label: Key derivation
+title: Key Derivation
+sidebar_label: Key Derivation
 ---
 
 Bindings for the crypto_kdf API. [See the libsodium crypto_kdf docs for more information](https://download.libsodium.org/doc/key_derivation/).

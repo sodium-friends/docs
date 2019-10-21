@@ -1,7 +1,7 @@
 ---
 id: keyexchange
-title: Key exchange
-sidebar_label: Key exchange
+title: Key Exchange
+sidebar_label: Key Exchange
 ---
 
 Bindings for the crypto_kx API. [See the libsodium crypto_kx docs for more information](https://download.libsodium.org/doc/key_exchange/).

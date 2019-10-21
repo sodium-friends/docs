@@ -1,7 +1,7 @@
 ---
 id: shorthashes
-title: Short hashes
-sidebar_label: Short hashes
+title: Short Hashes
+sidebar_label: Short Hashes
 ---
 
 Bindings for the crypto_shorthash API. [See the libsodium crypto_shorthash docs for more information](https://download.libsodium.org/doc/hashing/short-input_hashing).

@@ -1,7 +1,7 @@
 ---
 id: sealedboxencryption
-title: Sealed box encryption
-sidebar_label: Sealed box encryption
+title: Sealed Box Encryption
+sidebar_label: Sealed Box Encryption
 ---
 
 Bindings for the crypto_box_seal API. [See the libsodium crypto_box_seal docs for more information](https://download.libsodium.org/doc/public-key_cryptography/sealed_boxes).

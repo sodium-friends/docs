@@ -1,10 +1,10 @@
 ---
 id: onetimeauthentication
-title: One-time Authentication
-sidebar_label: One-time Authentication
+title: One-Time Authentication
+sidebar_label: One-Time Authentication
 ---
 
-Bindings for the crypto_onetimeaith API. [See the libsodium crypto_onetimeauth docs for more information](https://download.libsodium.org/doc/advanced/poly1305).
+Bindings for the crypto_onetimeauth API. [See the libsodium crypto_onetimeauth docs for more information](https://download.libsodium.org/doc/advanced/poly1305).
 
 ``` js
 crypto_onetimeauth(output, input, key)

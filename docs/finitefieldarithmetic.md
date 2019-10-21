@@ -1,7 +1,7 @@
 ---
 id: finitefieldarithmetic
-title: Finite field arithmetic
-sidebar_label: Finite field arithmetic
+title: Finite Field Arithmetic
+sidebar_label: Finite Field Arithmetic
 ---
 
 Bindings for the crypto_scalarmult_ed25519 and crypto_core_ed25519 API. [See the libsodium docs for more information](https://download.libsodium.org/doc/advanced/point-arithmetic).

@@ -1,7 +1,7 @@
 ---
 id: secretkeyboxencryption
-title: Secret key box encryption
-sidebar_label: Secret key box encryption
+title: Secret Key Box Encryption
+sidebar_label: Secret Key Box Encryption
 ---
 
 Bindings for the crypto_secretbox API. [See the libsodium crypto_secretbox docs for more information](https://download.libsodium.org/doc/public-key_cryptography/authenticated_encryption).

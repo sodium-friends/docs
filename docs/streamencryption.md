@@ -1,7 +1,7 @@
 ---
 id: streamencryption
-title: Stream encryption
-sidebar_label: Stream encryption
+title: Stream Encryption
+sidebar_label: Stream Encryption
 ---
 
 Bindings for the crypto_secretstream API. [See the libsodium crypto_secretstream docs for more information](https://download.libsodium.org/doc/secret-key_cryptography/secretstream).

@@ -1,7 +1,7 @@
 ---
 id: generichashing
-title: Generic hashing
-sidebar_label: Generic hashing
+title: Generic Hashing
+sidebar_label: Generic Hashing
 ---
 
 Bindings for the crypto_generichash API. [See the libsodium crypto_generichash docs for more information](https://download.libsodium.org/doc/hashing/generic_hashing).
