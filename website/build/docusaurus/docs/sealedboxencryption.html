@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Sealed Box Encryption · sodium-native</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Bindings for the crypto_box_seal API. [See the libsodium crypto_box_seal docs for more information](https://download.libsodium.org/doc/public-key_cryptography/sealed_boxes)."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Sealed Box Encryption · sodium-native"/><meta property="og:type" content="website"/><meta property="og:url" content="Hyperdivision.github.io/docusaurus/"/><meta property="og:description" content="Bindings for the crypto_box_seal API. [See the libsodium crypto_box_seal docs for more information](https://download.libsodium.org/doc/public-key_cryptography/sealed_boxes)."/><meta property="og:image" content="Hyperdivision.github.io/docusaurus/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="Hyperdivision.github.io/docusaurus/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/docusaurus/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/docusaurus/js/scrollSpy.js"></script><link rel="stylesheet" href="/docusaurus/css/main.css"/><script src="/docusaurus/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus/"><img class="logo" src="/docusaurus/img/favicon.ico" alt="sodium-native"/><h2 class="headerTitleWithLogo">sodium-native</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docusaurus/docs/getstarted" target="_self">Get Started</a></li><li class="siteNavGroupActive"><a href="/docusaurus/docs/api" target="_self">API</a></li><li class=""><a href="https://github.com/sodium-friends/sodium-native/" target="_self">Github</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Get Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docusaurus/docs/getstarted">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docusaurus/docs/api">API</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/memoryprotection">Memory Protection</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/generatingrandomdata">Generating Random Data</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/helpers">Helpers</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/padding">Padding</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/signing">Signing</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/generichashing">Generic Hashing</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/keyboxencryption">Public/Secret Key Box Encryption</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docusaurus/docs/sealedboxencryption">Sealed Box Encryption</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/secretkeyboxencryption">Secret Key Box Encryption</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/aead">AEAD (Authenticated Encryption with Additional Data)</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/nonauthstreamingencryption">Non-Authenticated Streaming Encryption</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/authentication">Authentication</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/streamencryption">Stream Encryption</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/onetimeauthentication">One-Time Authentication</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/passwordhashing">Password Hashing</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/keyexchange">Key Exchange</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/diffiehellman">Diffie-Hellman</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/finitefieldarithmetic">Finite Field Arithmetic</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/shorthashes">Short Hashes</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/keyderivation">Key Derivation</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/sha">SHA</a></li><li class="navListItem"><a class="navItem" href="/docusaurus/docs/license">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Sealed Box Encryption</h1></header><article><div><span><p>Bindings for the crypto_box_seal API. <a href="https://download.libsodium.org/doc/public-key_cryptography/sealed_boxes">See the libsodium crypto_box_seal docs for more information</a>.</p>
+<p>Keypairs can be generated with <code>crypto_box_keypair()</code> or <code>crypto_box_seed_keypair()</code>.</p>
+<pre><code class="hljs css language-js">crypto_box_seal(ciphertext, message, publicKey)
+</code></pre>
+<p>Encrypt a message in a sealed box using a throwaway keypair. The ciphertext cannot be associated with the sender due to the sender's key being a single use keypair that is overwritten during encryption.</p>
+<ul>
+<li><code>ciphertext</code> should be a <code>buffer</code> of length at least <code>message.length + crypto_box_SEALBYTES</code></li>
+<li><code>message</code> should be a <code>buffer</code> of any length</li>
+<li><code>publicKey</code> should be the recipient's public key.</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = crypto_box_seal_open(message, ciphertext, publicKey, secretKey)
+</code></pre>
+<p>Decrypt a message encoded with the sealed box method.</p>
+<ul>
+<li><code>message</code> should be a <code>buffer</code> of length at least <code>ciphertext.length - crypto_box_SEALBYTES</code></li>
+<li><code>ciphertext</code> should be a <code>buffer</code> of length at least <code>crypto_box_SEALBYTES</code></li>
+<li><code>publicKey</code> should be the recipient's public key</li>
+<li><code>secretKey</code> should be the recipient's secret key</li>
+</ul>
+<p>Note: the keypair of the recipient is required here, both public and secret key. This is because during encryption the recipient's public key is used to generate the nonce. The throwaway public key generated by the sender is stored in the first <code>crypto_box_PUBLICKEYBYTE</code>'s of the ciphertext.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus/docs/keyboxencryption"><span class="arrow-prev">← </span><span>Public/Secret Key Box Encryption</span></a><a class="docs-next button" href="/docusaurus/docs/secretkeyboxencryption"><span>Secret Key Box Encryption</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus/" class="nav-home"><img src="/docusaurus/img/favicon.ico" alt="sodium-native" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus/docs/en/getstarted">Get Started</a><a href="/docusaurus/docs/en/api">API</a></div><div><h5>Community</h5><a href="https://libsodium.gitbook.io/doc/" target="_blank" rel="noreferrer noopener">Libsodium</a><a href="https://hyperdivision.dk/" target="_blank" rel="noreferrer noopener">Hyperdivision</a><a href="https://twitter.com/hyperdivisiondk?lang=en" target="_blank" rel="noreferrer noopener">Hyperdivision on Twitter</a></div><div><h5>More</h5><a href="https://github.com/sodium-friends/sodium-native/" target="_blank" rel="noreferrer noopener">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docusaurus/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Hyperdivision</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
