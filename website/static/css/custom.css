@@ -16,7 +16,7 @@
 }
 
 .homeContainer {
-  background: #B9459A;
+  background: #0d773e;
   padding: 32px;
 }
 
@@ -47,18 +47,18 @@
 }
 
 .blockContent h2 {
-  color: #5C224C;
+  color: #0d773e;
   font-weight: 200;
 }
 
 .blockImage img{
   width: 64px;
   height: 64px;
-  fill: #5C224C;
+  fill: #0d773e;
 }
 
 a {
-  color: #8A3373;
+  color: ##0d773e;
 }
 
 .buttons {
@@ -81,7 +81,7 @@ a {
 
 .buttons a:hover {
     background: #FFF;
-    color: #B9459A;
+    color: ##0d773e;
 }
 
 .navigationSlider .slidingNav ul a[href*='github'] {

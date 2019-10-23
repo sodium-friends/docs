@@ -47,6 +47,12 @@ class Footer extends React.Component {
           <div>
             <h5>Community</h5>
             <a
+              href="https://libsodium.gitbook.io/doc/"
+              target="_blank"
+              rel="noreferrer noopener">
+              Libsodium
+            </a>
+            <a
               href="https://hyperdivision.dk/"
               target="_blank"
               rel="noreferrer noopener">
@@ -56,12 +62,16 @@ class Footer extends React.Component {
               href="https://twitter.com/hyperdivisiondk?lang=en"
               target="_blank"
               rel="noreferrer noopener">
-              Twitter
+              Hyperdivision on Twitter
             </a>
           </div>
           <div>
             <h5>More</h5>
-            <a href="https://github.com/">GitHub</a>
+            <a
+              href="https://github.com/sodium-friends/sodium-native/"
+              target="_blank"
+              rel="noreferrer noopener">
+              GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}

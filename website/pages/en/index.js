@@ -99,17 +99,23 @@ class Index extends React.Component {
             title: 'Libsodium',
           },
           {
-            content: 'See sodium-native on Github [here](https://github.com/sodium-friends/sodium-native)',
+            content: 'See sodium-native on GitHub [here](https://github.com/sodium-friends/sodium-native)',
             image: `${baseUrl}img/GitHub-Mark-120px-plus.png`,
             imageAlign: 'top',
-            title: 'Github'
+            title: 'GitHub'
           },
           {
             content: 'Learn cryptographic engineering through a set of exercises [here](https://github.com/sodium-friends/learntocrypto)',
             image: `${baseUrl}img/icons8-checkmark-96.png`,
             imageAlign: 'top',
-            title: 'Learn to crypto workshop',
+            title: 'Crypto workshop',
           },
+          {
+            content: 'Learn more about scaling, distributed systems, and crypto at [Hyperdivision](https://hyperdivision.dk/)',
+            image: `${baseUrl}img/hyperdivision-logo.svg`,
+            imageAlign: 'top',
+            title: 'Hyperdivision',
+          }
         ]}
       </Block>
     );

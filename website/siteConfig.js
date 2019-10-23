@@ -60,11 +60,11 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#B9459A',
-    secondaryColor: '#6b382c',
+    primaryColor: '#0d773e',
+    secondaryColor: '#09532b',
   },
 
-  // Old primaryColor: '#995040'
+  // Old primaryColor: '#B9459A'
   // Old secondaryColor: '#6b382c'
 
   /* Custom fonts for website */
