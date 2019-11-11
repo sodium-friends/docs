@@ -20,29 +20,38 @@ Bindings for the crypto_secretstream API. [See the libsodium crypto_secretstream
 * `crypto_secretstream_xchacha20poly1305_TAG_REKEY`
 * `crypto_secretstream_xchacha20poly1305_TAG_FINAL`
 
+***
+## `crypto_secretstream_xchacha20poly1305_keygen`
+![sodium-node][node]
 ``` js
-crypto_secretstream_xchacha20poly1305_keygen(key)
+sodium.crypto_secretstream_xchacha20poly1305_keygen(key)
 ```
 Generate a new encryption key.
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 
 The generated key is stored in `key`.
-
+***
+## `crypto_secretstream_xchacha20poly1305_state_new`
+![sodium-node][node]
 ``` js
-var state = crypto_secretstream_xchacha20poly1305_state_new()
+var state = sodium.crypto_secretstream_xchacha20poly1305_state_new()
 ```
 Create a new stream state. Returns an opaque object used in the next methods.
-
+***
+## `crypto_secretstream_xchacha20poly1305_init_push`
+![sodium-node][node]
 ``` js
-crypto_secretstream_xchacha20poly1305_init_push(state, header, key)
+sodium.crypto_secretstream_xchacha20poly1305_init_push(state, header, key)
 ```
-Initialise `state` from the writer side with message `header` and encryption key `key`. The `header` must be sent or stored with the stream. The `key` must be exchanged securely with the receiving / reading side.
+Initialize `state` from the writer side with message `header` and encryption key `key`. The `header` must be sent or stored with the stream. The `key` must be exchanged securely with the receiving / reading side.
 * `state` should be an opaque state object
 * `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
-
+***
+## `crypto_secretstream_xchacha20poly1305_push`
+![sodium-node][node]
 ``` js
-var mlen = crypto_secretstream_xchacha20poly1305_push(state, ciphertext, message, [ad], tag)
+var mlen = sodium.crypto_secretstream_xchacha20poly1305_push(state, ciphertext, message, [ad], tag)
 ```
 Encrypt a message with a certain tag and optional additional data `ad`.
 * `state` should be an opaque state object
@@ -52,17 +61,21 @@ Encrypt a message with a certain tag and optional additional data `ad`.
 * `tag` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_TAGBYTES`
 
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of encrypted bytes written to `ciphertext`.
-
+***
+## `crypto_secretstream_xchacha20poly1305_init_pull`
+![sodium-node][node]
 ``` js
-crypto_secretstream_xchacha20poly1305_init_pull(state, header, key)
+sodium.crypto_secretstream_xchacha20poly1305_init_pull(state, header, key)
 ```
 Initialise `state` from the reader side with message `header` and encryption key `key`. The `header` must be retrieved from somewhere. The `key` must be exchanged securely with the sending / writing side.
 * `state` should be an opaque state object
 * `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
-
+***
+## `crypto_secretstream_xchacha20poly1305_pull`
+![sodium-node][node]
 ``` js
-var clen = crypto_secretstream_xchacha20poly1305_pull(state, message, tag, ciphertext, [ad])
+var clen = sodium.crypto_secretstream_xchacha20poly1305_pull(state, message, tag, ciphertext, [ad])
 ```
 Decrypt a message with optional additional data `ad`, and write message tag to `tag`. Make sure to check this!
 * `state` should be an opaque state object
@@ -71,8 +84,14 @@ Decrypt a message with optional additional data `ad`, and write message tag to `
 * `ad` is optional and should be `null` or `buffer`. Included in the computation of the authentication tag appended to the message
 
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of decrypted bytes written to `message`.
-
+***
+## `crypto_secretstream_xchacha20poly1305_rekey`
+![sodium-node][node]
 ``` js
-crypto_secretstream_xchacha20poly1305_rekey(state)
+sodium.crypto_secretstream_xchacha20poly1305_rekey(state)
 ```
 Rekey the opaque `state` object.
+
+
+[js]: /docusaurus/img/icon_js.svg
+[node]: /docusaurus/img/nodejs-icon.svg

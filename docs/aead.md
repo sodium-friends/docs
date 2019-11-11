@@ -16,16 +16,21 @@ Currently only `crypto_aead_xchacha20poly1305_ietf` is exposed.
 * `crypto_aead_xchacha20poly1305_ietf_NSECBYTES`
 * `crypto_aead_xchacha20poly1305_ietf_MESSAGEBYTES_MAX` - Note this is `Number.MAX_SAFE_INTEGER` for now
 
+***
+## `crypto_aead_xchacha20poly1305_ietf_keygen`
+![sodium-node][node]
 ``` js
-crypto_aead_xchacha20poly1305_ietf_keygen(key)
+sodium.crypto_aead_xchacha20poly1305_ietf_keygen(key)
 ```
 Generate a new encryption key.
 * `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`.
 
 The generated key is stored in `key`.
-
+***
+## `crypto_aead_xchacha20poly1305_ietf_encrypt`
+![sodium-node][node]
 ``` js
-var clen = crypto_aead_xchacha20poly1305_ietf_encrypt(ciphertext, message, [ad], null, npub, key)
+var clen = sodium.crypto_aead_xchacha20poly1305_ietf_encrypt(ciphertext, message, [ad], null, npub, key)
 ```
 Encrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `ciphertext` should be a `buffer` of size `message.length + crypto_aead_xchacha20poly1305_ietf_ABYTES`
@@ -36,9 +41,11 @@ Encrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`
 
 Returns how many bytes were written to `ciphertext`. Note that in-place encryption is possible.
-
+***
+## `crypto_aead_xchacha20poly1305_ietf_decrypt`
+![sodium-node][node]
 ``` js
-var mlen = crypto_aead_xchacha20poly1305_ietf_decrypt(message, null, ciphertext, [ad], npub, key)
+var mlen = sodium.crypto_aead_xchacha20poly1305_ietf_decrypt(message, null, ciphertext, [ad], npub, key)
 ```
 Decrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `message` should be a `buffer` of size `ciphertext.length - crypto_aead_xchacha20poly1305_ietf_ABYTES`
@@ -49,9 +56,11 @@ Decrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`
 
 Returns how many bytes were written to `message`. Note that in-place encryption is possible.
-
+***
+## `crypto_aead_xchacha20poly1305_ietf_encrypt_detached`
+![sodium-node][node]
 ``` js
-var maclen = crypto_aead_xchacha20poly1305_ietf_encrypt_detached(ciphertext, mac, message, [ad], null, npub, key)
+var maclen = sodium.crypto_aead_xchacha20poly1305_ietf_encrypt_detached(ciphertext, mac, message, [ad], null, npub, key)
 ```
 Encrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `ciphertext` should be a `buffer` of size `message.length`
@@ -63,9 +72,11 @@ Encrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`
 
 Returns how many bytes were written to `mac`. Note that in-place encryption is possible.
-
+***
+## `crypto_aead_xchacha20poly1305_ietf_decrypt_detached`
+![sodium-node][node]
 ``` js
-crypto_aead_xchacha20poly1305_ietf_decrypt_detached(message, null, ciphertext, mac, [ad], npub, key)
+sodium.crypto_aead_xchacha20poly1305_ietf_decrypt_detached(message, null, ciphertext, mac, [ad], npub, key)
 ```
 Decrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `message` should be a `buffer` of size `ciphertext.length`
@@ -77,3 +88,7 @@ Decrypt a message with (`npub`, `key`) and optional additional data `ad`.
 * `key` should be a `buffer` of length `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`
 
 Returns nothing, but will throw on in case the MAC cannot be authenticated. Note that in-place encryption is possible.
+
+
+[js]: /docusaurus/img/icon_js.svg
+[node]: /docusaurus/img/nodejs-icon.svg

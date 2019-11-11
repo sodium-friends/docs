@@ -5,9 +5,11 @@ sidebar_label: Non-Authenticated Streaming Encryption
 ---
 
 Bindings for the crypto_stream API. [See the libsodium crypto_stream docs for more information](https://download.libsodium.org/doc/advanced/stream_ciphers/xsalsa20).
-
+***
+## `crypto_stream`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
-crypto_stream(ciphertext, nonce, key)
+sodium.crypto_stream(ciphertext, nonce, key)
 ```
 Generate random data based on a `nonce` and `key` into the `ciphertext`.
 * `ciphertext` should be a `buffer` of any size
@@ -15,13 +17,15 @@ Generate random data based on a `nonce` and `key` into the `ciphertext`.
 * `key` should be a secret key of length `crypto_stream_KEYBYTES`
 
 The generated data is stored in `ciphertext`.
-
+***
+## `crypto_stream_xor` and `crypto_stream_chacha20_xor`
+![sodium-node][node] ![sodium-javascript][js] and ![sodium-node][node]
 ``` js
-crypto_stream_xor(ciphertext, message, nonce, key)
+sodium.crypto_stream_xor(ciphertext, message, nonce, key)
 ```
 or
 ``` js
-crypto_stream_chacha20_xor(ciphertext, message, nonce, key)
+sodium.crypto_stream_chacha20_xor(ciphertext, message, nonce, key)
 ```
 Encrypt, but *not* authenticate, a `message` based on a `nonce` and `key`
 * `ciphertext` should be a `buffer` of length `message.length`
@@ -32,24 +36,32 @@ Encrypt, but *not* authenticate, a `message` based on a `nonce` and `key`
 The encrypted data is stored in `ciphertext`. To decrypt, swap `ciphertext` and `message`. Also supports in-place encryption where you use the same `buffer` as `ciphertext` and `message`.
 
 Encryption defaults to `XSalsa20`, use `crypto_stream_chacha20_xor` if you want to encrypt/decrypt with `ChaCha20` instead.
-
+***
+## `crypto_stream_xor_instance` and `crypto_stream_chacha20_xor_instance`
+![sodium-node][node] ![sodium-javascript][js] and ![sodium-node][node]
 ``` js
-var instance = crypto_stream_xor_instance(nonce, key)
+var instance = sodium.crypto_stream_xor_instance(nonce, key)
 ```
 or
 ``` js
-var istance = crypto_stream_chacha20_xor_instance(nonce, key)
+var instance = sodium.crypto_stream_chacha20_xor_instance(nonce, key)
 ```
 A streaming instance to the `crypto_stream_xor` API. Pass a `nonce` and `key` in the constructor.
 
 Encryption defaults to `XSalsa20`, use `crypto_stream_chacha20_xor_instance` if you want to encrypt/decrypt with `ChaCha20` instead.
 
+## `instance.update`
 ``` js
 instance.update(ciphertext, message)
 ```
 Encrypt the next message.
 
+## `instance.final`
 ``` js
 instance.final()
 ```
 Finalize the stream. Zeros out internal state.
+
+
+[js]: /docusaurus/img/icon_js.svg
+[node]: /docusaurus/img/nodejs-icon.svg

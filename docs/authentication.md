@@ -5,9 +5,11 @@ sidebar_label: Authentication
 ---
 
 Bindings for the crypto_auth API. [See the libsodium crypto_auth docs for more information](https://download.libsodium.org/doc/secret-key_cryptography/secret-key_authentication).
-
+***
+## `crypto_auth`
+![sodium-node][node]
 ``` js
-crypto_auth(output, input, key)
+sodium.crypto_auth(output, input, key)
 ```
 Create an authentication token.
 * `output` should be a `buffer` of length `crypto_auth_BYTES`
@@ -15,9 +17,11 @@ Create an authentication token.
 * `key` should be a `buffer` of length `crypto_auth_KEYBYTES`
 
 The generated token is stored in `output`.
-
+***
+## `crypto_auth_verify`
+![sodium-node][node]
 ``` js
-var bool = crypto_auth_verify(output, input, key)
+var bool = sodium.crypto_auth_verify(output, input, key)
 ```
 Verify a token.
 * `output` should be a `buffer` of length `crypto_auth_BYTES`
@@ -25,3 +29,7 @@ Verify a token.
 * `key` should be a `buffer` of length `crypto_auth_KEYBYTES`
 
 Returns `true` if the token could be verified. Otherwise `false`.
+
+
+[js]: /docusaurus/img/icon_js.svg
+[node]: /docusaurus/img/nodejs-icon.svg

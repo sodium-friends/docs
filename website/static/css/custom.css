@@ -81,7 +81,7 @@ a {
 
 .buttons a:hover {
     background: #FFF;
-    color: ##0d773e;
+    color: #0d773e;
 }
 
 .navigationSlider .slidingNav ul a[href*='github'] {
@@ -93,4 +93,10 @@ a {
     width: 32px;
     height: 32px;
     background: url('/docusaurus/img/github-brands.svg');
+}
+
+h2 + p img {
+  vertical-align: middle;
+  width: 32px;
+  margin: 0;
 }

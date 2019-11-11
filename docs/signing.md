@@ -5,9 +5,11 @@ sidebar_label: Signing
 ---
 
 Bindings for the crypto_sign API. [See the libsodium crypto_sign docs for more information](https://download.libsodium.org/doc/public-key_cryptography/public-key_signatures).
-
+***
+## `crypto_sign_seed_keypair`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
-crypto_sign_seed_keypair(publicKey, secretKey, seed)
+sodium.crypto_sign_seed_keypair(publicKey, secretKey, seed)
 ```
 Create a new keypair based on a `seed`.
 * `publicKey` should be a `buffer` of length `crypto_sign_PUBLICKEYBYTES`
@@ -15,18 +17,22 @@ Create a new keypair based on a `seed`.
 * `seed` should be a `buffer` of length `crypto_sign_SEEDBYTES`
 
 The generated public and secret key will be stored in `buffers`.
-
+***
+## `crypto_sign_keypair`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
-crypto_sign_keypair(publicKey, secretKey)
+sodium.crypto_sign_keypair(publicKey, secretKey)
 ```
 Create a new keypair.
 * `publicKey` should be a `buffer` of length `crypto_sign_PUBLICKEYBYTES`
 * `secretKey` should be a `buffer` of length `crypto_sign_SECRETKEYBYTES`
 
 The generated public and secret key will be stored in `buffers`.
-
+***
+## `crypto_sign`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
-crypto_sign(signedMessage, message, secretKey)
+sodium.crypto_sign(signedMessage, message, secretKey)
 ```
 Sign a message.
 * `signedMessage` should be a `buffer` of length `crypto_sign_BYTES + message.length`
@@ -34,9 +40,11 @@ Sign a message.
 * `secretKey` should be a secret key
 
 The generated signed message will be stored in `signedMessage`.
-
+***
+## `crypto_sign_open`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
-var bool = crypto_sign_open(message, signedMessage, publicKey)
+var bool = sodium.crypto_sign_open(message, signedMessage, publicKey)
 ```
 Verify and open a message.
 * `message` should be a `buffer` of length `signedMessage.length - crypto_sign_BYTES`
@@ -44,9 +52,11 @@ Verify and open a message.
 * `publicKey` should be a public key
 
 Will return `true` if the message could be verified. Otherwise `false`. If verified, the originally signed message is stored in the `message buffer`.
-
+***
+## `crypto_sign_detached`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
-crypto_sign_detached(signature, message, secretKey)
+sodium.crypto_sign_detached(signature, message, secretKey)
 ```
 Same as `crypto_sign` except it only stores the signature.
 * `signature` should be a `buffer` of length `crypto_sign_BYTES`
@@ -54,9 +64,11 @@ Same as `crypto_sign` except it only stores the signature.
 * `secretKey` should be a secret key
 
 The generated signature is stored in `signature`.
-
+***
+## `crypto_sign_verify_detached`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
-var bool = crypto_sign_verify_detached(signature, message, publicKey)
+var bool = sodium.crypto_sign_verify_detached(signature, message, publicKey)
 ```
 Verify a signature.
 * `signature` should be a `buffer` of length `crypto_sign_BYTES`
@@ -64,24 +76,34 @@ Verify a signature.
 * `publicKey` should be a public key
 
 Will return `true` if the message could be verified. Otherwise `false`.
-
+***
+## `crypto_sign_ed25519_pk_to_curve25519`
+![sodium-node][node]
 ``` js
-crypto_sign_ed25519_pk_to_curve25519(curve_pk, ed_pk)
+sodium.crypto_sign_ed25519_pk_to_curve25519(curve_pk, ed_pk)
 ```
 Convert an `ed25519` public key to `curve25519` (which can be used with `box` and `scalarmult`).
 * `curve_pk` should be a `buffer` of length `crypto_box_PUBLICKEYBYTES`
 * `ed_pk` should be a `buffer` of length `crypto_sign_PUBLICKEYBYTES`
-
+***
+## `crypto_sign_ed25519_sk_to_curve25519`
+![sodium-node][node]
 ``` js
-crypto_sign_ed25519_sk_to_curve25519(curve_sk, ed_sk)
+sodium.crypto_sign_ed25519_sk_to_curve25519(curve_sk, ed_sk)
 ```
 Convert an `ed25519` secret key to `curve25519` (which can be used with `box` and `scalarmult`).
 * `curve_sk` should be a `buffer` of length `crypto_box_SECRETKEYBYTES`
 * `ed_sk` should be a `buffer` of length `crypto_sign_SECRETKEYBYTES`
-
+***
+## `crypto_sign_ed25519_sk_to_pk`
+![sodium-node][node]
 ``` js
-crypto_sign_ed25519_sk_to_pk(pk, sk)
+sodium.crypto_sign_ed25519_sk_to_pk(pk, sk)
 ```
 Extract an `ed25519` public key from an `ed25519` secret key.
 * `pk` must be `buffer` of at least `crypto_box_PUBLICKEYBYTES` bytes
 * `sk` must be `buffer` of at least `crypto_sign_SECRETKEYBYTES` bytes
+
+
+[js]: /docusaurus/img/icon_js.svg
+[node]: /docusaurus/img/nodejs-icon.svg
