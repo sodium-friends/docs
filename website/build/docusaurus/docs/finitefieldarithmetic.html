@@ -70,7 +70,10 @@
 <li><code>crypto_core_ed25519_SCALARBYTES</code></li>
 <li><code>crypto_core_ed25519_NONREDUCEDSCALARBYTES</code></li>
 </ul>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = crypto_core_ed25519_is_valid_point(p)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_is_valid_point"></a><a href="#crypto_core_ed25519_is_valid_point" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_is_valid_point</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_core_ed25519_is_valid_point(p)
 </code></pre>
 <blockquote>
 <p>The crypto_core_ed25519_is_valid_point() function checks that p represents a point on the edwards25519 curve, in canonical &gt;form, on the main subgroup, and that the point doesn't have a small order.</p>
@@ -79,7 +82,10 @@
 <li><code>p</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_BYTES</code> bytes</li>
 </ul>
 <p>Returns <code>true</code> or <code>false</code></p>
-<pre><code class="hljs css language-js">crypto_core_ed25519_from_uniform(p, r)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_from_uniform"></a><a href="#crypto_core_ed25519_from_uniform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_from_uniform</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_from_uniform(p, r)
 </code></pre>
 <p>Maps a <code>crypto_core_ed25519_UNIFORMBYTES</code> bytes vector (usually the output of a hash function) to a a valid curve point and stores its compressed representation in <code>p</code>.</p>
 <p>The point is guaranteed to be on the main subgroup.</p>
@@ -87,7 +93,10 @@
 <li><code>p</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_BYTES</code> bytes</li>
 <li><code>r</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_UNIFORMBYTES</code> bytes</li>
 </ul>
-<pre><code class="hljs css language-js">crypto_scalarmult_ed25519(q, n, p)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_scalarmult_ed25519"></a><a href="#crypto_scalarmult_ed25519" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_scalarmult_ed25519</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_scalarmult_ed25519(q, n, p)
 </code></pre>
 <p>Multiply point <code>p</code> by scalar <code>n</code> and store its compressed representation in <code>q</code>.</p>
 <ul>
@@ -96,7 +105,10 @@
 <li><code>p</code> must be a <code>buffer</code> of at least <code>crypto_scalarmult_ed25519_BYTES</code> bytes</li>
 </ul>
 <p>Note this function will throw if <code>n</code> is zero or <code>p</code> is an invalid curve point.</p>
-<pre><code class="hljs css language-js">crypto_scalarmult_ed25519_base(q, n)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_scalarmult_ed25519_base"></a><a href="#crypto_scalarmult_ed25519_base" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_scalarmult_ed25519_base</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_scalarmult_ed25519_base(q, n)
 </code></pre>
 <p>Multiply the basepoint by scalar <code>n</code> and store its compressed representation in <code>q</code>. Note that <code>n</code> will be clamped.</p>
 <ul>
@@ -104,7 +116,10 @@
 <li><code>n</code> must be a <code>buffer</code> of at least <code>crypto_scalarmult_ed25519_SCALARBYTES</code> bytes</li>
 </ul>
 <p>Note this function will throw if <code>n</code> is zero.</p>
-<pre><code class="hljs css language-js">crypto_scalarmult_ed25519_noclamp(q, n, p)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_scalarmult_ed25519_noclamp"></a><a href="#crypto_scalarmult_ed25519_noclamp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_scalarmult_ed25519_noclamp</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_scalarmult_ed25519_noclamp(q, n, p)
 </code></pre>
 <p>Multiply point <code>p</code> by scalar <code>n</code> and store its compressed representation in <code>q</code>. This version does not clamp.</p>
 <ul>
@@ -113,7 +128,10 @@
 <li><code>p</code> must be a <code>buffer</code> of at least <code>crypto_scalarmult_ed25519_BYTES</code> bytes</li>
 </ul>
 <p>Note this function will throw if <code>n</code> is zero or <code>p</code> is an invalid curve point.</p>
-<pre><code class="hljs css language-js">crypto_scalarmult_ed25519_base_noclamp(q, n)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_scalarmult_ed25519_base_noclamp"></a><a href="#crypto_scalarmult_ed25519_base_noclamp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_scalarmult_ed25519_base_noclamp</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_scalarmult_ed25519_base_noclamp(q, n)
 </code></pre>
 <p>Multiply the basepoint by scalar <code>n</code> and store its compressed representation in <code>q</code>. This version does not clamp.</p>
 <ul>
@@ -121,7 +139,10 @@
 <li><code>n</code> must be a <code>buffer</code> of at least <code>crypto_scalarmult_ed25519_SCALARBYTES</code> bytes</li>
 </ul>
 <p>Note this function will throw if <code>n</code> is zero.</p>
-<pre><code class="hljs css language-js">crypto_core_ed25519_add(r, p, q)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_add"></a><a href="#crypto_core_ed25519_add" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_add</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_add(r, p, q)
 </code></pre>
 <p>Add point <code>q</code> to <code>p</code>, storing the result to <code>r</code>.</p>
 <ul>
@@ -130,7 +151,10 @@
 <li><code>q</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_BYTES</code> bytes</li>
 </ul>
 <p>Will throw if <code>p</code>, <code>q</code> are not valid curve points</p>
-<pre><code class="hljs css language-js">crypto_core_ed25519_sub(r, p, q)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_sub"></a><a href="#crypto_core_ed25519_sub" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_sub</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_sub(r, p, q)
 </code></pre>
 <p>Subtract point <code>q</code> to <code>p</code>, storing the result to <code>r</code>.</p>
 <ul>
@@ -139,41 +163,59 @@
 <li><code>q</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_BYTES</code> bytes</li>
 </ul>
 <p>Will throw if <code>p</code>, <code>q</code> are not valid curve points</p>
-<pre><code class="hljs css language-js">crypto_core_ed25519_scalar_random(r)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_scalar_random"></a><a href="#crypto_core_ed25519_scalar_random" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_scalar_random</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_scalar_random(r)
 </code></pre>
 <p>Generate random scalar in <code>]0..L[</code>, storing it in <code>r</code>.</p>
 <ul>
 <li><code>r</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 </ul>
-<pre><code class="hljs css language-js">crypto_core_ed25519_scalar_reduce(r, s)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_scalar_reduce"></a><a href="#crypto_core_ed25519_scalar_reduce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_scalar_reduce</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_scalar_reduce(r, s)
 </code></pre>
 <p>Reduce <code>s mod L</code>, storing it in <code>r</code>.</p>
 <ul>
 <li><code>r</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 <li><code>s</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_NONREDUCEDSCALARBYTES</code> bytes</li>
 </ul>
-<pre><code class="hljs css language-js">crypto_core_ed25519_scalar_invert(recip, s)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_scalar_invert"></a><a href="#crypto_core_ed25519_scalar_invert" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_scalar_invert</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_scalar_invert(recip, s)
 </code></pre>
 <p>Find <code>recip</code> such that <code>s * recip = 1 (mod L)</code>, storing it in <code>recip</code>.</p>
 <ul>
 <li><code>recip</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 <li><code>s</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 </ul>
-<pre><code class="hljs css language-js">crypto_core_ed25519_scalar_negate(neg, s)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_scalar_negate"></a><a href="#crypto_core_ed25519_scalar_negate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_scalar_negate</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_scalar_negate(neg, s)
 </code></pre>
 <p>Find <code>neg</code> such that <code>s + neg = 0 (mod L)</code>, storing it in <code>recip</code>.</p>
 <ul>
 <li><code>recip</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 <li><code>s</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 </ul>
-<pre><code class="hljs css language-js">crypto_core_ed25519_scalar_complement(comp, s)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_scalar_complement"></a><a href="#crypto_core_ed25519_scalar_complement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_scalar_complement</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_scalar_complement(comp, s)
 </code></pre>
 <p>Find <code>comp</code> such that <code>s + comp = 1 (mod L)</code>, storing it in <code>recip</code>.</p>
 <ul>
 <li><code>comp</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 <li><code>s</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 </ul>
-<pre><code class="hljs css language-js">crypto_core_ed25519_scalar_add(z, x, y)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_scalar_add"></a><a href="#crypto_core_ed25519_scalar_add" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_scalar_add</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_scalar_add(z, x, y)
 </code></pre>
 <p>Add <code>x</code> and <code>y</code> such that <code>x + y = z (mod L)</code>, storing it in <code>z</code>.</p>
 <ul>
@@ -181,7 +223,10 @@
 <li><code>y</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 <li><code>z</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 </ul>
-<pre><code class="hljs css language-js">crypto_core_ed25519_scalar_sub(z, x, y)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_core_ed25519_scalar_sub"></a><a href="#crypto_core_ed25519_scalar_sub" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_core_ed25519_scalar_sub</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_core_ed25519_scalar_sub(z, x, y)
 </code></pre>
 <p>Subtract <code>x</code> and <code>y</code> such that <code>x - y = z (mod L)</code>, storing it in <code>z</code>.</p>
 <ul>
@@ -189,7 +234,7 @@
 <li><code>y</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 <li><code>z</code> must be a <code>buffer</code> of at least <code>crypto_core_ed25519_SCALARBYTES</code> bytes</li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus/docs/diffiehellman"><span class="arrow-prev">← </span><span>Diffie-Hellman</span></a><a class="docs-next button" href="/docusaurus/docs/shorthashes"><span>Short Hashes</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus/" class="nav-home"><img src="/docusaurus/img/favicon.ico" alt="sodium-native" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus/docs/en/getstarted">Get Started</a><a href="/docusaurus/docs/en/api">API</a></div><div><h5>Community</h5><a href="https://libsodium.gitbook.io/doc/" target="_blank" rel="noreferrer noopener">Libsodium</a><a href="https://hyperdivision.dk/" target="_blank" rel="noreferrer noopener">Hyperdivision</a><a href="https://twitter.com/hyperdivisiondk?lang=en" target="_blank" rel="noreferrer noopener">Hyperdivision on Twitter</a></div><div><h5>More</h5><a href="https://github.com/sodium-friends/sodium-native/" target="_blank" rel="noreferrer noopener">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docusaurus/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Hyperdivision</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus/docs/diffiehellman"><span class="arrow-prev">← </span><span>Diffie-Hellman</span></a><a class="docs-next button" href="/docusaurus/docs/shorthashes"><span>Short Hashes</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#crypto_core_ed25519_is_valid_point"><code>crypto_core_ed25519_is_valid_point</code></a></li><li><a href="#crypto_core_ed25519_from_uniform"><code>crypto_core_ed25519_from_uniform</code></a></li><li><a href="#crypto_scalarmult_ed25519"><code>crypto_scalarmult_ed25519</code></a></li><li><a href="#crypto_scalarmult_ed25519_base"><code>crypto_scalarmult_ed25519_base</code></a></li><li><a href="#crypto_scalarmult_ed25519_noclamp"><code>crypto_scalarmult_ed25519_noclamp</code></a></li><li><a href="#crypto_scalarmult_ed25519_base_noclamp"><code>crypto_scalarmult_ed25519_base_noclamp</code></a></li><li><a href="#crypto_core_ed25519_add"><code>crypto_core_ed25519_add</code></a></li><li><a href="#crypto_core_ed25519_sub"><code>crypto_core_ed25519_sub</code></a></li><li><a href="#crypto_core_ed25519_scalar_random"><code>crypto_core_ed25519_scalar_random</code></a></li><li><a href="#crypto_core_ed25519_scalar_reduce"><code>crypto_core_ed25519_scalar_reduce</code></a></li><li><a href="#crypto_core_ed25519_scalar_invert"><code>crypto_core_ed25519_scalar_invert</code></a></li><li><a href="#crypto_core_ed25519_scalar_negate"><code>crypto_core_ed25519_scalar_negate</code></a></li><li><a href="#crypto_core_ed25519_scalar_complement"><code>crypto_core_ed25519_scalar_complement</code></a></li><li><a href="#crypto_core_ed25519_scalar_add"><code>crypto_core_ed25519_scalar_add</code></a></li><li><a href="#crypto_core_ed25519_scalar_sub"><code>crypto_core_ed25519_scalar_sub</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus/" class="nav-home"><img src="/docusaurus/img/favicon.ico" alt="sodium-native" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus/docs/en/getstarted">Get Started</a><a href="/docusaurus/docs/en/api">API</a></div><div><h5>Community</h5><a href="https://libsodium.gitbook.io/doc/" target="_blank" rel="noreferrer noopener">Libsodium</a><a href="https://hyperdivision.dk/" target="_blank" rel="noreferrer noopener">Hyperdivision</a><a href="https://twitter.com/hyperdivisiondk?lang=en" target="_blank" rel="noreferrer noopener">Hyperdivision on Twitter</a></div><div><h5>More</h5><a href="https://github.com/sodium-friends/sodium-native/" target="_blank" rel="noreferrer noopener">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docusaurus/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Hyperdivision</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

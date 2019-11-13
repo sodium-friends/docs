@@ -77,25 +77,37 @@
 <li><code>crypto_secretstream_xchacha20poly1305_TAG_REKEY</code></li>
 <li><code>crypto_secretstream_xchacha20poly1305_TAG_FINAL</code></li>
 </ul>
-<pre><code class="hljs css language-js">crypto_secretstream_xchacha20poly1305_keygen(key)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_secretstream_xchacha20poly1305_keygen"></a><a href="#crypto_secretstream_xchacha20poly1305_keygen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_secretstream_xchacha20poly1305_keygen</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_secretstream_xchacha20poly1305_keygen(key)
 </code></pre>
 <p>Generate a new encryption key.</p>
 <ul>
 <li><code>key</code> should be a <code>buffer</code> of length <code>crypto_secretstream_xchacha20poly1305_KEYBYTES</code></li>
 </ul>
 <p>The generated key is stored in <code>key</code>.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> state = crypto_secretstream_xchacha20poly1305_state_new()
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_secretstream_xchacha20poly1305_state_new"></a><a href="#crypto_secretstream_xchacha20poly1305_state_new" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_secretstream_xchacha20poly1305_state_new</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> state = sodium.crypto_secretstream_xchacha20poly1305_state_new()
 </code></pre>
 <p>Create a new stream state. Returns an opaque object used in the next methods.</p>
-<pre><code class="hljs css language-js">crypto_secretstream_xchacha20poly1305_init_push(state, header, key)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_secretstream_xchacha20poly1305_init_push"></a><a href="#crypto_secretstream_xchacha20poly1305_init_push" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_secretstream_xchacha20poly1305_init_push</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_secretstream_xchacha20poly1305_init_push(state, header, key)
 </code></pre>
-<p>Initialise <code>state</code> from the writer side with message <code>header</code> and encryption key <code>key</code>. The <code>header</code> must be sent or stored with the stream. The <code>key</code> must be exchanged securely with the receiving / reading side.</p>
+<p>Initialize <code>state</code> from the writer side with message <code>header</code> and encryption key <code>key</code>. The <code>header</code> must be sent or stored with the stream. The <code>key</code> must be exchanged securely with the receiving / reading side.</p>
 <ul>
 <li><code>state</code> should be an opaque state object</li>
 <li><code>header</code> should be a <code>buffer</code> of length <code>crypto_secretstream_xchacha20poly1305_HEADERBYTES</code></li>
 <li><code>key</code> should be a <code>buffer</code> of length <code>crypto_secretstream_xchacha20poly1305_KEYBYTES</code></li>
 </ul>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> mlen = crypto_secretstream_xchacha20poly1305_push(state, ciphertext, message, [ad], tag)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_secretstream_xchacha20poly1305_push"></a><a href="#crypto_secretstream_xchacha20poly1305_push" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_secretstream_xchacha20poly1305_push</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> mlen = sodium.crypto_secretstream_xchacha20poly1305_push(state, ciphertext, message, [ad], tag)
 </code></pre>
 <p>Encrypt a message with a certain tag and optional additional data <code>ad</code>.</p>
 <ul>
@@ -106,7 +118,10 @@
 <li><code>tag</code> should be a <code>buffer</code> of length <code>crypto_secretstream_xchacha20poly1305_TAGBYTES</code></li>
 </ul>
 <p>Note that <code>tag</code> should be one of the <code>crypto_secretstream_xchacha20poly1305_TAG_*</code> constants. Returns number of encrypted bytes written to <code>ciphertext</code>.</p>
-<pre><code class="hljs css language-js">crypto_secretstream_xchacha20poly1305_init_pull(state, header, key)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_secretstream_xchacha20poly1305_init_pull"></a><a href="#crypto_secretstream_xchacha20poly1305_init_pull" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_secretstream_xchacha20poly1305_init_pull</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_secretstream_xchacha20poly1305_init_pull(state, header, key)
 </code></pre>
 <p>Initialise <code>state</code> from the reader side with message <code>header</code> and encryption key <code>key</code>. The <code>header</code> must be retrieved from somewhere. The <code>key</code> must be exchanged securely with the sending / writing side.</p>
 <ul>
@@ -114,7 +129,10 @@
 <li><code>header</code> should be a <code>buffer</code> of length <code>crypto_secretstream_xchacha20poly1305_HEADERBYTES</code></li>
 <li><code>key</code> should be a <code>buffer</code> of length <code>crypto_secretstream_xchacha20poly1305_KEYBYTES</code></li>
 </ul>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> clen = crypto_secretstream_xchacha20poly1305_pull(state, message, tag, ciphertext, [ad])
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_secretstream_xchacha20poly1305_pull"></a><a href="#crypto_secretstream_xchacha20poly1305_pull" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_secretstream_xchacha20poly1305_pull</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> clen = sodium.crypto_secretstream_xchacha20poly1305_pull(state, message, tag, ciphertext, [ad])
 </code></pre>
 <p>Decrypt a message with optional additional data <code>ad</code>, and write message tag to <code>tag</code>. Make sure to check this!</p>
 <ul>
@@ -124,10 +142,13 @@
 <li><code>ad</code> is optional and should be <code>null</code> or <code>buffer</code>. Included in the computation of the authentication tag appended to the message</li>
 </ul>
 <p>Note that <code>tag</code> should be one of the <code>crypto_secretstream_xchacha20poly1305_TAG_*</code> constants. Returns number of decrypted bytes written to <code>message</code>.</p>
-<pre><code class="hljs css language-js">crypto_secretstream_xchacha20poly1305_rekey(state)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_secretstream_xchacha20poly1305_rekey"></a><a href="#crypto_secretstream_xchacha20poly1305_rekey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_secretstream_xchacha20poly1305_rekey</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_secretstream_xchacha20poly1305_rekey(state)
 </code></pre>
 <p>Rekey the opaque <code>state</code> object.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus/docs/authentication"><span class="arrow-prev">← </span><span>Authentication</span></a><a class="docs-next button" href="/docusaurus/docs/onetimeauthentication"><span>One-Time Authentication</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus/" class="nav-home"><img src="/docusaurus/img/favicon.ico" alt="sodium-native" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus/docs/en/getstarted">Get Started</a><a href="/docusaurus/docs/en/api">API</a></div><div><h5>Community</h5><a href="https://libsodium.gitbook.io/doc/" target="_blank" rel="noreferrer noopener">Libsodium</a><a href="https://hyperdivision.dk/" target="_blank" rel="noreferrer noopener">Hyperdivision</a><a href="https://twitter.com/hyperdivisiondk?lang=en" target="_blank" rel="noreferrer noopener">Hyperdivision on Twitter</a></div><div><h5>More</h5><a href="https://github.com/sodium-friends/sodium-native/" target="_blank" rel="noreferrer noopener">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docusaurus/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Hyperdivision</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus/docs/authentication"><span class="arrow-prev">← </span><span>Authentication</span></a><a class="docs-next button" href="/docusaurus/docs/onetimeauthentication"><span>One-Time Authentication</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#crypto_secretstream_xchacha20poly1305_keygen"><code>crypto_secretstream_xchacha20poly1305_keygen</code></a></li><li><a href="#crypto_secretstream_xchacha20poly1305_state_new"><code>crypto_secretstream_xchacha20poly1305_state_new</code></a></li><li><a href="#crypto_secretstream_xchacha20poly1305_init_push"><code>crypto_secretstream_xchacha20poly1305_init_push</code></a></li><li><a href="#crypto_secretstream_xchacha20poly1305_push"><code>crypto_secretstream_xchacha20poly1305_push</code></a></li><li><a href="#crypto_secretstream_xchacha20poly1305_init_pull"><code>crypto_secretstream_xchacha20poly1305_init_pull</code></a></li><li><a href="#crypto_secretstream_xchacha20poly1305_pull"><code>crypto_secretstream_xchacha20poly1305_pull</code></a></li><li><a href="#crypto_secretstream_xchacha20poly1305_rekey"><code>crypto_secretstream_xchacha20poly1305_rekey</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus/" class="nav-home"><img src="/docusaurus/img/favicon.ico" alt="sodium-native" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus/docs/en/getstarted">Get Started</a><a href="/docusaurus/docs/en/api">API</a></div><div><h5>Community</h5><a href="https://libsodium.gitbook.io/doc/" target="_blank" rel="noreferrer noopener">Libsodium</a><a href="https://hyperdivision.dk/" target="_blank" rel="noreferrer noopener">Hyperdivision</a><a href="https://twitter.com/hyperdivisiondk?lang=en" target="_blank" rel="noreferrer noopener">Hyperdivision on Twitter</a></div><div><h5>More</h5><a href="https://github.com/sodium-friends/sodium-native/" target="_blank" rel="noreferrer noopener">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docusaurus/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Hyperdivision</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

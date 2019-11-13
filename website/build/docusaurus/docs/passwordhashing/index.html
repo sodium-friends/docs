@@ -61,7 +61,10 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Password Hashing</h1></header><article><div><span><p>Bindings for the crypto_pwhash API. <a href="https://download.libsodium.org/doc/password_hashing/">See the libsodium crypto_pwhash docs for more information</a>.</p>
-<pre><code class="hljs css language-js">crypto_pwhash(output, password, salt, opslimit, memlimit, algorithm)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash"></a><a href="#crypto_pwhash" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash(output, password, salt, opslimit, memlimit, algorithm)
 </code></pre>
 <p>Create a password hash.</p>
 <ul>
@@ -88,7 +91,10 @@
 <li><code>crypto_pwhash_ALG_ARGON2I13</code></li>
 </ul>
 <p>The generated hash will be stored in <code>output</code> and the entire <code>output buffer</code> will be used.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_str(output, password, opslimit, memlimit)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_str"></a><a href="#crypto_pwhash_str" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_str</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_str(output, password, opslimit, memlimit)
 </code></pre>
 <p>Create a password hash with a random salt.</p>
 <ul>
@@ -98,7 +104,10 @@
 <li><code>memlimit</code> should be a number containing your mem limit setting in the range <code>crypto_pwhash_MEMLIMIT_MIN</code> - <code>crypto_pwhash_OPSLIMIT_MAX</code></li>
 </ul>
 <p>The generated hash, settings, salt, version and algorithm will be stored in <code>output</code> and the entire <code>output buffer</code> will be used.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = crypto_pwhash_str_verify(str, password)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_str_verify"></a><a href="#crypto_pwhash_str_verify" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_str_verify</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_pwhash_str_verify(str, password)
 </code></pre>
 <p>Verify a password hash generated with the above method.</p>
 <ul>
@@ -106,7 +115,10 @@
 <li><code>password</code> should be a <code>buffer</code> of any size</li>
 </ul>
 <p>Returns <code>true</code> if the hash could be verified with the settings contained in <code>str</code>. Otherwise <code>false</code>.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = crypto_pwhash_str_needs_rehash(hash, opslimit, memlimit)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_str_needs_rehash"></a><a href="#crypto_pwhash_str_needs_rehash" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_str_needs_rehash</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_pwhash_str_needs_rehash(hash, opslimit, memlimit)
 </code></pre>
 <p>Check if a password hash needs rehash, either because the default algorithm changed, <code>opslimit</code> or <code>memlimit</code> increased or because the hash is malformed.</p>
 <ul>
@@ -115,18 +127,31 @@
 <li><code>memlimit</code> should be a number containing your mem limit setting in the range <code>crypto_pwhash_MEMLIMIT_MIN</code> - <code>crypto_pwhash_OPSLIMIT_MAX</code></li>
 </ul>
 <p>Returns <code>true</code> if the hash should be rehashed the settings contained in <code>str</code>. Otherwise <code>false</code> if it is still good.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_async(output, password, salt, opslimit, memlimit, algorithm, callback)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_async"></a><a href="#crypto_pwhash_async" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_async</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_async(output, password, salt, opslimit, memlimit, algorithm, callback)
 </code></pre>
 <p>Just like <code>crypto_pwhash</code> but will run password hashing on a separate worker so it will not block the event loop. <code>callback(err)</code> will receive any errors from the hashing but all argument errors will throw. The resulting hash is written to <code>output</code>. This function also supports <a href="https://nodejs.org/dist/latest/docs/api/async_hooks.html"><code>async_hook</code>s</a> as the type <code>sodium-native:crypto_pwhash_async</code>.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_str_async(output, password, opslimit, memlimit, callback)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_str_async"></a><a href="#crypto_pwhash_str_async" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_str_async</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_str_async(output, password, opslimit, memlimit, callback)
 </code></pre>
 <p>Just like <code>crypto_pwhash_str</code> but will run password hashing on a seperate worker so it will not block the event loop. <code>callback(err)</code> will receive any errors from the hashing but all argument errors will throw. The resulting hash with parameters is written to <code>output</code>. This function also supports <a href="https://nodejs.org/dist/latest/docs/api/async_hooks.html"><code>async_hook</code>s</a> as the type <code>sodium-native:crypto_pwhash_str_async</code>.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_str_verify_async(str, password, callback)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_str_verify_async"></a><a href="#crypto_pwhash_str_verify_async" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_str_verify_async</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_str_verify_async(str, password, callback)
 </code></pre>
 <p>Just like <code>crypto_pwhash_str_verify</code> but will run password hashing on a seperate worker so it will not block the event loop. <code>callback(err, bool)</code> will receive any errors from the hashing but all argument errors will throw. If the verification succeeds bool is <code>true</code>, otherwise <code>false</code>. Due to an issue with libsodium <code>err</code> is currently never set. This function also supports <a href="https://nodejs.org/dist/latest/docs/api/async_hooks.html"><code>async_hook</code>s</a> as the type <code>sodium-native:crypto_pwhash_str_verify_async</code>.</p>
-<h2><a class="anchor" aria-hidden="true" id="password-hashing-scrypt"></a><a href="#password-hashing-scrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Password Hashing (Scrypt)</h2>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="password-hashing-scrypt"></a><a href="#password-hashing-scrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Password Hashing (Scrypt)</h1>
 <p>Bindings for the crypto_pwhash_scryptsalsa208sha256 API. <a href="https://download.libsodium.org/doc/advanced/scrypt">See the libsodium crypto_pwhash_scryptsalsa208sha256 docs for more information</a>.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_scryptsalsa208sha256(output, password, salt, opslimit, memlimit)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_scryptsalsa208sha256"></a><a href="#crypto_pwhash_scryptsalsa208sha256" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_scryptsalsa208sha256</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_scryptsalsa208sha256(output, password, salt, opslimit, memlimit)
 </code></pre>
 <p>Create a password hash.</p>
 <ul>
@@ -144,7 +169,10 @@
 <li><code>crypto_pwhash_scryptsalsa208sha256_MEMLIMIT_SENSITIVE</code></li>
 </ul>
 <p>The generated hash will be stored in <code>output</code> and the entire <code>output buffer</code> will be used.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_scryptsalsa208sha256_str(output, password, opslimit, memlimit)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_scryptsalsa208sha256_str"></a><a href="#crypto_pwhash_scryptsalsa208sha256_str" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_scryptsalsa208sha256_str</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_scryptsalsa208sha256_str(output, password, opslimit, memlimit)
 </code></pre>
 <p>Create a password hash with a random salt.</p>
 <ul>
@@ -154,7 +182,10 @@
 <li><code>memlimit</code> should be a number containing your mem limit setting in the range <code>crypto_pwhash_scryptsalsa208sha256_MEMLIMIT_MIN</code> - <code>crypto_pwhash_scryptsalsa208sha256_OPSLIMIT_MAX</code></li>
 </ul>
 <p>The generated hash, settings, salt, version and algorithm will be stored in <code>output</code> and the entire <code>output buffer</code> will be used.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = crypto_pwhash_scryptsalsa208sha256_str_verify(str, password)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_scryptsalsa208sha256_str_verify"></a><a href="#crypto_pwhash_scryptsalsa208sha256_str_verify" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_scryptsalsa208sha256_str_verify</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_pwhash_scryptsalsa208sha256_str_verify(str, password)
 </code></pre>
 <p>Verify a password hash generated with the above method.</p>
 <ul>
@@ -162,7 +193,10 @@
 <li><code>password</code> should be a <code>buffer</code> of any size</li>
 </ul>
 <p>Returns <code>true</code> if the hash could be verified with the settings contained in <code>str</code>. Otherwise <code>false</code>.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = crypto_pwhash_scryptsalsa208sha256_str_needs_rehash(hash, opslimit, memlimit)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_scryptsalsa208sha256_str_needs_rehash"></a><a href="#crypto_pwhash_scryptsalsa208sha256_str_needs_rehash" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_scryptsalsa208sha256_str_needs_rehash</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_pwhash_scryptsalsa208sha256_str_needs_rehash(hash, opslimit, memlimit)
 </code></pre>
 <p>Check if a password hash needs rehash, either because <code>opslimit</code> or <code>memlimit</code> increased or because the hash is malformed.</p>
 <ul>
@@ -171,16 +205,25 @@
 <li><code>memlimit</code> should be a number containing your mem limit setting in the range <code>crypto_pwhash_scryptsalsa208sha256_MEMLIMIT_MIN</code> - <code>crypto_pwhash_scryptsalsa208sha256_OPSLIMIT_MAX</code></li>
 </ul>
 <p>Returns <code>true</code> if the hash should be rehashed the settings contained in <code>str</code>. Otherwise <code>false</code> if it is still good.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_scryptsalsa208sha256_async(output, password, salt, opslimit, memlimit, callback)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_scryptsalsa208sha256_async"></a><a href="#crypto_pwhash_scryptsalsa208sha256_async" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_scryptsalsa208sha256_async</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_scryptsalsa208sha256_async(output, password, salt, opslimit, memlimit, callback)
 </code></pre>
 <p>Just like <code>crypto_pwhash_scryptsalsa208sha256</code> but will run password hashing on a seperate worker so it will not block the event loop. <code>callback(err)</code> will receive any errors from the hashing but all argument errors will throw. The resulting hash is written to <code>output</code>. This function also supports <a href="https://nodejs.org/dist/latest/docs/api/async_hooks.html"><code>async_hook</code>s</a> as the type <code>sodium-native:crypto_pwhash_scryptsalsa208sha256_async</code>.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_scryptsalsa208sha256_str_async(output, password, opslimit, memlimit, callback)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_scryptsalsa208sha256_str_async"></a><a href="#crypto_pwhash_scryptsalsa208sha256_str_async" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_scryptsalsa208sha256_str_async</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_scryptsalsa208sha256_str_async(output, password, opslimit, memlimit, callback)
 </code></pre>
 <p>Just like <code>crypto_pwhash_scryptsalsa208sha256_str</code> but will run password hashing on a seperate worker so it will not block the event loop. <code>callback(err)</code> will receive any errors from the hashing but all argument errors will throw. The resulting hash with parameters is written to <code>output</code>. This function also supports <a href="https://nodejs.org/dist/latest/docs/api/async_hooks.html"><code>async_hook</code>s</a> as the type <code>sodium-native:crypto_pwhash_scryptsalsa208sha256_str_async</code>.</p>
-<pre><code class="hljs css language-js">crypto_pwhash_scryptsalsa208sha256_str_verify_async(str, password, callback)
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_pwhash_scryptsalsa208sha256_str_verify_async"></a><a href="#crypto_pwhash_scryptsalsa208sha256_str_verify_async" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_pwhash_scryptsalsa208sha256_str_verify_async</code></h2>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<pre><code class="hljs css language-js">sodium.crypto_pwhash_scryptsalsa208sha256_str_verify_async(str, password, callback)
 </code></pre>
 <p>Just like <code>crypto_pwhash_scryptsalsa208sha256_str_verify</code> but will run password hashing on a seperate worker so it will not block the event loop. <code>callback(err, bool)</code> will receive any errors from the hashing but all argument errors will throw. If the verification succeeds bool is <code>true</code>, otherwise <code>false</code>. Due to an issue with libsodium <code>err</code> is currently never set. This function also supports <a href="https://nodejs.org/dist/latest/docs/api/async_hooks.html"><code>async_hook</code>s</a> as the type <code>sodium-native:crypto_pwhash_scryptsalsa208sha256_str_verify_async</code>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus/docs/onetimeauthentication"><span class="arrow-prev">← </span><span>One-Time Authentication</span></a><a class="docs-next button" href="/docusaurus/docs/keyexchange"><span>Key Exchange</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#password-hashing-scrypt">Password Hashing (Scrypt)</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus/" class="nav-home"><img src="/docusaurus/img/favicon.ico" alt="sodium-native" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus/docs/en/getstarted">Get Started</a><a href="/docusaurus/docs/en/api">API</a></div><div><h5>Community</h5><a href="https://libsodium.gitbook.io/doc/" target="_blank" rel="noreferrer noopener">Libsodium</a><a href="https://hyperdivision.dk/" target="_blank" rel="noreferrer noopener">Hyperdivision</a><a href="https://twitter.com/hyperdivisiondk?lang=en" target="_blank" rel="noreferrer noopener">Hyperdivision on Twitter</a></div><div><h5>More</h5><a href="https://github.com/sodium-friends/sodium-native/" target="_blank" rel="noreferrer noopener">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docusaurus/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Hyperdivision</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus/docs/onetimeauthentication"><span class="arrow-prev">← </span><span>One-Time Authentication</span></a><a class="docs-next button" href="/docusaurus/docs/keyexchange"><span>Key Exchange</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#crypto_pwhash"><code>crypto_pwhash</code></a></li><li><a href="#crypto_pwhash_str"><code>crypto_pwhash_str</code></a></li><li><a href="#crypto_pwhash_str_verify"><code>crypto_pwhash_str_verify</code></a></li><li><a href="#crypto_pwhash_str_needs_rehash"><code>crypto_pwhash_str_needs_rehash</code></a></li><li><a href="#crypto_pwhash_async"><code>crypto_pwhash_async</code></a></li><li><a href="#crypto_pwhash_str_async"><code>crypto_pwhash_str_async</code></a></li><li><a href="#crypto_pwhash_str_verify_async"><code>crypto_pwhash_str_verify_async</code></a></li><li><a href="#crypto_pwhash_scryptsalsa208sha256"><code>crypto_pwhash_scryptsalsa208sha256</code></a></li><li><a href="#crypto_pwhash_scryptsalsa208sha256_str"><code>crypto_pwhash_scryptsalsa208sha256_str</code></a></li><li><a href="#crypto_pwhash_scryptsalsa208sha256_str_verify"><code>crypto_pwhash_scryptsalsa208sha256_str_verify</code></a></li><li><a href="#crypto_pwhash_scryptsalsa208sha256_str_needs_rehash"><code>crypto_pwhash_scryptsalsa208sha256_str_needs_rehash</code></a></li><li><a href="#crypto_pwhash_scryptsalsa208sha256_async"><code>crypto_pwhash_scryptsalsa208sha256_async</code></a></li><li><a href="#crypto_pwhash_scryptsalsa208sha256_str_async"><code>crypto_pwhash_scryptsalsa208sha256_str_async</code></a></li><li><a href="#crypto_pwhash_scryptsalsa208sha256_str_verify_async"><code>crypto_pwhash_scryptsalsa208sha256_str_verify_async</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus/" class="nav-home"><img src="/docusaurus/img/favicon.ico" alt="sodium-native" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus/docs/en/getstarted">Get Started</a><a href="/docusaurus/docs/en/api">API</a></div><div><h5>Community</h5><a href="https://libsodium.gitbook.io/doc/" target="_blank" rel="noreferrer noopener">Libsodium</a><a href="https://hyperdivision.dk/" target="_blank" rel="noreferrer noopener">Hyperdivision</a><a href="https://twitter.com/hyperdivisiondk?lang=en" target="_blank" rel="noreferrer noopener">Hyperdivision on Twitter</a></div><div><h5>More</h5><a href="https://github.com/sodium-friends/sodium-native/" target="_blank" rel="noreferrer noopener">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docusaurus/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Hyperdivision</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

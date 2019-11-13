@@ -1,0 +1,10 @@
+{
+  "docs": {
+    "Get Started": ["getstarted"],
+    "API": ["api", "memoryprotection", "generatingrandomdata", "helpers", "padding", "signing", "generichashing",
+    "keyboxencryption", "sealedboxencryption", "secretkeyboxencryption", "aead", "nonauthstreamingencryption", "authentication", "streamencryption", "onetimeauthentication", "passwordhashing", "keyexchange", "diffiehellman", "finitefieldarithmetic", "shorthashes", "keyderivation", "sha", "license"]
+  },
+  "docs-other": {
+    "First Category": ["doc5"]
+  }
+}
