@@ -5,9 +5,14 @@ sidebar_label: Sealed Box Encryption
 ---
 
 Bindings for the crypto_box_seal API. [See the libsodium crypto_box_seal docs for more information](https://download.libsodium.org/doc/public-key_cryptography/sealed_boxes).
+
+## Constants
+**Buffer lengths (integer)**
+* `crypto_box_SEALBYTES`
+
 ***
 ## `crypto_box_seal`
-![sodium-node][node]
+![sodium-native][node]
 Keypairs can be generated with `crypto_box_keypair()` or `crypto_box_seed_keypair()`.
 
 ``` js
@@ -19,7 +24,7 @@ Encrypts a message in a sealed box using a throwaway keypair. The ciphertext can
 * `publicKey` should be the recipient's public key
 ***
 ## `crypto_box_seal_open`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var bool = sodium.crypto_box_seal_open(message, ciphertext, publicKey, secretKey)
 ```

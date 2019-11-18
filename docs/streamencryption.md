@@ -22,7 +22,7 @@ Bindings for the crypto_secretstream API. [See the libsodium crypto_secretstream
 
 ***
 ## `crypto_secretstream_xchacha20poly1305_keygen`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_keygen(key)
 ```
@@ -32,14 +32,14 @@ Generates a new encryption key.
 The generated key is stored in `key`.
 ***
 ## `crypto_secretstream_xchacha20poly1305_state_new`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var state = sodium.crypto_secretstream_xchacha20poly1305_state_new()
 ```
 Creates a new stream state. Returns an opaque object used in the next methods.
 ***
 ## `crypto_secretstream_xchacha20poly1305_init_push`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_init_push(state, header, key)
 ```
@@ -49,7 +49,7 @@ Initializes `state` from the writer side with message `header` and encryption `k
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 ***
 ## `crypto_secretstream_xchacha20poly1305_push`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var mlen = sodium.crypto_secretstream_xchacha20poly1305_push(state, ciphertext, message, [ad], tag)
 ```
@@ -63,7 +63,7 @@ Encrypts a message with a certain tag and optional additional data `ad`.
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of encrypted bytes written to `ciphertext`.
 ***
 ## `crypto_secretstream_xchacha20poly1305_init_pull`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_init_pull(state, header, key)
 ```
@@ -73,7 +73,7 @@ Initializes `state` from the reader side with message `header` and encryption `k
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 ***
 ## `crypto_secretstream_xchacha20poly1305_pull`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var clen = sodium.crypto_secretstream_xchacha20poly1305_pull(state, message, tag, ciphertext, [ad])
 ```
@@ -86,7 +86,7 @@ Decrypts a message with optional additional data `ad`, and writes message tag to
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of decrypted bytes written to `message`.
 ***
 ## `crypto_secretstream_xchacha20poly1305_rekey`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_rekey(state)
 ```

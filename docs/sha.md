@@ -4,9 +4,14 @@ title: SHA
 sidebar_label: SHA
 ---
 
+## Constants
+**Buffer lengths (integer)**
+* `crypto_hash_sha256_BYTES`
+* `crypto_hash_sha512_BYTES`
+
 ***
 ## `crypto_hash_sha256`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_hash_sha256(output, input)
 ```
@@ -17,7 +22,7 @@ Hashes a value to a short hash based on a key.
 The generated short hash is stored in `output`.
 ***
 ## `crypto_hash_sha256_instance`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var instance = sodium.crypto_hash_sha256_instance()
 ```
@@ -40,7 +45,7 @@ Finalizes the instance.
 The generated hash is stored in `output`.
 ***
 ## `crypto_hash_sha512`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_hash_sha512(output, input)
 ```
@@ -51,7 +56,7 @@ Hashes a value to a short hash based on a key.
 The generated short hash is stored in `output`.
 ***
 ## `crypto_hash_sha512_instance`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var instance = sodium.crypto_hash_sha512_instance()
 ```

@@ -5,9 +5,15 @@ sidebar_label: Diffie-Hellman
 ---
 
 Bindings for the crypto_scalarmult API. [See the libsodium crypto_scalarmult docs for more information](https://download.libsodium.org/doc/advanced/scalar_multiplication).
+
+## Constants
+**Buffer lengths (integer)**
+* `crypto_scalarmult_BYTES`
+* `crypto_scalarmult_SCALARBYTES`
+
 ***
 ## `crypto_scalarmult_base`
-![sodium-node][node] ![sodium-javascript][js]
+![sodium-native][node] ![sodium-javascript][js]
 ``` js
 sodium.crypto_scalarmult_base(publicKey, secretKey)
 ```
@@ -18,7 +24,7 @@ Creates a scalar multiplication public key based on a secret key.
 The generated public key is stored in `publicKey`.
 ***
 ## `crypto_scalarmult`
-![sodium-node][node] ![sodium-javascript][js]
+![sodium-native][node] ![sodium-javascript][js]
 ``` js
 sodium.crypto_scalarmult(sharedSecret, secretKey, remotePublicKey)
 ```

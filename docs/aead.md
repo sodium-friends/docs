@@ -7,8 +7,8 @@ sidebar_label: AEAD (Authenticated Encryption with Additional Data)
 Bindings for the crypto_aead_* APIs. [See the libsodium AEAD docs for more information](https://download.libsodium.org/doc/secret-key_cryptography/aead).
 
 Currently, only `crypto_aead_xchacha20poly1305_ietf` is exposed.
-
-### Constants
+***
+## Constants
 **Buffer lengths (integer)**
 * `crypto_aead_xchacha20poly1305_ietf_ABYTES`
 * `crypto_aead_xchacha20poly1305_ietf_KEYBYTES`
@@ -18,7 +18,7 @@ Currently, only `crypto_aead_xchacha20poly1305_ietf` is exposed.
 
 ***
 ## `crypto_aead_xchacha20poly1305_ietf_keygen`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_aead_xchacha20poly1305_ietf_keygen(key)
 ```
@@ -28,7 +28,7 @@ Generates a new encryption key.
 The generated key is stored in `key`.
 ***
 ## `crypto_aead_xchacha20poly1305_ietf_encrypt`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var clen = sodium.crypto_aead_xchacha20poly1305_ietf_encrypt(ciphertext, message, [ad], null, npub, key)
 ```
@@ -43,7 +43,7 @@ Encrypts a message with (`npub`, `key`) and optional additional data `ad`.
 Returns how many bytes were written to `ciphertext`. Note that in-place encryption is possible.
 ***
 ## `crypto_aead_xchacha20poly1305_ietf_decrypt`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var mlen = sodium.crypto_aead_xchacha20poly1305_ietf_decrypt(message, null, ciphertext, [ad], npub, key)
 ```
@@ -58,7 +58,7 @@ Decrypts a message with (`npub`, `key`) and optional additional data `ad`.
 Returns how many bytes were written to `message`. Note that in-place encryption is possible.
 ***
 ## `crypto_aead_xchacha20poly1305_ietf_encrypt_detached`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var maclen = sodium.crypto_aead_xchacha20poly1305_ietf_encrypt_detached(ciphertext, mac, message, [ad], null, npub, key)
 ```
@@ -74,7 +74,7 @@ Encrypts a message with (`npub`, `key`) and optional additional data `ad`.
 Returns how many bytes were written to `mac`. Note that in-place encryption is possible.
 ***
 ## `crypto_aead_xchacha20poly1305_ietf_decrypt_detached`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_aead_xchacha20poly1305_ietf_decrypt_detached(message, null, ciphertext, mac, [ad], npub, key)
 ```

@@ -5,9 +5,15 @@ sidebar_label: Authentication
 ---
 
 Bindings for the crypto_auth API. [See the libsodium crypto_auth docs for more information](https://download.libsodium.org/doc/secret-key_cryptography/secret-key_authentication).
+
+## Constants
+**Buffer lengths (integer)**
+* `crypto_auth_BYTES`
+* `crypto_auth_KEYBYTES`
+
 ***
 ## `crypto_auth`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_auth(output, input, key)
 ```
@@ -19,7 +25,7 @@ Creates an authentication token.
 The generated token is stored in `output`.
 ***
 ## `crypto_auth_verify`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var bool = sodium.crypto_auth_verify(output, input, key)
 ```

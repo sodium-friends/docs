@@ -7,7 +7,7 @@ sidebar_label: Padding
 Bindings for the padding API. [See the libsodium padding docs for more information](https://download.libsodium.org/doc/padding).
 ***
 ## `sodium_pad`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var paddedLength = sodium.sodium_pad(buf, unpaddedLength, blocksize)
 ```
@@ -19,7 +19,7 @@ Pads `buf` with random data from index `unpaddedLength` up to closest multiple o
 Returns the length of the padded data (so you may `.slice` the `buffer` to here).
 ***
 ## `sodium_unpad`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var unpaddedLength = sodium.sodium_unpad(buf, paddedLength, blocksize)
 ```

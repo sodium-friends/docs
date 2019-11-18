@@ -100,3 +100,11 @@ h2 + p img {
   width: 32px;
   margin: 0;
 }
+
+img[alt="sodium-native"] {
+  width: 32px;
+}
+
+img[alt="sodium-javascript"] {
+  width: 32px;
+}

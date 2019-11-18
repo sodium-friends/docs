@@ -5,9 +5,19 @@ sidebar_label: Generic Hashing
 ---
 
 Bindings for the crypto_generichash API. [See the libsodium crypto_generichash docs for more information](https://download.libsodium.org/doc/hashing/generic_hashing).
+
+## Constants
+**Buffer lengths (integer)**
+* `crypto_generichash_BYTES`
+* `crypto_generichash_BYTES_MIN`
+* `crypto_generichash_BYTES_MAX`
+* `crypto_generichash_KEYBYTES`
+* `crypto_generichash_KEYBYTES_MIN`
+* `crypto_generichash_KEYBYTES_MAX`
+
 ***
 ## `crypto_generichash`
-![sodium-node][node] ![sodium-javascript][js]
+![sodium-native][node] ![sodium-javascript][js]
 ``` js
 sodium.crypto_generichash(output, input, [key])
 ```
@@ -21,14 +31,14 @@ The generated hash is stored in `output`.
 Also exposes `crypto_generichash_BYTES` and `crypto_generichash_KEYBYTES` that can be used as "default" `buffer` sizes.
 ***
 ## `crypto_generichash_batch`
-![sodium-node][node] ![sodium-javascript][js]
+![sodium-native][node] ![sodium-javascript][js]
 ``` js
 sodium.crypto_generichash_batch(output, inputArray, [key])
 ```
 Same as `crypto_generichash`, except that this hashes an array of `buffer`'s instead of a single one.
 ***
 ## `crypto_generichash_instance`
-![sodium-node][node] ![sodium-javascript][js]
+![sodium-native][node] ![sodium-javascript][js]
 ``` js
 var instance = sodium.crypto_generichash_instance([key], [outputLength])
 ```

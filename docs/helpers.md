@@ -7,7 +7,7 @@ sidebar_label: Helpers
 Bindings for various helper functions. [See the libsodium helpers docs for more information](https://download.libsodium.org/doc/helpers/).
 ***
 ## `sodium_memcmp`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var bool = sodium.sodium_memcmp(b1, b2)
 ```
@@ -18,7 +18,7 @@ Compares `b1` with `b2`, in **constant-time** for `b1.length`.
 Returns `true` when equal, otherwise `false`.
 ***
 ## `sodium_compare`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var direction = sodium.sodium_compare(b1, b2)
 ```
@@ -29,7 +29,7 @@ Compares `b1` with `b2`, regarding either as little-endian encoded number.
 Returns `1`, `0`, or `-1` on whether `b1` is greater than, equal to, or less than `b2`. This is the same scheme as `Array.prototype.sort` expect.
 ***
 ## `sodium_add`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.sodium_add(a, b)
 ```
@@ -38,7 +38,7 @@ Adds `b` to `a` (wrapping), regarding either as little-endian encoded number, an
 * `b` must be a `buffer` and must be `a.length` bytes
 ***
 ## `sodium_sub`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.sodium_sub(a, b)
 ```
@@ -47,7 +47,7 @@ Subtracts `b` from `a` (wrapping), regarding either as little-endian encoded num
 * `b` must be a `buffer` and must be `a.length` bytes
 ***
 ## `sodium_increment`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.sodium_increment(buf)
 ```
@@ -55,7 +55,7 @@ Increments `buf` as a little-endian number. This operation is **constant-time** 
 * `buf` must be a `buffer`
 ***
 ## `sodium_is_zero`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var bool = sodium.sodium_is_zero(buf, len)
 ```

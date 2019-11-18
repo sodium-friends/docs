@@ -16,7 +16,7 @@ Bindings for the crypto_scalarmult_ed25519 and crypto_core_ed25519 API. [See the
 
 ***
 ## `crypto_core_ed25519_is_valid_point`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var bool = sodium.crypto_core_ed25519_is_valid_point(p)
 ```
@@ -27,7 +27,7 @@ var bool = sodium.crypto_core_ed25519_is_valid_point(p)
 Returns `true` or `false`.
 ***
 ## `crypto_core_ed25519_from_uniform`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_from_uniform(p, r)
 ```
@@ -39,7 +39,7 @@ The point is guaranteed to be on the main subgroup.
 
 ***
 ## `crypto_scalarmult_ed25519`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_scalarmult_ed25519(q, n, p)
 ```
@@ -51,7 +51,7 @@ Multiplies point `p` by scalar `n` and stores its compressed representation in `
 Note this function will throw, if `n` is zero or `p` is an invalid curve point.
 ***
 ## `crypto_scalarmult_ed25519_base`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_scalarmult_ed25519_base(q, n)
 ```
@@ -62,7 +62,7 @@ Multiplies the base point by scalar `n` and stores its compressed representation
 Note this function will throw if `n` is zero.
 ***
 ## `crypto_scalarmult_ed25519_noclamp`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_scalarmult_ed25519_noclamp(q, n, p)
 ```
@@ -74,7 +74,7 @@ Multiplies point `p` by scalar `n` and stores its compressed representation in `
 Note this function will throw, if `n` is zero or `p` is an invalid curve point.
 ***
 ## `crypto_scalarmult_ed25519_base_noclamp`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_scalarmult_ed25519_base_noclamp(q, n)
 ```
@@ -85,7 +85,7 @@ Multiplies the base point by scalar `n` and stores its compressed representation
 Note this function will throw, if `n` is zero.
 ***
 ## `crypto_core_ed25519_add`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_add(r, p, q)
 ```
@@ -97,7 +97,7 @@ Adds point `q` to `p` and stores the result in `r`.
 Note this function will throw, if `p`, `q` are not valid curve points
 ***
 ## `crypto_core_ed25519_sub`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_sub(r, p, q)
 ```
@@ -109,7 +109,7 @@ Subtracts point `q` to `p` and stores the result in `r`.
 Note this function will throw, if `p`, `q` are not valid curve points.
 ***
 ## `crypto_core_ed25519_scalar_random`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_scalar_random(r)
 ```
@@ -118,7 +118,7 @@ Generates random scalar in `]0..L[` and stores the result in `r`.
 
 ***
 ## `crypto_core_ed25519_scalar_reduce`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_scalar_reduce(r, s)
 ```
@@ -128,7 +128,7 @@ Reduces `s mod L` and stores the result in `r`.
 
 ***
 ## `crypto_core_ed25519_scalar_invert`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_scalar_invert(recip, s)
 ```
@@ -138,7 +138,7 @@ Finds `recip` such that `s * recip = 1 (mod L)` and stores the result in `recip`
 
 ***
 ## `crypto_core_ed25519_scalar_negate`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_scalar_negate(neg, s)
 ```
@@ -148,7 +148,7 @@ Finds `neg` such that `s + neg = 0 (mod L)` and stores the result in `recip`.
 
 ***
 ## `crypto_core_ed25519_scalar_complement`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_scalar_complement(comp, s)
 ```
@@ -158,7 +158,7 @@ Finds `comp` such that `s + comp = 1 (mod L)` and stores the result in `recip`.
 
 ***
 ## `crypto_core_ed25519_scalar_add`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_scalar_add(z, x, y)
 ```
@@ -169,7 +169,7 @@ Adds `x` and `y` such that `x + y = z (mod L)` and stores the result in `z`.
 
 ***
 ## `crypto_core_ed25519_scalar_sub`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_core_ed25519_scalar_sub(z, x, y)
 ```

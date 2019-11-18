@@ -63,7 +63,7 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Public/Secret Key Box Encryption</h1></header><article><div><span><p>Bindings for the crypto_box API. <a href="https://download.libsodium.org/doc/public-key_cryptography/authenticated_encryption">See the libsodium crypto_box docs for more information</a>.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="crypto_box_seed_keypair"></a><a href="#crypto_box_seed_keypair" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_box_seed_keypair</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js">sodium.crypto_box_seed_keypair(publicKey, secretKey, seed)
 </code></pre>
 <p>Create a new keypair based on a <code>seed</code>.</p>
@@ -75,7 +75,7 @@
 <p>The generated public and secret key will be stored in <code>buffer</code>'s.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="crypto_box_keypair"></a><a href="#crypto_box_keypair" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_box_keypair</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js">sodium.crypto_box_keypair(publicKey, secretKey)
 </code></pre>
 <p>Create a new keypair.</p>
@@ -86,7 +86,7 @@
 <p>The generated public and secret key will be stored in <code>buffer</code>'s.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="crypto_box_detached"></a><a href="#crypto_box_detached" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_box_detached</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js">sodium.crypto_box_detached(ciphertext, mac, message, nonce, publicKey, secretKey)
 </code></pre>
 <p>Encrypt a message.</p>
@@ -101,7 +101,7 @@
 <p>The encrypted message will be stored in <code>ciphertext</code> and the authentification code will be stored in <code>mac</code>.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="crypto_box_easy"></a><a href="#crypto_box_easy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_box_easy</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js">sodium.crypto_box_easy(ciphertext, message, nonce, publicKey, secretKey)
 </code></pre>
 <p>Same as <code>crypto_box_detached</code> except it encodes the <code>mac</code> in the message.</p>
@@ -115,7 +115,7 @@
 <p>The encrypted message and authentification code will be stored in <code>ciphertext</code>.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="crypto_box_open_detached"></a><a href="#crypto_box_open_detached" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_box_open_detached</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_box_open_detached(message, ciphertext, mac, nonce, publicKey, secretKey)
 </code></pre>
 <p>Decrypt a message.</p>
@@ -131,7 +131,7 @@
 <p>The decrypted message will be stored in <code>message</code>.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="crypto_box_open_easy"></a><a href="#crypto_box_open_easy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_box_open_easy</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_box_open_easy(message, ciphertext, nonce, publicKey, secretKey)
 </code></pre>
 <p>Decrypt a message encoded with the easy method.</p>

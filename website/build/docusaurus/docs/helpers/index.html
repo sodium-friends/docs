@@ -63,7 +63,7 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Helpers</h1></header><article><div><span><p>Bindings to various helper functions. <a href="https://download.libsodium.org/doc/helpers/">See the libsodium helpers docs for more information</a>.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="sodium_memcmp"></a><a href="#sodium_memcmp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sodium_memcmp</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.sodium_memcmp(b1, b2)
 </code></pre>
 <p>Compare <code>b1</code> with <code>b2</code>, in <strong>constant-time</strong> for <code>b1.length</code>.</p>
@@ -74,7 +74,7 @@
 <p>Returns <code>true</code> when equal, otherwise <code>false</code>.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="sodium_compare"></a><a href="#sodium_compare" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sodium_compare</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> direction = sodium.sodium_compare(b1, b2)
 </code></pre>
 <p>Compare <code>b1</code> with <code>b2</code>, regarding either as little-endian encoded number.</p>
@@ -85,7 +85,7 @@
 <p>Returns <code>1</code>, <code>0</code>, or <code>-1</code> on whether <code>b1</code>is greater, equal, or less than <code>b2</code>. This is the same scheme as <code>Array.prototype.sort</code> expect.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="sodium_add"></a><a href="#sodium_add" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sodium_add</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js">sodium.sodium_add(a, b)
 </code></pre>
 <p>Adds <code>b</code> to <code>a</code> (wrapping), regarding either as little-endian encoded number, and writing the result into <code>a</code>.</p>
@@ -95,7 +95,7 @@
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="sodium_sub"></a><a href="#sodium_sub" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sodium_sub</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js">sodium.sodium_sub(a, b)
 </code></pre>
 <p>Subtracts <code>b</code> from <code>a</code> (wrapping), regarding either as little-endian encoded number, and writing the result into <code>a</code>.</p>
@@ -105,7 +105,7 @@
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="sodium_increment"></a><a href="#sodium_increment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sodium_increment</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js">sodium.sodium_increment(buf)
 </code></pre>
 <p>Increments <code>buf</code> as a little-endian number. This operation is <strong>constant-time</strong> for the length of <code>buf</code>.</p>
@@ -114,7 +114,7 @@
 </ul>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="sodium_is_zero"></a><a href="#sodium_is_zero" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sodium_is_zero</code></h2>
-<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-node"></p>
+<p><img src="/docusaurus/img/nodejs-icon.svg" alt="sodium-native"></p>
 <pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.sodium_is_zero(buf, len)
 </code></pre>
 <p>Tests whether <code>buf</code> is all zero for <code>len</code> bytes. This operation is <strong>constant-time</strong> for <code>len</code>.</p>

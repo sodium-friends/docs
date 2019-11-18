@@ -5,9 +5,15 @@ sidebar_label: One-Time Authentication
 ---
 
 Bindings for the crypto_onetimeauth API. [See the libsodium crypto_onetimeauth docs for more information](https://download.libsodium.org/doc/advanced/poly1305).
+
+## Constants
+**Buffer lengths (integer)**
+* `crypto_onetimeauth_BYTES`
+* `crypto_onetimeauth_KEYBYTES`
+
 ***
 ## `crypto_onetimeauth`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_onetimeauth(output, input, key)
 ```
@@ -19,7 +25,7 @@ Creates an authentication token based on a onetime key.
 The generated token is stored in `output`.
 ***
 ## `crypto_onetimeauth_verify`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var bool = sodium.crypto_onetimeauth_verify(output, input, key)
 ```
@@ -31,7 +37,7 @@ Verifies a token.
 Returns `true` if the token could be verified. Otherwise `false`.
 ***
 ## `crypto_onetimeauth_instance`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var instance = sodium.crypto_onetimeauth_instance(key)
 ```

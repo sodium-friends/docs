@@ -5,9 +5,18 @@ sidebar_label: Public/Secret Key Box Encryption
 ---
 
 Bindings for the crypto_box API. [See the libsodium crypto_box docs for more information](https://download.libsodium.org/doc/public-key_cryptography/authenticated_encryption).
+
+## Constants
+**Buffer lengths (integer)**
+* `crypto_box_PUBLICKEYBYTES`
+* `crypto_box_SECRETKEYBYTES`
+* `crypto_box_SEEDBYTES`
+* `crypto_box_MACBYTES`
+* `crypto_box_NONCEBYTES`
+
 ***
 ## `crypto_box_seed_keypair`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_box_seed_keypair(publicKey, secretKey, seed)
 ```
@@ -19,7 +28,7 @@ Creates a new keypair based on a `seed`.
 The generated public and secret key will be stored in `buffer`'s.
 ***
 ## `crypto_box_keypair`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_box_keypair(publicKey, secretKey)
 ```
@@ -30,7 +39,7 @@ Creates a new keypair.
 The generated public and secret key will be stored in `buffer`'s.
 ***
 ## `crypto_box_detached`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_box_detached(ciphertext, mac, message, nonce, publicKey, secretKey)
 ```
@@ -45,7 +54,7 @@ Encrypts a message.
 The encrypted message will be stored in `ciphertext` and the authentification code will be stored in `mac`.
 ***
 ## `crypto_box_easy`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 sodium.crypto_box_easy(ciphertext, message, nonce, publicKey, secretKey)
 ```
@@ -59,7 +68,7 @@ Same as `crypto_box_detached`, except that it encodes the `mac` in the message.
 The encrypted message and authentification code will be stored in `ciphertext`.
 ***
 ## `crypto_box_open_detached`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var bool = sodium.crypto_box_open_detached(message, ciphertext, mac, nonce, publicKey, secretKey)
 ```
@@ -76,7 +85,7 @@ Returns `true` if the message could be decrypted. Otherwise `false`.
 The decrypted message will be stored in `message`.
 ***
 ## `crypto_box_open_easy`
-![sodium-node][node]
+![sodium-native][node]
 ``` js
 var bool = sodium.crypto_box_open_easy(message, ciphertext, nonce, publicKey, secretKey)
 ```
