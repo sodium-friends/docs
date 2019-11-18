@@ -11,21 +11,21 @@ Bindings for the crypto_secretbox API. [See the libsodium crypto_secretbox docs 
 ``` js
 sodium.crypto_secretbox_detached(ciphertext, mac, message, nonce, secretKey)
 ```
-Encrypt a message.
+Encrypts a message.
 * `ciphertext` should be a `buffer` of length `message.length`
 * `mac` should be a `buffer` of length `crypto_secretbox_MACBYTES`
 * `message` should be a `buffer` of any length
 * `nonce` should be a `buffer` of length `crypto_secretbox_NONCEBYTES`
 * `secretKey` should be a secret key of length `crypto_secretbox_KEYBYTES`
 
-The encrypted message will be stored in `ciphertext` and the authentification code will be stored in `mac`.
+The encrypted message will be stored in `ciphertext`, and the authentification code will be stored in `mac`.
 ***
 ## `crypto_secretbox_easy`
 ![sodium-node][node] ![sodium-javascript][js]
 ``` js
 sodium.crypto_secretbox_easy(ciphertext, message, nonce, secretKey)
 ```
-Same as `crypto_secretbox_detached` except it encodes the `mac` in the `message`.
+Same as `crypto_secretbox_detached`, except that it encodes the `mac` in the `message`.
 * `ciphertext` should be a `buffer` of length `message.length + crypto_secretbox_MACBYTES`
 * `message` should be a `buffer` of any length
 * `nonce` should be a `buffer` of length `crypto_secretbox_NONCEBYTES`
@@ -36,7 +36,7 @@ Same as `crypto_secretbox_detached` except it encodes the `mac` in the `message`
 ``` js
 var bool = sodium.crypto_secretbox_open_detached(message, ciphertext, mac, nonce, secretKey)
 ```
-Decrypt a message.
+Decrypts a message.
 * `message` should be a `buffer` of length `ciphertext.length`
 * `mac` should be a `buffer` of length `crypto_secretbox_MACBYTES`
 * `ciphertext` should be a `buffer` of any length
@@ -52,7 +52,7 @@ The decrypted message will be stored in `message`.
 ``` js
 var bool = sodium.crypto_secretbox_open_easy(message, ciphertext, nonce, secretKey)
 ```
-Decrypt a message encoded with the easy method.
+Decrypts a message encoded with the easy method.
 * `message` should be a `buffer` of length `ciphertext.length - crypto_secretbox_MACBYTES`
 * `ciphertext` should be a `buffer` of length at least `crypto_secretbox_MACBYTES`
 * `nonce` should be a `buffer` of length `crypto_secretbox_NONCEBYTES`

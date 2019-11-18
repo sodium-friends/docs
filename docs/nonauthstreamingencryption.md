@@ -11,23 +11,24 @@ Bindings for the crypto_stream API. [See the libsodium crypto_stream docs for mo
 ``` js
 sodium.crypto_stream(ciphertext, nonce, key)
 ```
-Generate random data based on a `nonce` and `key` into the `ciphertext`.
+Generates random data based on a `nonce` and `key` into the `ciphertext`.
 * `ciphertext` should be a `buffer` of any size
 * `nonce` should be a `buffer` of length `crypto_stream_NONCEBYTES`
 * `key` should be a secret key of length `crypto_stream_KEYBYTES`
 
 The generated data is stored in `ciphertext`.
 ***
-## `crypto_stream_xor` and `crypto_stream_chacha20_xor`
-![sodium-node][node] ![sodium-javascript][js] and ![sodium-node][node]
+## `crypto_stream_xor` or `crypto_stream_chacha20_xor`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
 sodium.crypto_stream_xor(ciphertext, message, nonce, key)
 ```
-or
+## 
+![sodium-node][node]
 ``` js
 sodium.crypto_stream_chacha20_xor(ciphertext, message, nonce, key)
 ```
-Encrypt, but *not* authenticate, a `message` based on a `nonce` and `key`
+Encrypts, but *not* authenticates, a `message` based on a `nonce` and `key`
 * `ciphertext` should be a `buffer` of length `message.length`
 * `message` should be a `buffer` of any size
 * `nonce` should be a `buffer` of length `crypto_stream_NONCEBYTES`
@@ -37,12 +38,13 @@ The encrypted data is stored in `ciphertext`. To decrypt, swap `ciphertext` and 
 
 Encryption defaults to `XSalsa20`, use `crypto_stream_chacha20_xor` if you want to encrypt/decrypt with `ChaCha20` instead.
 ***
-## `crypto_stream_xor_instance` and `crypto_stream_chacha20_xor_instance`
-![sodium-node][node] ![sodium-javascript][js] and ![sodium-node][node]
+## `crypto_stream_xor_instance` or `crypto_stream_chacha20_xor_instance`
+![sodium-node][node] ![sodium-javascript][js]
 ``` js
 var instance = sodium.crypto_stream_xor_instance(nonce, key)
 ```
-or
+## 
+![sodium-node][node]
 ``` js
 var instance = sodium.crypto_stream_chacha20_xor_instance(nonce, key)
 ```
@@ -54,13 +56,13 @@ Encryption defaults to `XSalsa20`, use `crypto_stream_chacha20_xor_instance` if 
 ``` js
 instance.update(ciphertext, message)
 ```
-Encrypt the next message.
+Encrypts the next message.
 
 ## `instance.final`
 ``` js
 instance.final()
 ```
-Finalize the stream. Zeros out internal state.
+Finalizes the stream. Zeros out internal state.
 
 
 [js]: /docusaurus/img/icon_js.svg

@@ -24,7 +24,7 @@ var bool = sodium.crypto_core_ed25519_is_valid_point(p)
 
 * `p` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 
-Returns `true` or `false`
+Returns `true` or `false`.
 ***
 ## `crypto_core_ed25519_from_uniform`
 ![sodium-node][node]
@@ -43,19 +43,19 @@ The point is guaranteed to be on the main subgroup.
 ``` js
 sodium.crypto_scalarmult_ed25519(q, n, p)
 ```
-Multiply point `p` by scalar `n` and store its compressed representation in `q`.
+Multiplies point `p` by scalar `n` and stores its compressed representation in `q`.
 * `q` must be a `buffer` of at least `crypto_scalarmult_ed25519_BYTES` bytes
 * `n` must be a `buffer` of at least `crypto_scalarmult_ed25519_SCALARBYTES` bytes
 * `p` must be a `buffer` of at least `crypto_scalarmult_ed25519_BYTES` bytes
 
-Note this function will throw if `n` is zero or `p` is an invalid curve point.
+Note this function will throw, if `n` is zero or `p` is an invalid curve point.
 ***
 ## `crypto_scalarmult_ed25519_base`
 ![sodium-node][node]
 ``` js
 sodium.crypto_scalarmult_ed25519_base(q, n)
 ```
-Multiply the basepoint by scalar `n` and store its compressed representation in `q`. Note that `n` will be clamped.
+Multiplies the base point by scalar `n` and stores its compressed representation in `q`. Note that `n` will be clamped.
 * `q` must be a `buffer` of at least `crypto_scalarmult_ed25519_BYTES` bytes
 * `n` must be a `buffer` of at least `crypto_scalarmult_ed25519_SCALARBYTES` bytes
 
@@ -66,54 +66,54 @@ Note this function will throw if `n` is zero.
 ``` js
 sodium.crypto_scalarmult_ed25519_noclamp(q, n, p)
 ```
-Multiply point `p` by scalar `n` and store its compressed representation in `q`. This version does not clamp.
+Multiplies point `p` by scalar `n` and stores its compressed representation in `q`. This version does not clamp.
 * `q` must be a `buffer` of at least `crypto_scalarmult_ed25519_BYTES` bytes
 * `n` must be a `buffer` of at least `crypto_scalarmult_ed25519_SCALARBYTES` bytes
 * `p` must be a `buffer` of at least `crypto_scalarmult_ed25519_BYTES` bytes
 
-Note this function will throw if `n` is zero or `p` is an invalid curve point.
+Note this function will throw, if `n` is zero or `p` is an invalid curve point.
 ***
 ## `crypto_scalarmult_ed25519_base_noclamp`
 ![sodium-node][node]
 ``` js
 sodium.crypto_scalarmult_ed25519_base_noclamp(q, n)
 ```
-Multiply the basepoint by scalar `n` and store its compressed representation in `q`. This version does not clamp.
+Multiplies the base point by scalar `n` and stores its compressed representation in `q`. This version does not clamp.
 * `q` must be a `buffer` of at least `crypto_scalarmult_ed25519_BYTES` bytes
 * `n` must be a `buffer` of at least `crypto_scalarmult_ed25519_SCALARBYTES` bytes
 
-Note this function will throw if `n` is zero.
+Note this function will throw, if `n` is zero.
 ***
 ## `crypto_core_ed25519_add`
 ![sodium-node][node]
 ``` js
 sodium.crypto_core_ed25519_add(r, p, q)
 ```
-Add point `q` to `p`, storing the result to `r`.
+Adds point `q` to `p` and stores the result in `r`.
 * `r` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 * `p` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 * `q` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 
-Will throw if `p`, `q` are not valid curve points
+Note this function will throw, if `p`, `q` are not valid curve points
 ***
 ## `crypto_core_ed25519_sub`
 ![sodium-node][node]
 ``` js
 sodium.crypto_core_ed25519_sub(r, p, q)
 ```
-Subtract point `q` to `p`, storing the result to `r`.
+Subtracts point `q` to `p` and stores the result in `r`.
 * `r` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 * `p` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 * `q` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 
-Will throw if `p`, `q` are not valid curve points
+Note this function will throw, if `p`, `q` are not valid curve points.
 ***
 ## `crypto_core_ed25519_scalar_random`
 ![sodium-node][node]
 ``` js
 sodium.crypto_core_ed25519_scalar_random(r)
 ```
-Generate random scalar in `]0..L[`, storing it in `r`.
+Generates random scalar in `]0..L[` and stores the result in `r`.
 * `r` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 
 ***
@@ -122,7 +122,7 @@ Generate random scalar in `]0..L[`, storing it in `r`.
 ``` js
 sodium.crypto_core_ed25519_scalar_reduce(r, s)
 ```
-Reduce `s mod L`, storing it in `r`.
+Reduces `s mod L` and stores the result in `r`.
 * `r` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `s` must be a `buffer` of at least `crypto_core_ed25519_NONREDUCEDSCALARBYTES` bytes
 
@@ -132,7 +132,7 @@ Reduce `s mod L`, storing it in `r`.
 ``` js
 sodium.crypto_core_ed25519_scalar_invert(recip, s)
 ```
-Find `recip` such that `s * recip = 1 (mod L)`, storing it in `recip`.
+Finds `recip` such that `s * recip = 1 (mod L)` and stores the result in `recip`.
 * `recip` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `s` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 
@@ -142,7 +142,7 @@ Find `recip` such that `s * recip = 1 (mod L)`, storing it in `recip`.
 ``` js
 sodium.crypto_core_ed25519_scalar_negate(neg, s)
 ```
-Find `neg` such that `s + neg = 0 (mod L)`, storing it in `recip`.
+Finds `neg` such that `s + neg = 0 (mod L)` and stores the result in `recip`.
 * `recip` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `s` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 
@@ -152,7 +152,7 @@ Find `neg` such that `s + neg = 0 (mod L)`, storing it in `recip`.
 ``` js
 sodium.crypto_core_ed25519_scalar_complement(comp, s)
 ```
-Find `comp` such that `s + comp = 1 (mod L)`, storing it in `recip`.
+Finds `comp` such that `s + comp = 1 (mod L)` and stores the result in `recip`.
 * `comp` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `s` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 
@@ -162,7 +162,7 @@ Find `comp` such that `s + comp = 1 (mod L)`, storing it in `recip`.
 ``` js
 sodium.crypto_core_ed25519_scalar_add(z, x, y)
 ```
-Add `x` and `y` such that `x + y = z (mod L)`, storing it in `z`.
+Adds `x` and `y` such that `x + y = z (mod L)` and stores the result in `z`.
 * `x` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `y` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `z` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
@@ -173,7 +173,7 @@ Add `x` and `y` such that `x + y = z (mod L)`, storing it in `z`.
 ``` js
 sodium.crypto_core_ed25519_scalar_sub(z, x, y)
 ```
-Subtract `x` and `y` such that `x - y = z (mod L)`, storing it in `z`.
+Subtracts `x` and `y` such that `x - y = z (mod L)` and stores the result in `z`.
 * `x` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `y` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `z` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes

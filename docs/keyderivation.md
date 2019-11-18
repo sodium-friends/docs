@@ -11,7 +11,7 @@ Bindings for the crypto_kdf API. [See the libsodium crypto_kdf docs for more inf
 ``` js
 sodium.crypto_kdf_keygen(key)
 ```
-Generate a new master key.
+Generates a new master key.
 * `key` should be a `buffer` of length `crypto_kdf_KEYBYTES`
 
 ***
@@ -20,7 +20,7 @@ Generate a new master key.
 ``` js
 sodium.crypto_kdf_derive_from_key(subkey, subkeyId, context, key)
 ```
-Derive a new key from a master key.
+Derives a new key from a master key.
 * `subkey` should be a `buffer` between `crypto_kdf_BYTES_MIN` and `crypto_kdf_BYTES_MAX`
 * `subkeyId` should be an integer
 * `context` should be a `buffer` of length `crypto_kdf_CONTEXTBYTES`

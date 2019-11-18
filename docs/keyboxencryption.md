@@ -11,10 +11,10 @@ Bindings for the crypto_box API. [See the libsodium crypto_box docs for more inf
 ``` js
 sodium.crypto_box_seed_keypair(publicKey, secretKey, seed)
 ```
-Create a new keypair based on a `seed`.
+Creates a new keypair based on a `seed`.
 * `publicKey` should be a `buffer` of length `crypto_box_PUBLICKEYBYTES`
 * `secretKey` should be a `buffer` of length `crypto_box_SECRETKEYBYTES`
-* `seed` should be a buffer of length `crypto_box_SEEDBYTES`
+* `seed` should be a `buffer` of length `crypto_box_SEEDBYTES`
 
 The generated public and secret key will be stored in `buffer`'s.
 ***
@@ -23,7 +23,7 @@ The generated public and secret key will be stored in `buffer`'s.
 ``` js
 sodium.crypto_box_keypair(publicKey, secretKey)
 ```
-Create a new keypair.
+Creates a new keypair.
 * `publicKey` should be a `buffer` of length `crypto_box_PUBLICKEYBYTES`
 * `secretKey` should be a `buffer` of length `crypto_box_SECRETKEYBYTES`
 
@@ -34,7 +34,7 @@ The generated public and secret key will be stored in `buffer`'s.
 ``` js
 sodium.crypto_box_detached(ciphertext, mac, message, nonce, publicKey, secretKey)
 ```
-Encrypt a message.
+Encrypts a message.
 * `ciphertext` should be a `buffer` of length `message.length`
 * `mac` should be a `buffer` of length `crypto_box_MACBYTES`
 * `message` should be a `buffer` of any length
@@ -49,7 +49,7 @@ The encrypted message will be stored in `ciphertext` and the authentification co
 ``` js
 sodium.crypto_box_easy(ciphertext, message, nonce, publicKey, secretKey)
 ```
-Same as `crypto_box_detached` except it encodes the `mac` in the message.
+Same as `crypto_box_detached`, except that it encodes the `mac` in the message.
 * `ciphertext` should be a `buffer` of length `message.length + crypto_box_MACBYTES`
 * `message` should be a `buffer` of any length
 * `nonce` should be a `buffer` of length `crypto_box_NONCEBYTES`
@@ -63,7 +63,7 @@ The encrypted message and authentification code will be stored in `ciphertext`.
 ``` js
 var bool = sodium.crypto_box_open_detached(message, ciphertext, mac, nonce, publicKey, secretKey)
 ```
-Decrypt a message.
+Decrypts a message.
 * `message` should be a `buffer` of length `ciphertext.length`
 * `mac` should be a `buffer` of length `crypto_box_MACBYTES`
 * `ciphertext` should be a `buffer` of any length
@@ -80,7 +80,7 @@ The decrypted message will be stored in `message`.
 ``` js
 var bool = sodium.crypto_box_open_easy(message, ciphertext, nonce, publicKey, secretKey)
 ```
-Decrypt a message encoded with the easy method.
+Decrypts a message encoded with the easy method.
 * `message` should be a `buffer` of length `ciphertext.length - crypto_box_MACBYTES`
 * `ciphertext` should be a `buffer` of length at least `crypto_box_MACBYTES`
 * `nonce` should be a `buffer` of length `crypto_box_NONCEBYTES`

@@ -4,16 +4,16 @@ title: Helpers
 sidebar_label: Helpers
 ---
 
-Bindings to various helper functions. [See the libsodium helpers docs for more information](https://download.libsodium.org/doc/helpers/).
+Bindings for various helper functions. [See the libsodium helpers docs for more information](https://download.libsodium.org/doc/helpers/).
 ***
 ## `sodium_memcmp`
 ![sodium-node][node]
 ``` js
 var bool = sodium.sodium_memcmp(b1, b2)
 ```
-Compare `b1` with `b2`, in **constant-time** for `b1.length`.
-* `b1` must be `buffer`
-* `b2` must be `buffer` and must be `b1.length` bytes
+Compares `b1` with `b2`, in **constant-time** for `b1.length`.
+* `b1` must be a `buffer`
+* `b2` must be a `buffer` and must be `b1.length` bytes
 
 Returns `true` when equal, otherwise `false`.
 ***
@@ -22,11 +22,11 @@ Returns `true` when equal, otherwise `false`.
 ``` js
 var direction = sodium.sodium_compare(b1, b2)
 ```
-Compare `b1` with `b2`, regarding either as little-endian encoded number.
-* `b1` must be `buffer`
-* `b2` must be `buffer` and must be `b1.length` bytes
+Compares `b1` with `b2`, regarding either as little-endian encoded number.
+* `b1` must be a `buffer`
+* `b2` must be a `buffer` and must be `b1.length` bytes
 
-Returns `1`, `0`, or `-1` on whether `b1`is greater, equal, or less than `b2`. This is the same scheme as `Array.prototype.sort` expect.
+Returns `1`, `0`, or `-1` on whether `b1` is greater than, equal to, or less than `b2`. This is the same scheme as `Array.prototype.sort` expect.
 ***
 ## `sodium_add`
 ![sodium-node][node]
@@ -34,8 +34,8 @@ Returns `1`, `0`, or `-1` on whether `b1`is greater, equal, or less than `b2`. T
 sodium.sodium_add(a, b)
 ```
 Adds `b` to `a` (wrapping), regarding either as little-endian encoded number, and writing the result into `a`.
-* `a` must be `buffer`
-* `b` must be `buffer` and must be `a.length` bytes
+* `a` must be a `buffer`
+* `b` must be a `buffer` and must be `a.length` bytes
 ***
 ## `sodium_sub`
 ![sodium-node][node]
@@ -43,8 +43,8 @@ Adds `b` to `a` (wrapping), regarding either as little-endian encoded number, an
 sodium.sodium_sub(a, b)
 ```
 Subtracts `b` from `a` (wrapping), regarding either as little-endian encoded number, and writing the result into `a`.
-* `a` must be `buffer`
-* `b` must be `buffer` and must be `a.length` bytes
+* `a` must be a `buffer`
+* `b` must be a `buffer` and must be `a.length` bytes
 ***
 ## `sodium_increment`
 ![sodium-node][node]
@@ -52,7 +52,7 @@ Subtracts `b` from `a` (wrapping), regarding either as little-endian encoded num
 sodium.sodium_increment(buf)
 ```
 Increments `buf` as a little-endian number. This operation is **constant-time** for the length of `buf`.
-* `buf` must be `buffer`
+* `buf` must be a `buffer`
 ***
 ## `sodium_is_zero`
 ![sodium-node][node]

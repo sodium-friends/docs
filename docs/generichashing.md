@@ -11,7 +11,7 @@ Bindings for the crypto_generichash API. [See the libsodium crypto_generichash d
 ``` js
 sodium.crypto_generichash(output, input, [key])
 ```
-Hash a value with an optional key using the `generichash` method.
+Hashes a value with an optional key using the `generichash` method.
 * `output` should be a `buffer` of length within `crypto_generichash_BYTES_MIN` - `crypto_generichash_BYTES_MAX`
 * `input` should be a `buffer` of any length
 * `key` is an optional `buffer` of length within `crypto_generichash_KEYBYTES_MIN` - `crypto_generichash_KEYBYTES_MAX`
@@ -25,29 +25,29 @@ Also exposes `crypto_generichash_BYTES` and `crypto_generichash_KEYBYTES` that c
 ``` js
 sodium.crypto_generichash_batch(output, inputArray, [key])
 ```
-Same as `crypto_generichash` except this hashes an array of `buffer`'s instead of a single one.
+Same as `crypto_generichash`, except that this hashes an array of `buffer`'s instead of a single one.
 ***
 ## `crypto_generichash_instance`
 ![sodium-node][node] ![sodium-javascript][js]
 ``` js
 var instance = sodium.crypto_generichash_instance([key], [outputLength])
 ```
-Create a `generichash` instance that can hash a stream of input `buffer`'s.
+Creates a `generichash` instance that can hash a stream of input `buffer`'s.
 * `key` is an optional `buffer` as above
-* `outputLength` the `buffer` size of your output
+* `outputLength` is the `buffer` size of your output
 
 ## `instance.update`
 ``` js
 instance.update(input)
 ```
-Update the instance with a new piece of data.
+Updates the instance with a new piece of data.
 * `input` should be a `buffer` of any size
 
 ## `instance.final`
 ``` js
 instance.final(output)
 ```
-Finalize the instance.
+Finalizes the instance.
 * `output` should be a `buffer` as above with the same length you gave when creating the instance
 
 The generated hash is stored in `output`.
