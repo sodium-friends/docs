@@ -11,6 +11,9 @@ Bindings for the crypto_shorthash API. [See the libsodium crypto_shorthash docs 
 * `crypto_shorthash_BYTES`
 * `crypto_shorthash_KEYBYTES`
 
+**String constants (string)**
+* `crypto_shorthash_PRIMITIVE`
+
 ***
 ## `crypto_shorthash`
 ![sodium-native][node] ![sodium-javascript][js]

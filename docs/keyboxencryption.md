@@ -14,6 +14,9 @@ Bindings for the crypto_box API. [See the libsodium crypto_box docs for more inf
 * `crypto_box_MACBYTES`
 * `crypto_box_NONCEBYTES`
 
+**String constants (string)**
+* `crypto_box_PRIMITIVE`
+
 ***
 ## `crypto_box_seed_keypair`
 ![sodium-native][node]

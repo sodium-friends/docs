@@ -12,6 +12,9 @@ Bindings for the crypto_secretbox API. [See the libsodium crypto_secretbox docs 
 * `crypto_secretbox_NONCEBYTES`
 * `crypto_secretbox_KEYBYTES`
 
+**String constants (string)**
+* `crypto_secretbox_PRIMITIVE`
+
 ***
 ## `crypto_secretbox_detached`
 ![sodium-native][node] ![sodium-javascript][js]

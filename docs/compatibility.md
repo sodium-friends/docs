@@ -24,7 +24,7 @@ sidebar_label: Compatibility
 | [`crypto_auth`](authentication#crypto_auth)                                                                            | ![sodium-native][node] |                          |
 | [`crypto_auth_BYTES`](authentication#constants)                                                                        | ![sodium-native][node] |                          |
 | [`crypto_auth_KEYBYTES`](authentication#constants)                                                                     | ![sodium-native][node] |                          |
-| [`crypto_auth_PRIMITIVE`]                                                                                              | ![sodium-native][node] |                          |
+| [`crypto_auth_PRIMITIVE`](authentication#constants)                                                                    | ![sodium-native][node] |                          |
 | [`crypto_auth_verify`](authentication#crypto_auth_verify)                                                              | ![sodium-native][node] |                          |
 | [`crypto_box_detached`](keyboxencryption#crypto_box_detached)                                                          | ![sodium-native][node] |                          |
 | [`crypto_box_easy`](keyboxencryption#crypto_box_easy)                                                                  | ![sodium-native][node] |                          |
@@ -33,7 +33,7 @@ sidebar_label: Compatibility
 | [`crypto_box_NONCEBYTES`](keyboxencryption#constants)                                                                  | ![sodium-native][node] |                          |
 | [`crypto_box_open_detached`](keyboxencryption#crypto_box_open_detached)                                                | ![sodium-native][node] |                          |
 | [`crypto_box_open_easy`](keyboxencryption#crypto_box_open_easy)                                                        | ![sodium-native][node] |                          |
-| [`crypto_box_PRIMITIVE`]                                                                                               | ![sodium-native][node] |                          |
+| [`crypto_box_PRIMITIVE`](keyboxencryption#constants)                                                                   | ![sodium-native][node] |                          |
 | [`crypto_box_PUBLICKEYBYTES`](keyboxencryption#constants)                                                              | ![sodium-native][node] |                          |
 | [`crypto_box_seal`](sealedboxencryption#crypto_box_seal)                                                               | ![sodium-native][node] |                          |
 | [`crypto_box_seal_open`](sealedboxencryption#crypto_box_seal_open)                                                     | ![sodium-native][node] |                          |
@@ -43,10 +43,10 @@ sidebar_label: Compatibility
 | [`crypto_box_SEEDBYTES`](keyboxencryption#constants)                                                                   | ![sodium-native][node] |                          |
 | [`crypto_core_ed25519_add`](finitefieldarithmetic#crypto_core_ed25519_add)                                             | ![sodium-native][node] |                          |
 | [`crypto_core_ed25519_BYTES`](finitefieldarithmetic#constants)                                                         | ![sodium-native][node] |                          |
-| [`crypto_core_ed25519_from_uniform`]                                                                                   | ![sodium-native][node] |                          |
-| [`crypto_core_ed25519_is_valid_point`]                                                                                 | ![sodium-native][node] |                          |
+| [`crypto_core_ed25519_from_uniform`](finitefieldarithmetic#crypto_core_ed25519_from_uniform)                           | ![sodium-native][node] |                          |
+| [`crypto_core_ed25519_is_valid_point`](finitefieldarithmetic#crypto_core_ed25519_is_valid_point)                       | ![sodium-native][node] |                          |
 | [`crypto_core_ed25519_sub`](finitefieldarithmetic#crypto_core_ed25519_sub)                                             | ![sodium-native][node] |                          |
-| [`crypto_core_ed25519_UNIFORMBYTES`]                                                                                   | ![sodium-native][node] |                          |
+| [`crypto_core_ed25519_UNIFORMBYTES`](finitefieldarithmetic#constants)                                                  | ![sodium-native][node] |                          |
 | [`crypto_generichash`](generichashing#crypto_generichash)                                                              | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_generichash_BYTES`](generichashing#crypto_constants)                                                          | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_generichash_BYTES_MAX`](generichashing#constants)                                                             | ![sodium-native][node] | ![sodium-javascript][js] |
@@ -54,10 +54,10 @@ sidebar_label: Compatibility
 | [`crypto_generichash_KEYBYTES`](generichashing#constants)                                                              | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_generichash_KEYBYTES_MAX`](generichashing#constants)                                                          | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_generichash_KEYBYTES_MIN`](generichashing#constants)                                                          | ![sodium-native][node] | ![sodium-javascript][js] |
-| [`crypto_generichash_PRIMITIVE`]                                                                                       | ![sodium-native][node] | ![sodium-javascript][js] |
-| [`crypto_hash`]                                                                                                        | ![sodium-native][node] |                          |
-| [`crypto_hash_BYTES`]                                                                                                  | ![sodium-native][node] |                          |
-| [`crypto_hash_PRIMITIVE`]                                                                                              | ![sodium-native][node] |                          |
+| [`crypto_generichash_PRIMITIVE`](generichashing#constants)                                                             | ![sodium-native][node] | ![sodium-javascript][js] |
+| [`crypto_hash`](sha#crypto_hash)                                                                                       | ![sodium-native][node] |                          |
+| [`crypto_hash_BYTES`](sha#constants)                                                                                   | ![sodium-native][node] |                          |
+| [`crypto_hash_PRIMITIVE`](sha#constants)                                                                               | ![sodium-native][node] |                          |
 | [`crypto_hash_sha256`](sha#crypto_hash_sha256)                                                                         | ![sodium-native][node] |                          |
 | [`crypto_hash_sha256_BYTES`](sha#constants)                                                                            | ![sodium-native][node] |                          |
 | [`crypto_hash_sha512`](sha#crypto_hash_sha512)                                                                         | ![sodium-native][node] |                          |
@@ -68,10 +68,10 @@ sidebar_label: Compatibility
 | [`crypto_kdf_derive_from_key`](keyderivation#crypto_kdf_derive_from_key)                                               | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_kdf_KEYBYTES`](keyderivation#constants)                                                                       | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_kdf_keygen`](keyderivation#crypto_kdf_keygen)                                                                 | ![sodium-native][node] | ![sodium-javascript][js] |
-| [`crypto_kdf_PRIMITIVE`]                                                                                               | ![sodium-native][node] | ![sodium-javascript][js] |
+| [`crypto_kdf_PRIMITIVE`](keyderivation#constants)                                                                      | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_kx_client_session_keys`](keyexchange#crypto_kx_client_session_keys)                                           | ![sodium-native][node] |                          |
 | [`crypto_kx_keypair`](keyexchange#crypto_kx_keypair)                                                                   | ![sodium-native][node] |                          |
-| [`crypto_kx_PRIMITIVE`]                                                                                                | ![sodium-native][node] |                          |
+| [`crypto_kx_PRIMITIVE`](keyexchange#constants)                                                                         | ![sodium-native][node] |                          |
 | [`crypto_kx_PUBLICKEYBYTES`](keyexchange#constants)                                                                    | ![sodium-native][node] |                          |
 | [`crypto_kx_SECRETKEYBYTES`](keyexchange#constants)                                                                    | ![sodium-native][node] |                          |
 | [`crypto_kx_seed_keypair`](keyexchange#crypto_kx_seed_keypair)                                                         | ![sodium-native][node] |                          |
@@ -81,7 +81,7 @@ sidebar_label: Compatibility
 | [`crypto_onetimeauth`](onetimeauthentication#crypto_onetimeauth)                                                       | ![sodium-native][node] |                          |
 | [`crypto_onetimeauth_BYTES`](onetimeauthentication#constants)                                                          | ![sodium-native][node] |                          |
 | [`crypto_onetimeauth_KEYBYTES`](onetimeauthentication#constants)                                                       | ![sodium-native][node] |                          |
-| [`crypto_onetimeauth_PRIMITIVE`]                                                                                       | ![sodium-native][node] |                          |
+| [`crypto_onetimeauth_PRIMITIVE`](onetimeauthentication#constants)                                                      | ![sodium-native][node] |                          |
 | [`crypto_onetimeauth_verify`](onetimeauthentication#crypto_onetimeauth_verify)                                         | ![sodium-native][node] |                          |
 | [`crypto_pwhash`](passwordhashing#crypto_pwhash)                                                                       | ![sodium-native][node] |                          |
 | [`crypto_pwhash_ALG_ARGON2I13`](passwordhashing#crypto_pwhash)                                                         | ![sodium-native][node] |                          |
@@ -89,13 +89,13 @@ sidebar_label: Compatibility
 | [`crypto_pwhash_ALG_DEFAULT`](passwordhashing#crypto_pwhash)                                                           | ![sodium-native][node] |                          |
 | [`crypto_pwhash_BYTES_MAX`](passwordhashing#constants)                                                                 | ![sodium-native][node] |                          |
 | [`crypto_pwhash_BYTES_MIN`](passwordhashing#constants)                                                                 | ![sodium-native][node] |                          |
-| [`crypto_pwhash_PRIMITIVE`]                                                                                            | ![sodium-native][node] |                          |
+| [`crypto_pwhash_PRIMITIVE`](passwordhashing#constants)                                                                 | ![sodium-native][node] |                          |
 | [`crypto_pwhash_SALTBYTES`](passwordhashing#constants)                                                                 | ![sodium-native][node] |                          |
 | [`crypto_pwhash_str`](passwordhashing#crypto_pwhash_str)                                                               | ![sodium-native][node] |                          |
 | [`crypto_pwhash_str_needs_rehash`](passwordhashing#crypto_pwhash_str_needs_rehash)                                     | ![sodium-native][node] |                          |
 | [`crypto_pwhash_str_verify`](passwordhashing#crypto_pwhash_str_verify)                                                 | ![sodium-native][node] |                          |
 | [`crypto_pwhash_STRBYTES`](passwordhashing#constants)                                                                  | ![sodium-native][node] |                          |
-| [`crypto_pwhash_STRPREFIX`]                                                                                            | ![sodium-native][node] |                          |
+| [`crypto_pwhash_STRPREFIX`](passwordhasing#constants)                                                                  | ![sodium-native][node] |                          |
 | [`crypto_scalarmult`](finitefieldarithmetic)                                                                           | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_scalarmult_base`](finitefieldarithmetic)                                                                      | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_scalarmult_BYTES`](finitefieldarithmetic#constants)                                                           | ![sodium-native][node] | ![sodium-javascript][js] |
@@ -103,7 +103,7 @@ sidebar_label: Compatibility
 | [`crypto_scalarmult_ed25519_base`](finitefieldarithmetic#crypto_scalarmult_ed25519_base)                               | ![sodium-native][node] |                          |
 | [`crypto_scalarmult_ed25519_BYTES`](finitefieldarithmetic#constants)                                                   | ![sodium-native][node] |                          |
 | [`crypto_scalarmult_ed25519_SCALARBYTES`](finitefieldarithmetic#constants)                                             | ![sodium-native][node] |                          |
-| [`crypto_scalarmult_PRIMITIVE`]                                                                                        | ![sodium-native][node] |                          |
+| [`crypto_scalarmult_PRIMITIVE`](finitefieldarithmetic#constants)                                                       | ![sodium-native][node] |                          |
 | [`crypto_scalarmult_SCALARBYTES`](finitefieldarithmetic#constants)                                                     | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_secretbox_detached`](secretkeyboxencryption#crypto_secretbox_detached)                                        | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_secretbox_easy`](secretkeyboxencryption#crypto_secretbox_easy)                                                | ![sodium-native][node] | ![sodium-javascript][js] |
@@ -112,7 +112,7 @@ sidebar_label: Compatibility
 | [`crypto_secretbox_NONCEBYTES`](secretkeyboxencryption#constants)                                                      | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_secretbox_open_detached`](secretkeyboxencryption#crypto_secretbox_open_detached)                              | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_secretbox_open_easy`](secretkeyboxencryption#crypto_secretbox_open_easy)                                      | ![sodium-native][node] | ![sodium-javascript][js] |
-| [`crypto_secretbox_PRIMITIVE`]                                                                                         | ![sodium-native][node] |                          |
+| [`crypto_secretbox_PRIMITIVE`](secretkeyboxencryption#constants)                                                       | ![sodium-native][node] |                          |
 | [`crypto_secretstream_xchacha20poly1305_ABYTES`](streamencryption#constants)                                           | ![sodium-native][node] |                          |
 | [`crypto_secretstream_xchacha20poly1305_HEADERBYTES`](streamencryption#constants)                                      | ![sodium-native][node] |                          |
 | [`crypto_secretstream_xchacha20poly1305_init_pull`](streamencryption#crypto_secretstream_xchacha20poly1305_init_pull)  | ![sodium-native][node] |                          |
@@ -126,7 +126,7 @@ sidebar_label: Compatibility
 | [`crypto_shorthash`](shorthashes#crypto_shorthash)                                                                     | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_shorthash_BYTES`](shorthashes#constants)                                                                      | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_shorthash_KEYBYTES`](shorthashes#constants)                                                                   | ![sodium-native][node] | ![sodium-javascript][js] |
-| [`crypto_shorthash_PRIMITIVE`]                                                                                         | ![sodium-native][node] | ![sodium-javascript][js] |
+| [`crypto_shorthash_PRIMITIVE`](shorthashes#constants)                                                                  | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_sign`](signing#crypto_sign)                                                                                   | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_sign_BYTES`](signing#constants)                                                                               | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_sign_detached`](signing#crypt_sign_detached)                                                                  | ![sodium-native][node] | ![sodium-javascript][js] |
@@ -145,7 +145,7 @@ sidebar_label: Compatibility
 | [`crypto_stream_chacha20_xor`](nonauthstreamingencryption#crypto_stream_chacha20_xor)                                  | ![sodium-native][node] |                          |
 | [`crypto_stream_KEYBYTES`](nonauthstreamingencryption#constants)                                                       | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_stream_NONCEBYTES`](nonauthstreamingencryption#constants)                                                     | ![sodium-native][node] | ![sodium-javascript][js] |
-| [`crypto_stream_PRIMITIVE`]                                                                                            | ![sodium-native][node] | ![sodium-javascript][js] |
+| [`crypto_stream_PRIMITIVE`](nonauthstreamingencryption#constants)                                                      | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`crypto_stream_xor`](nonauthstreamingencryption#crypto_stream_xor)                                                    | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`randombytes_buf`](generatingrandomdata#randombytes_buf)                                                              | ![sodium-native][node] | ![sodium-javascript][js] |
 | [`randombytes_buf_deterministic`](generatingrandomdata#randombytes_buf_deterministic)                                  | ![sodium-native][node] |                          |

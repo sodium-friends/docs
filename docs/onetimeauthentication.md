@@ -11,6 +11,9 @@ Bindings for the crypto_onetimeauth API. [See the libsodium crypto_onetimeauth d
 * `crypto_onetimeauth_BYTES`
 * `crypto_onetimeauth_KEYBYTES`
 
+**String constants (string)**
+* `crypto_onetimeauth_PRIMITIVE`
+
 ***
 ## `crypto_onetimeauth`
 ![sodium-native][node]

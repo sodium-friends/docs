@@ -16,8 +16,10 @@ Bindings for the crypto_pwhash API. [See the libsodium crypto_pwhash docs for mo
 * `crypto_pwhash_OPSLIMIT_MAX`
 * `crypto_pwhash_MEMLIMIT_MIN`
 * `crypto_pwhash_MEMLIMIT_MAX`
+* `crypto_pwhash_STRPREFIX`
+
 **String constants (string)**
-*
+* `crypto_pwhash_PRIMITIVE`
 
 ***
 ## `crypto_pwhash`
@@ -109,7 +111,7 @@ Just like `crypto_pwhash_str_verify`, but this will run password hashing on a se
 # Password Hashing (Scrypt)
 Bindings for the crypto_pwhash_scryptsalsa208sha256 API. [See the libsodium crypto_pwhash_scryptsalsa208sha256 docs for more information](https://download.libsodium.org/doc/advanced/scrypt).
 ***
-## Constants2
+## Constants (Scrypt)
 **Buffer lengths (integer)**
 * `crypto_pwhash_scryptsalsa208sha256_BYTES_MIN`
 * `crypto_pwhash_scryptsalsa208sha256_BYTES_MAX`

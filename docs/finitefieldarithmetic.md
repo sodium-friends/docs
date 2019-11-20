@@ -7,12 +7,17 @@ sidebar_label: Finite Field Arithmetic
 Bindings for the crypto_scalarmult_ed25519 and crypto_core_ed25519 API. [See the libsodium docs for more information](https://download.libsodium.org/doc/advanced/point-arithmetic).
 
 ### Constants
+**Buffer lengths (integer)**
 * `crypto_scalarmult_ed25519_BYTES`
 * `crypto_scalarmult_ed25519_SCALARBYTES`
 * `crypto_core_ed25519_BYTES`
 * `crypto_core_ed25519_UNIFORMBYTES`
 * `crypto_core_ed25519_SCALARBYTES`
 * `crypto_core_ed25519_NONREDUCEDSCALARBYTES`
+* `crypto_core_ed25519_UNIFORMBYTES`
+
+**String constants (string)**
+* `crypto_scalarmult_PRIMITIVE`
 
 ***
 ## `crypto_core_ed25519_is_valid_point`
@@ -20,7 +25,7 @@ Bindings for the crypto_scalarmult_ed25519 and crypto_core_ed25519 API. [See the
 ``` js
 var bool = sodium.crypto_core_ed25519_is_valid_point(p)
 ```
->The crypto_core_ed25519_is_valid_point() function checks that p represents a point on the edwards25519 curve, in canonical >form, on the main subgroup, and that the point doesn't have a small order.
+Checks that `p` represents a point on the edwards25519 curve, in canonical form, on the main subgroup, and that the point does not have a small order.
 
 * `p` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes
 
@@ -31,7 +36,7 @@ Returns `true` or `false`.
 ``` js
 sodium.crypto_core_ed25519_from_uniform(p, r)
 ```
-Maps a `crypto_core_ed25519_UNIFORMBYTES` bytes vector (usually the output of a hash function) to a a valid curve point and stores its compressed representation in `p`.
+Maps a `crypto_core_ed25519_UNIFORMBYTES` bytes vector (usually the output of a hash function) to a valid curve point and stores its compressed representation in `p`.
 
 The point is guaranteed to be on the main subgroup.
 * `p` must be a `buffer` of at least `crypto_core_ed25519_BYTES` bytes

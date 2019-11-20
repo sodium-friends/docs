@@ -13,6 +13,9 @@ Bindings for the crypto_kx API. [See the libsodium crypto_kx docs for more infor
 * `crypto_kx_SEEDBYTES`
 * `crypto_kx_SESSIONKEYBYTES`
 
+**String constants (string)**
+* `crypto_kx_PRIMITIVE`
+
 ***
 ## `crypto_kx_keypair`
 ![sodium-native][node]

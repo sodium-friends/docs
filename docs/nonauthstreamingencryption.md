@@ -11,6 +11,9 @@ Bindings for the crypto_stream API. [See the libsodium crypto_stream docs for mo
 * `crypto_stream_NONCEBYTES`
 * `crypto_stream_KEYBYTES`
 
+**String constants (string)**
+* `crypto_stream_PRIMITIVE`
+
 ***
 ## `crypto_stream`
 ![sodium-native][node] ![sodium-javascript][js]

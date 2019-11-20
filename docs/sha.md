@@ -6,8 +6,24 @@ sidebar_label: SHA
 
 ## Constants
 **Buffer lengths (integer)**
+* `crypto_hash_BYTES`
 * `crypto_hash_sha256_BYTES`
 * `crypto_hash_sha512_BYTES`
+
+**String constants (string)**
+* `crypto_hash_PRIMITIVE`
+
+***
+## `crypto_hash`
+![sodium-native][node]
+``` js
+sodium.crypto_hash_(output, input)
+```
+Hashes a value to a short hash based on a key.
+* `output` should be a `buffer` of length `crypto_hash_BYTES`
+* `input` should be a `buffer` of any size
+
+The generated short hash is stored in `output`.
 
 ***
 ## `crypto_hash_sha256`

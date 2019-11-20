@@ -15,6 +15,9 @@ Bindings for the crypto_generichash API. [See the libsodium crypto_generichash d
 * `crypto_generichash_KEYBYTES_MIN`
 * `crypto_generichash_KEYBYTES_MAX`
 
+**String constants (string)**
+* `crypto_generichash_PRIMITIVE`
+
 ***
 ## `crypto_generichash`
 ![sodium-native][node] ![sodium-javascript][js]

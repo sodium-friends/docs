@@ -39,7 +39,7 @@ Fills `buffer` with random data.
 sodium.randombytes_buf_deterministic(buffer, seed)
 ```
 Fills `buffer` with random data, generated from `seed`.
-* `seed` must be a `buffer` of length at least `sodium.randombytes_SEEDBYTES`
+* `seed` must be a `buffer` of length at least `randombytes_SEEDBYTES`
 
 
 [js]: /docusaurus/img/icon_js.svg

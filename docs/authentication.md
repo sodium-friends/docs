@@ -11,6 +11,9 @@ Bindings for the crypto_auth API. [See the libsodium crypto_auth docs for more i
 * `crypto_auth_BYTES`
 * `crypto_auth_KEYBYTES`
 
+**String constants (string)**
+* `crypto_auth_PRIMITIVE`
+
 ***
 ## `crypto_auth`
 ![sodium-native][node]

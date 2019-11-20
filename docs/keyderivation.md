@@ -13,6 +13,9 @@ Bindings for the crypto_kdf API. [See the libsodium crypto_kdf docs for more inf
 * `crypto_kdf_BYTES_MAX`
 * `crypto_kdf_CONTEXTBYTES`
 
+**String constants (string)**
+* `crypto_kdf_PRIMITIVE`
+
 ***
 ## `crypto_kdf_keygen`
 ![sodium-native][node] ![sodium-javascript][js]
