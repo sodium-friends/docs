@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Get Started": ["getstarted"],
+    "Get Started": ["getstarted", "otherprojects"],
     "API": ["compatibility", "api", "memoryprotection", "generatingrandomdata", "helpers", "padding", "signing", "generichashing",
     "keyboxencryption", "sealedboxencryption", "secretkeyboxencryption", "aead", "nonauthstreamingencryption", "authentication", "streamencryption", "onetimeauthentication", "passwordhashing", "keyexchange", "diffiehellman", "finitefieldarithmetic", "shorthashes", "keyderivation", "sha", "license"]
   },

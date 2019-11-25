@@ -96,9 +96,7 @@ a {
 }
 
 h2 + p img {
-  vertical-align: middle;
-  width: 32px;
-  margin: 0;
+  display: inline-block;
 }
 
 img[alt="sodium-native"] {
@@ -107,4 +105,8 @@ img[alt="sodium-native"] {
 
 img[alt="sodium-javascript"] {
   width: 32px;
+}
+
+ul img {
+  vertical-align: middle;
 }
