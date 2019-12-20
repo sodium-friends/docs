@@ -31,5 +31,5 @@ Calculates `unpaddedLength` from a padded `buf` with `blocksize`.
 Returns the length of the unpadded data (so you may `.slice` the `buffer` to here).
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

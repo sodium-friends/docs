@@ -22,5 +22,5 @@ Some JavaScript modules using sodium-native. See the full list [here](https://ww
 
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

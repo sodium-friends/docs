@@ -201,6 +201,6 @@ sodium.crypto_pwhash_scryptsalsa208sha256_str_verify_async(str, password, callba
 Just like `crypto_pwhash_scryptsalsa208sha256_str_verify`, but this will run password hashing on a separate worker so it will not block the event loop. `callback(err, bool)` will receive any errors from the hashing but all argument errors will throw. If the verification succeeds bool is `true`, otherwise `false`. Due to an issue with libsodium `err` is currently never set. This function also supports [`async_hook`s](https://nodejs.org/dist/latest/docs/api/async_hooks.html) as the type `sodium-native:crypto_pwhash_scryptsalsa208sha256_str_verify_async`.
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg
 

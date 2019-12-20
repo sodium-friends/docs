@@ -65,5 +65,5 @@ Tests whether `buf` is all zero for `len` bytes. This operation is **constant-ti
 Returns `true` if all `len` bytes are zero, otherwise `false`.
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

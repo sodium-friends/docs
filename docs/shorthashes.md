@@ -28,5 +28,5 @@ Hashes a value to a short hash based on a `key`.
 The generated short hash is stored in `output`.
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

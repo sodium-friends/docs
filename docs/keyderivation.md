@@ -38,5 +38,5 @@ Derives a new key from a master key.
 * `key` should be a `buffer` of length `crypto_kdf_KEYBYTES`
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

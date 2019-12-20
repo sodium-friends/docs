@@ -90,5 +90,5 @@ Decrypts a message with (`npub`, `key`) and optional additional data `ad`.
 Returns nothing, but will throw on in case the MAC cannot be authenticated. Note that in-place encryption is possible.
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

@@ -40,5 +40,5 @@ Verifies a token.
 Returns `true` if the token could be verified. Otherwise `false`.
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

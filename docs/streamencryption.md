@@ -93,5 +93,5 @@ sodium.crypto_secretstream_xchacha20poly1305_rekey(state)
 Rekeys the opaque `state` object.
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

@@ -60,5 +60,5 @@ Generates a session receive and transmission key for a server. The public / secr
 You should use the `rx` to decrypt incoming data and `tx` to encrypt outgoing. If you need to make a one-way or half-duplex channel you can give only one of `rx` or `tx`.
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

@@ -42,5 +42,5 @@ Fills `buffer` with random data, generated from `seed`.
 * `seed` must be a `buffer` of length at least `randombytes_SEEDBYTES`
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

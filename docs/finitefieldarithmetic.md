@@ -184,5 +184,5 @@ Subtracts `x` and `y` such that `x - y = z (mod L)` and stores the result in `z`
 * `z` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

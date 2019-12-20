@@ -104,5 +104,5 @@ Returns `true` if the message could be decrypted. Otherwise `false`.
 The decrypted message will be stored in `message`.
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg

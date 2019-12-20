@@ -115,5 +115,5 @@ Extracts an `ed25519` public key from an `ed25519` secret key.
 * `sk` must be a `buffer` of at least `crypto_sign_SECRETKEYBYTES` bytes
 
 
-[js]: /docusaurus/img/icon_js.svg
-[node]: /docusaurus/img/nodejs-icon.svg
+[js]: /docs/img/icon_js.svg
+[node]: /docs/img/nodejs-icon.svg
