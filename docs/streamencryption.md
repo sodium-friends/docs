@@ -46,7 +46,7 @@ Creates a new stream state. Returns an opaque object used in the next methods.
 sodium.crypto_secretstream_xchacha20poly1305_init_push(state, header, key)
 ```
 Initializes `state` from the writer side with message `header` and encryption `key`. The `header` must be sent or stored with the stream. The `key` must be exchanged securely with the receiving / reading side.
-* `state` should be a `buffer` of length `crypto_secretstream_xchacha20_poly1305_STATEBYTES` bytes
+* `state` should be an opaque state object
 * `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 ***
@@ -56,7 +56,7 @@ Initializes `state` from the writer side with message `header` and encryption `k
 var mlen = sodium.crypto_secretstream_xchacha20poly1305_push(state, ciphertext, message, [ad], tag)
 ```
 Encrypts a message with a certain tag and optional additional data `ad`.
-* `state` should be a `buffer` of length `crypto_secretstream_xchacha20_poly1305_STATEBYTES` bytes
+* `state` should be an opaque state object
 * `ciphertext` should be a `buffer` of length `message.length + crypto_secretstream_xchacha20poly1305_ABYTES`
 * `message` should be a `buffer`
 * `ad` is optional and should be `null` or `buffer`. Included in the computation of authentication tag appended to the message
@@ -70,7 +70,7 @@ Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_
 sodium.crypto_secretstream_xchacha20poly1305_init_pull(state, header, key)
 ```
 Initializes `state` from the reader side with message `header` and encryption `key`. The `header` must be retrieved from somewhere. The `key` must be exchanged securely with the sending / writing side.
-* `state` should be a `buffer` of length `crypto_secretstream_xchacha20_poly1305_STATEBYTES` bytes
+* `state` should be an opaque state object
 * `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `key` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 ***
@@ -80,7 +80,7 @@ Initializes `state` from the reader side with message `header` and encryption `k
 var clen = sodium.crypto_secretstream_xchacha20poly1305_pull(state, message, tag, ciphertext, [ad])
 ```
 Decrypts a message with optional additional data `ad`, and writes message tag to `tag`. Make sure to check this!
-* `state` should be a `buffer` of length `crypto_secretstream_xchacha20_poly1305_STATEBYTES` bytes
+* `state` should be an opaque state object
 * `message` should be a `buffer` of length `ciphertext.length - crypto_secretstream_xchacha20poly1305_ABYTES`
 * `tag` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_TAGBYTES`
 * `ad` is optional and should be `null` or `buffer`. Included in the computation of the authentication tag appended to the message
