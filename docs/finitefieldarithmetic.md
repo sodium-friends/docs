@@ -147,8 +147,8 @@ Finds `recip` such that `s * recip = 1 (mod L)` and stores the result in `recip`
 ``` js
 sodium.crypto_core_ed25519_scalar_negate(neg, s)
 ```
-Finds `neg` such that `s + neg = 0 (mod L)` and stores the result in `recip`.
-* `recip` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
+Finds `neg` such that `s + neg = 0 (mod L)` and stores the result in `neg`.
+* `neg` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 * `s` must be a `buffer` of at least `crypto_core_ed25519_SCALARBYTES` bytes
 
 ***

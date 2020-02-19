@@ -18,24 +18,24 @@ Bindings for the crypto_auth API. [See the libsodium crypto_auth docs for more i
 ## `crypto_auth`
 ![sodium-native][node]
 ``` js
-sodium.crypto_auth(output, input, key)
+sodium.crypto_auth(out, in, k)
 ```
 Creates an authentication token.
-* `output` should be a `buffer` of length `crypto_auth_BYTES`
-* `input` should be a `buffer` of any size
-* `key` should be a `buffer` of length `crypto_auth_KEYBYTES`
+* `out` should be a `buffer` of length `crypto_auth_BYTES`
+* `in` should be a `buffer` of any size
+* `k` should be a `buffer` of length `crypto_auth_KEYBYTES`
 
-The generated token is stored in `output`.
+The generated token is stored in `out`.
 ***
 ## `crypto_auth_verify`
 ![sodium-native][node]
 ``` js
-var bool = sodium.crypto_auth_verify(output, input, key)
+var bool = sodium.crypto_auth_verify(out, in, k)
 ```
 Verifies a token.
-* `output` should be a `buffer` of length `crypto_auth_BYTES`
-* `input` should be a `buffer` of any size
-* `key` should be a `buffer` of length `crypto_auth_KEYBYTES`
+* `out` should be a `buffer` of length `crypto_auth_BYTES`
+* `in` should be a `buffer` of any size
+* `k` should be a `buffer` of length `crypto_auth_KEYBYTES`
 
 Returns `true` if the token could be verified. Otherwise `false`.
 

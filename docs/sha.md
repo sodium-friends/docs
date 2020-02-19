@@ -18,25 +18,25 @@ sidebar_label: SHA
 ## `crypto_hash`
 ![sodium-native][node]
 ``` js
-sodium.crypto_hash_(output, input)
+sodium.crypto_hash_(out, in)
 ```
 Hashes a value to a short hash based on a key.
-* `output` should be a `buffer` of length `crypto_hash_BYTES`
-* `input` should be a `buffer` of any size
+* `out` should be a `buffer` of length `crypto_hash_BYTES`
+* `in` should be a `buffer` of any size
 
-The generated short hash is stored in `output`.
+The generated short hash is stored in `out`.
 
 ***
 ## `crypto_hash_sha256`
 ![sodium-native][node]
 ``` js
-sodium.crypto_hash_sha256(output, input)
+sodium.crypto_hash_sha256(out, in)
 ```
 Hashes a value to a short hash based on a key.
-* `output` should be a `buffer` of length `crypto_hash_sha256_BYTES`
-* `input` should be a `buffer` of any size
+* `out` should be a `buffer` of length `crypto_hash_sha256_BYTES`
+* `in` should be a `buffer` of any size
 
-The generated short hash is stored in `output`.
+The generated short hash is stored in `out`.
 ***
 ## Stateful API
 ### `crypto_hash_sha256_instance`
@@ -48,30 +48,30 @@ Creates an instance that has stream of input data to `sha256`.
 
 ### `instance.update`
 ``` js
-instance.update(input)
+instance.update(in)
 ```
 Updates the instance with a new piece of data.
-* `input` should be a `buffer` of any size
+* `in` should be a `buffer` of any size
 
 ### `instance.final`
 ``` js
-instance.final(output)
+instance.final(out)
 ```
 Finalizes the instance.
-* `output` should be a `buffer` of length `crypto_hash_sha256_BYTES`
+* `out` should be a `buffer` of length `crypto_hash_sha256_BYTES`
 
-The generated hash is stored in `output`.
+The generated hash is stored in `out`.
 ***
 ### `crypto_hash_sha512`
 ![sodium-native][node]
 ``` js
-sodium.crypto_hash_sha512(output, input)
+sodium.crypto_hash_sha512(out, in)
 ```
 Hashes a value to a short hash based on a key.
-* `output` should be a `buffer` of length `crypto_hash_sha512_BYTES`
-* `input` should be a `buffer` of any size
+* `out` should be a `buffer` of length `crypto_hash_sha512_BYTES`
+* `in` should be a `buffer` of any size
 
-The generated short hash is stored in `output`.
+The generated short hash is stored in `out`.
 ***
 ### `crypto_hash_sha512_instance`
 ![sodium-native][node]
@@ -82,19 +82,19 @@ Creates an instance that has stream of input data to `sha512`.
 
 ### `instance.update`
 ``` js
-instance.update(input)
+instance.update(in)
 ```
 Updates the instance with a new piece of data.
-* `input` should be a `buffer` of any size
+* `in` should be a `buffer` of any size
 
 ### `instance.final`
 ``` js
-instance.final(output)
+instance.final(out)
 ```
 Finalizes the instance.
-* `output` should be a `buffer` of `length crypto_hash_sha512_BYTES`
+* `out` should be a `buffer` of `length crypto_hash_sha512_BYTES`
 
-The generated hash is stored in `output`.
+The generated hash is stored in `out`.
 
 ## Stateful API
 Replaces the above instance implementation in the N-API release
@@ -122,7 +122,7 @@ Update a hash state with a given input.
 ```js
 sodium.crypto_hash_sha256_final(state, out)
 ```
-Finalize a given hash state and write the digest to `output` buffer.
+Finalize a given hash state and write the digest to `out` buffer.
 * `state` must be a buffer of length `crypto_hash_sha256_STATEBYTES` bytes
 * `out` must be a `buffer` of byte length `crypto_hash_sha256_BYTES` bytes
 
@@ -150,7 +150,7 @@ Update a hash state with a given input.
 ```js
 sodium.crypto_hash_sha512_final(state, out)
 ```
-Finalize a given hash state and write the digest to `output` buffer.
+Finalize a given hash state and write the digest to `out` buffer.
 * `state` must be a buffer of length `crypto_hash_sha512_STATEBYTES` bytes
 * `out` must be a `buffer` of byte length `crypto_hash_sha512_BYTES` bytes
 
