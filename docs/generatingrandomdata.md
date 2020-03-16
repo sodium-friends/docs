@@ -29,16 +29,16 @@ Generates a random 32-bit unsigned integer `[0, upper_bound)` (last exclusive).
 ## `randombytes_buf`
 ![sodium-native][node] ![sodium-javascript][js]
 ``` js
-sodium.randombytes_buf(buffer)
+sodium.randombytes_buf(buf)
 ```
-Fills `buffer` with random data.
+Fills `buf` with random data.
 ***
 ## `randombytes_buf_deterministic` 
 ![sodium-native][node]
 ``` js
-sodium.randombytes_buf_deterministic(buffer, seed)
+sodium.randombytes_buf_deterministic(buf, seed)
 ```
-Fills `buffer` with random data, generated from `seed`.
+Fills `buf` with random data, generated from `seed`.
 * `seed` must be a `buffer` of length at least `randombytes_SEEDBYTES`
 
 

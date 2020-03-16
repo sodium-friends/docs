@@ -18,14 +18,14 @@ Bindings for the crypto_shorthash API. [See the libsodium crypto_shorthash docs 
 ## `crypto_shorthash`
 ![sodium-native][node] ![sodium-javascript][js]
 ``` js
-sodium.crypto_shorthash(output, input, key)
+sodium.crypto_shorthash(out, in, k)
 ```
-Hashes a value to a short hash based on a `key`.
-* `output` should be a `buffer` of length `crypto_shorthash_BYTES`
-* `input` should be a `buffer` of any size
-* `key` should be a `buffer` of length `crypto_shorthash_KEYBYTES`
+Hashes a value to a short hash based on a `k`.
+* `out` should be a `buffer` of length `crypto_shorthash_BYTES`
+* `in` should be a `buffer` of any size
+* `k` should be a `buffer` of length `crypto_shorthash_KEYBYTES`
 
-The generated short hash is stored in `output`.
+The generated short hash is stored in `out`.
 
 
 [js]: /docs/img/icon_js.svg

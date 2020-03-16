@@ -20,26 +20,26 @@ Bindings for the crypto_kx API. [See the libsodium crypto_kx docs for more infor
 ## `crypto_kx_keypair`
 ![sodium-native][node]
 ``` js
-sodium.crypto_kx_keypair(publicKey, secretKey)
+sodium.crypto_kx_keypair(pk, sk)
 ```
 Creates a key exchange key pair.
-* `publicKey` should be a `buffer` of length `crypto_kx_PUBLICKEYBYTES`
-* `secretKey` should be a `buffer` of length `crypto_kx_SECRETKEYBYTES`
+* `pk` should be a `buffer` of length `crypto_kx_PUBLICKEYBYTES`
+* `sk` should be a `buffer` of length `crypto_kx_SECRETKEYBYTES`
 ***
 ## `crypto_kx_seed_keypair`
 ![sodium-native][node]
 ``` js
-sodium.crypto_kx_seed_keypair(publicKey, secretKey, seed)
+sodium.crypto_kx_seed_keypair(pk, sk, seed)
 ```
 Creates a key exchange key pair based on a `seed`.
-* `publicKey` should be a `buffer` of length `crypto_kx_PUBLICKEYBYTES`
-* `secretKey` should be a `buffer` of length `crypto_kx_SECRETKEYBYTES`
+* `pk` should be a `buffer` of length `crypto_kx_PUBLICKEYBYTES`
+* `sk` should be a `buffer` of length `crypto_kx_SECRETKEYBYTES`
 * `seed` should be a `buffer` of length `crypto_kx_SEEDBYTES`
 ***
 ## `crypto_kx_client_session_keys`
 ![sodium-native][node]
 ``` js
-sodium.crypto_kx_client_session_keys(rx, tx, clientPublicKey, clientSecretKey, serverPublicKey)
+sodium.crypto_kx_client_session_keys(rx, tx, clientPk, clientSk, serverPk)
 ```
 Generates a session receive and transmission key for a client. The public / secret keys should be generated using the key pair method above.
 * `rx` should be a `buffer` of length `crypto_kx_SESSIONKEYBYTES` or `null`
@@ -50,7 +50,7 @@ You should use the `rx` to decrypt incoming data and `tx` to encrypt outgoing. I
 ## `crypto_kx_server_session_keys`
 ![sodium-native][node]
 ``` js
-sodium.crypto_kx_server_session_keys(rx, tx, serverPublicKey, serverSecretKey, clientPublicKey)
+sodium.crypto_kx_server_session_keys(rx, tx, serverPk, serverSk, clientPk)
 ```
 Generates a session receive and transmission key for a server. The public / secret keys should be generated using the key pair method above.
 
