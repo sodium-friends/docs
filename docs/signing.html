@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Signing · sodium-native</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Bindings for the crypto_sign API. [See the libsodium crypto_sign docs for more information](https://download.libsodium.org/doc/public-key_cryptography/public-key_signatures)."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Signing · sodium-native"/><meta property="og:type" content="website"/><meta property="og:url" content="sodium-friends.github.io/docs/"/><meta property="og:description" content="Bindings for the crypto_sign API. [See the libsodium crypto_sign docs for more information](https://download.libsodium.org/doc/public-key_cryptography/public-key_signatures)."/><meta property="og:image" content="sodium-friends.github.io/docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="sodium-friends.github.io/docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/docs/img/favicon-196x196.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/kindpng_574766.png" alt="sodium-native"/><h2 class="headerTitleWithLogo">sodium-native</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/docs/getstarted" target="_self">Get Started</a></li><li class="siteNavGroupActive"><a href="/docs/docs/api" target="_self">API</a></li><li class=""><a href="https://github.com/sodium-friends/sodium-native/" target="_self">Github</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Get Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/getstarted">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/otherprojects">Projects using sodium-native</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/compatibility">Compatibility</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/api">API</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/memoryprotection">Memory Protection</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/generatingrandomdata">Generating Random Data</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/helpers">Helpers</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/padding">Padding</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/signing">Signing</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/generichashing">Generic Hashing</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/keyboxencryption">Public/Secret Key Box Encryption</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/sealedboxencryption">Sealed Box Encryption</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/secretkeyboxencryption">Secret Key Box Encryption</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/aead">AEAD (Authenticated Encryption with Additional Data)</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/nonauthstreamingencryption">Non-Authenticated Streaming Encryption</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/authentication">Authentication</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/streamencryption">Stream Encryption</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/onetimeauthentication">One-Time Authentication</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/passwordhashing">Password Hashing</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/keyexchange">Key Exchange</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/diffiehellman">Diffie-Hellman</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/finitefieldarithmetic">Finite Field Arithmetic</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/shorthashes">Short Hashes</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/keyderivation">Key Derivation</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/sha">SHA</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/license">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Signing</h1></header><article><div><span><p>Bindings for the crypto_sign API. <a href="https://download.libsodium.org/doc/public-key_cryptography/public-key_signatures">See the libsodium crypto_sign docs for more information</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="constants"></a><a href="#constants" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constants</h2>
+<p><strong>Buffer lengths (integer)</strong></p>
+<ul>
+<li><code>crypto_sign_PUBLICKEYBYTES</code></li>
+<li><code>crypto_sign_SECRETKEYBYTES</code></li>
+<li><code>crypto_sign_SEEDBYTES</code></li>
+<li><code>crypto_sign_BYTES</code></li>
+<li><code>crypto_box_PUBLICKEYBYTES</code></li>
+<li><code>crypto_box_SECRETKEYBYTES</code></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign_seed25519_keypair"></a><a href="#crypto_sign_seed25519_keypair" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign_seed25519_keypair</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"> <img src="/docs/img/icon_js.svg" alt="sodium-javascript"></p>
+<pre><code class="hljs css language-js">sodium.crypto_sign_seed25519_keypair(pk, sk, seed)
+</code></pre>
+<p>Creates a new keypair based on a <code>seed</code>.</p>
+<ul>
+<li><code>pk</code> should be a <code>buffer</code> of length <code>crypto_sign_PUBLICKEYBYTES</code></li>
+<li><code>sk</code> should be a <code>buffer</code> of length <code>crypto_sign_SECRETKEYBYTES</code></li>
+<li><code>seed</code> should be a <code>buffer</code> of length <code>crypto_sign_SEEDBYTES</code></li>
+</ul>
+<p>The generated public and secret key will be stored in <code>buffers</code>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign_keypair"></a><a href="#crypto_sign_keypair" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign_keypair</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"> <img src="/docs/img/icon_js.svg" alt="sodium-javascript"></p>
+<pre><code class="hljs css language-js">sodium.crypto_sign_keypair(pk, sk)
+</code></pre>
+<p>Creates a new keypair.</p>
+<ul>
+<li><code>pk</code> should be a <code>buffer</code> of length <code>crypto_sign_PUBLICKEYBYTES</code></li>
+<li><code>sk</code> should be a <code>buffer</code> of length <code>crypto_sign_SECRETKEYBYTES</code></li>
+</ul>
+<p>The generated public and secret key will be stored in <code>buffers</code>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign"></a><a href="#crypto_sign" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"> <img src="/docs/img/icon_js.svg" alt="sodium-javascript"></p>
+<pre><code class="hljs css language-js">sodium.crypto_sign(sm, m, sk)
+</code></pre>
+<p>Signs a message.</p>
+<ul>
+<li><code>sm</code> should be a <code>buffer</code> of length <code>crypto_sign_BYTES + m.length</code></li>
+<li><code>m</code> should be a <code>buffer</code> of any length</li>
+<li><code>sk</code> should be a secret key</li>
+</ul>
+<p>The generated signed message will be stored in <code>sm</code>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign_open"></a><a href="#crypto_sign_open" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign_open</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"> <img src="/docs/img/icon_js.svg" alt="sodium-javascript"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_sign_open(m, sm, pk)
+</code></pre>
+<p>Verifies and opens a message.</p>
+<ul>
+<li><code>m</code> should be a <code>buffer</code> of length <code>sm.length - crypto_sign_BYTES</code></li>
+<li><code>sm</code> of length at least <code>crypto_sign_BYTES</code></li>
+<li><code>pk</code> should be a public key</li>
+</ul>
+<p>Will return <code>true</code> if the message could be verified. Otherwise <code>false</code>. If verified, the originally signed message is stored in the <code>message buffer</code>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign_detached"></a><a href="#crypto_sign_detached" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign_detached</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"> <img src="/docs/img/icon_js.svg" alt="sodium-javascript"></p>
+<pre><code class="hljs css language-js">sodium.crypto_sign_detached(sig, m, sk)
+</code></pre>
+<p>Same as <code>crypto_sign</code>, except that it only stores the signature.</p>
+<ul>
+<li><code>sig</code> should be a <code>buffer</code> of length <code>crypto_sign_BYTES</code></li>
+<li><code>m</code> should be a <code>buffer</code> of any length</li>
+<li><code>sk</code> should be a secret key</li>
+</ul>
+<p>The generated signature is stored in <code>signature</code>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign_verify_detached"></a><a href="#crypto_sign_verify_detached" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign_verify_detached</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"> <img src="/docs/img/icon_js.svg" alt="sodium-javascript"></p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> bool = sodium.crypto_sign_verify_detached(sig, m, pk)
+</code></pre>
+<p>Verifies a signature.</p>
+<ul>
+<li><code>sig</code> should be a <code>buffer</code> of length <code>crypto_sign_BYTES</code></li>
+<li><code>m</code> should be a <code>buffer</code> of any length</li>
+<li><code>pk</code> should be a public key</li>
+</ul>
+<p>Will return <code>true</code> if the message could be verified. Otherwise <code>false</code>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign_ed25519_pk_to_curve25519"></a><a href="#crypto_sign_ed25519_pk_to_curve25519" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign_ed25519_pk_to_curve25519</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"></p>
+<pre><code class="hljs css language-js">sodium.crypto_sign_ed25519_pk_to_curve25519(x25519_pk, ed25519_pk)
+</code></pre>
+<p>Converts an <code>ed25519</code> public key to <code>curve25519</code> (which can be used with <code>box</code> and <code>scalarmult</code>).</p>
+<ul>
+<li><code>x25519_pk</code> should be a <code>buffer</code> of length <code>crypto_box_PUBLICKEYBYTES</code></li>
+<li><code>ed25519_pk</code> should be a <code>buffer</code> of length <code>crypto_sign_PUBLICKEYBYTES</code></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign_ed25519_sk_to_curve25519"></a><a href="#crypto_sign_ed25519_sk_to_curve25519" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign_ed25519_sk_to_curve25519</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"></p>
+<pre><code class="hljs css language-js">sodium.crypto_sign_ed25519_sk_to_curve25519(x25519_sk, ed25519_sk)
+</code></pre>
+<p>Converts an <code>ed25519</code> secret key to <code>curve25519</code> (which can be used with <code>box</code> and <code>scalarmult</code>).</p>
+<ul>
+<li><code>x25519_sk</code> should be a <code>buffer</code> of length <code>crypto_box_SECRETKEYBYTES</code></li>
+<li><code>ed25519_sk</code> should be a <code>buffer</code> of length <code>crypto_sign_SECRETKEYBYTES</code></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="crypto_sign_ed25519_sk_to_pk"></a><a href="#crypto_sign_ed25519_sk_to_pk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>crypto_sign_ed25519_sk_to_pk</code></h2>
+<p><img src="/docs/img/nodejs-icon.svg" alt="sodium-native"></p>
+<pre><code class="hljs css language-js">sodium.crypto_sign_ed25519_sk_to_pk(pk, sk)
+</code></pre>
+<p>Extracts an <code>ed25519</code> public key from an <code>ed25519</code> secret key.</p>
+<ul>
+<li><code>pk</code> must be a <code>buffer</code> of at least <code>crypto_box_PUBLICKEYBYTES</code> bytes</li>
+<li><code>sk</code> must be a <code>buffer</code> of at least <code>crypto_sign_SECRETKEYBYTES</code> bytes</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/padding"><span class="arrow-prev">← </span><span>Padding</span></a><a class="docs-next button" href="/docs/docs/generichashing"><span>Generic Hashing</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#constants">Constants</a></li><li><a href="#crypto_sign_seed25519_keypair"><code>crypto_sign_seed25519_keypair</code></a></li><li><a href="#crypto_sign_keypair"><code>crypto_sign_keypair</code></a></li><li><a href="#crypto_sign"><code>crypto_sign</code></a></li><li><a href="#crypto_sign_open"><code>crypto_sign_open</code></a></li><li><a href="#crypto_sign_detached"><code>crypto_sign_detached</code></a></li><li><a href="#crypto_sign_verify_detached"><code>crypto_sign_verify_detached</code></a></li><li><a href="#crypto_sign_ed25519_pk_to_curve25519"><code>crypto_sign_ed25519_pk_to_curve25519</code></a></li><li><a href="#crypto_sign_ed25519_sk_to_curve25519"><code>crypto_sign_ed25519_sk_to_curve25519</code></a></li><li><a href="#crypto_sign_ed25519_sk_to_pk"><code>crypto_sign_ed25519_sk_to_pk</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/docs/en/getstarted">Get Started</a><a href="/docs/docs/en/api">API</a></div><div><h5>Community</h5><a href="https://libsodium.gitbook.io/doc/" target="_blank" rel="noreferrer noopener">Libsodium</a><a href="https://hyperdivision.dk/" target="_blank" rel="noreferrer noopener">Hyperdivision</a><a href="https://twitter.com/hyperdivisiondk?lang=en" target="_blank" rel="noreferrer noopener">Hyperdivision on Twitter</a></div><div><h5>More</h5><a href="https://github.com/sodium-friends/sodium-native/" target="_blank" rel="noreferrer noopener">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Hyperdivision</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

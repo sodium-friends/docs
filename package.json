@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "deploy": "git branch -D gh-pages 2>/dev/null; git checkout -b gh-pages && rm -rf * && git checkout master -- website/build && mv website/build/docusaurus/* . && git add . && git commit -am 'add latest build' && git push origin gh-pages -f && git checkout master"
-  }
-}
