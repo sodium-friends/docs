@@ -33,14 +33,14 @@ Generates a new encryption key.
 The generated key is stored in `k`.
 ***
 ## Opaque API
-### `crypto_secretstream_xchacha20poly1305_state_new`
+## `crypto_secretstream_xchacha20poly1305_state_new`
 ![sodium-native][node]
 ``` js
 var state = sodium.crypto_secretstream_xchacha20poly1305_state_new()
 ```
 Creates a new stream state. Returns an opaque object used in the next methods.
 ***
-### `crypto_secretstream_xchacha20poly1305_init_push`
+## `crypto_secretstream_xchacha20poly1305_init_push`
 ![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_init_push(state, header, k)
@@ -50,7 +50,7 @@ Initializes `state` from the writer side with message `header` and encryption `k
 * `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `k` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 ***
-### `crypto_secretstream_xchacha20poly1305_push`
+## `crypto_secretstream_xchacha20poly1305_push`
 ![sodium-native][node]
 ``` js
 var mlen = sodium.crypto_secretstream_xchacha20poly1305_push(state, c, m, [ad], tag)
@@ -64,7 +64,7 @@ Encrypts a message with a certain tag and optional additional data `ad`.
 
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of encrypted bytes written to `c`.
 ***
-### `crypto_secretstream_xchacha20poly1305_init_pull`
+## `crypto_secretstream_xchacha20poly1305_init_pull`
 ![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_init_pull(state, header, k)
@@ -74,7 +74,7 @@ Initializes `state` from the reader side with message `header` and encryption `k
 * `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `k` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 ***
-### `crypto_secretstream_xchacha20poly1305_pull`
+## `crypto_secretstream_xchacha20poly1305_pull`
 ![sodium-native][node]
 ``` js
 var clen = sodium.crypto_secretstream_xchacha20poly1305_pull(state, m, tag, c, [ad])
@@ -87,7 +87,7 @@ Decrypts a message with optional additional data `ad`, and writes message tag to
 
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of decrypted bytes written to `m`.
 ***
-### `crypto_secretstream_xchacha20poly1305_rekey`
+## `crypto_secretstream_xchacha20poly1305_rekey`
 ![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_rekey(state)
@@ -101,7 +101,7 @@ var state = Buffer.alloc(sodium.crypto_secretstream_xchacha20poly1305_STATEBYTES
 ```
 Create a new `buffer` to hold stream state.
 ***
-### `crypto_secretstream_xchacha20poly1305_init_push`
+## `crypto_secretstream_xchacha20poly1305_init_push`
 ![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_init_push(state, header, k)
@@ -111,7 +111,7 @@ Initializes `state` from the writer side with message `header` and encryption `k
 * `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `k` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 ***
-### `crypto_secretstream_xchacha20poly1305_push`
+## `crypto_secretstream_xchacha20poly1305_push`
 ![sodium-native][node]
 ``` js
 var mlen = sodium.crypto_secretstream_xchacha20poly1305_push(state, c, m, [ad], tag)
@@ -125,7 +125,7 @@ Encrypts a message with a certain tag and optional additional data `ad`.
 
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of encrypted bytes written to `c`.
 ***
-### `crypto_secretstream_xchacha20poly1305_init_pull`
+## `crypto_secretstream_xchacha20poly1305_init_pull`
 ![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_init_pull(state, header, k)
@@ -135,7 +135,7 @@ Initializes `state` from the reader side with message `header` and encryption `k
 * `header` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_HEADERBYTES`
 * `k` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_KEYBYTES`
 ***
-### `crypto_secretstream_xchacha20poly1305_pull`
+## `crypto_secretstream_xchacha20poly1305_pull`
 ![sodium-native][node]
 ``` js
 var clen = sodium.crypto_secretstream_xchacha20poly1305_pull(state, m, tag, c, [ad])
@@ -148,7 +148,7 @@ Decrypts a message with optional additional data `ad`, and writes message tag to
 
 Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of decrypted bytes written to `m`.
 ***
-### `crypto_secretstream_xchacha20poly1305_rekey`
+## `crypto_secretstream_xchacha20poly1305_rekey`
 ![sodium-native][node]
 ``` js
 sodium.crypto_secretstream_xchacha20poly1305_rekey(state)

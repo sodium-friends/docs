@@ -42,7 +42,7 @@ sodium.crypto_generichash_batch(out, inArray, [key])
 Same as `crypto_generichash`, except that this hashes an array of `buffer`'s instead of a single one.
 ***
 ## Instance API
-### `crypto_generichash_instance`
+## `crypto_generichash_instance`
 ![sodium-native][node] ![sodium-javascript][js]
 ``` js
 var instance = sodium.crypto_generichash_instance([key], [outlen])
@@ -51,14 +51,14 @@ Creates a `generichash` instance that can hash a stream of input `buffer`'s.
 * `key` is an optional `buffer` as above
 * `outlen` is the `buffer` size of your output
 
-### `instance.update`
+## `instance.update`
 ``` js
 instance.update(in)
 ```
 Updates the instance with a new piece of data.
 * `in` should be a `buffer` of any size
 
-### `instance.final`
+## `instance.final`
 ``` js
 instance.final(out)
 ```
@@ -69,7 +69,7 @@ The generated hash is stored in `out`.
 
 ## Stateful API
 Replaces the above instance implementation in the N-API release
-### `crypto_generichash_init`
+## `crypto_generichash_init`
 ![sodium-native][node]
 ```js
 var state = Buffer.alloc(crypto_generichash_STATEBYTES)
@@ -80,7 +80,7 @@ Initialise a new hash state with an optional key and the desired output length.
 * `state` must be a buffer of length `crypto_generichash_STATEBYTES` bytes
 * `key` is an optional buffer as above
 
-### `crypto_generichash_update`
+## `crypto_generichash_update`
 ![sodium-native][node]
 ```js
 sodium.crypto_generichash_update(state, in)
@@ -89,7 +89,7 @@ Update a hash state with a given input.
 * `state` must be a buffer of length `crypto_generichash_STATEBYTES` bytes
 * `in` should be a a `buffer` of any length
 
-### `crypto_generichash_final(state, out)`
+## `crypto_generichash_final(state, out)`
 ![sodium-native][node]
 ```js
 sodium.crypto_generichash_final(state, out)

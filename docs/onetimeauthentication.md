@@ -41,7 +41,7 @@ Verifies a token.
 Returns `true` if the token could be verified. Otherwise `false`.
 ***
 ## Instance API
-### `crypto_onetimeauth_instance`
+## `crypto_onetimeauth_instance`
 ![sodium-native][node]
 ``` js
 var instance = sodium.crypto_onetimeauth_instance(k)
@@ -49,14 +49,14 @@ var instance = sodium.crypto_onetimeauth_instance(k)
 Creates an instance that creates a token from a onetime k and a stream of in data.
 * `k` should be a `buffer` of length `crypto_onetimeauth_KEYBYTES`
 
-### `instance.update`
+## `instance.update`
 ``` js
 instance.update(in)
 ```
 Updates the instance with a new piece of data.
 * `in` should be a `buffer` of any length
 
-### `instance.final`
+## `instance.final`
 ``` js
 instance.final(out)
 ```
@@ -67,7 +67,7 @@ The generated hash is stored in `out`.
 
 ## Stateful API
 Replaces the above instance implementation in the N-API release
-### `crypto_onetimeauth_init`
+## `crypto_onetimeauth_init`
 ![sodium-native][node]
 ```js
 var state = Buffer.alloc(crypto_onetimeauth_STATEBYTES)
@@ -78,7 +78,7 @@ Initialise a new auth state with a k.
 * `state` must be a buffer of length `crypto_onetimeauth_STATEBYTES` bytes
 * `k` must be a buffer of length `crypto_onetimeauth_STATEBYTES` bytes
 
-### `crypto_onetimeauth_update`
+## `crypto_onetimeauth_update`
 ![sodium-native][node]
 ```js
 sodium.crypto_onetimeauth_update(state, in)
@@ -87,7 +87,7 @@ Update a hash state with a given in.
 * `state` must be a buffer of length `crypto_onetimeauth_STATEBYTES` bytes
 * `in` should be a a `buffer` of any length
 
-### `crypto_onetimeauth_final(state, out)`
+## `crypto_onetimeauth_final(state, out)`
 ![sodium-native][node]
 ```js
 sodium.crypto_onetimeauth_final(state, out)

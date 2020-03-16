@@ -59,7 +59,7 @@ The encrypted data is stored in `c`. To decrypt, swap `c` and `m`. Also supports
 Encryption defaults to `XSalsa20`, use `crypto_stream_chacha20_xor` if you want to encrypt/decrypt with `ChaCha20` instead.
 ***
 ## Instance API
-### `crypto_stream_xor_instance`
+## `crypto_stream_xor_instance`
 ![sodium-native][node] ![sodium-javascript][js]
 ``` js
 var instance = sodium.crypto_stream_xor_instance(n, k)
@@ -68,7 +68,7 @@ A streaming instance to the `crypto_stream_xor` API. Pass a nonce `n` and key `k
 
 Encryption defaults to `XSalsa20`, use `crypto_stream_chacha20_xor_instance` if you want to encrypt/decrypt with `ChaCha20` instead.
 
-### `crypto_stream_chacha20_xor_instance`
+## `crypto_stream_chacha20_xor_instance`
 ![sodium-native][node]
 ``` js
 var instance = sodium.crypto_stream_chacha20_xor_instance(n, k)
@@ -77,13 +77,13 @@ A streaming instance to the `crypto_stream_xor` API. Pass a nonce `n` and key `k
 
 Encryption defaults to `XSalsa20`, use `crypto_stream_chacha20_xor_instance` if you want to encrypt/decrypt with `ChaCha20` instead.
 
-### `instance.update`
+## `instance.update`
 ``` js
 instance.update(c, m)
 ```
 Encrypts the next m.
 
-### `instance.final`
+## `instance.final`
 ``` js
 instance.final()
 ```
@@ -91,7 +91,7 @@ Finalizes the stream. Zeros out internal state.
 
 ## Stateful API
 Replaces the above instance implementation in the N-API release
-### `crypto_stream_xor_init`
+## `crypto_stream_xor_init`
 ![sodium-native][node]
 ```js
 var state = Buffer.alloc(crypto_stream_xor_STATEBYTES)
@@ -102,7 +102,7 @@ Initialise a new xor state with a nonce `n` and key `k`.
 * `state` must be a buffer of length `crypto_stream_xor_STATEBYTES` bytes
 * `n` is must be buffer of `crypto_stream_NONCEBYTES` bytes
 * `k` is must be buffer of `crypto_stream_KEYBYTES` bytes
-### `crypto_stream_xor_update`
+## `crypto_stream_xor_update`
 ![sodium-native][node]
 ```js
 sodium.crypto_stream_xor_update(state, c, m)
@@ -113,7 +113,7 @@ Update a hash state with a given input.
 * `m` should be a `buffer`
 * `c` should be a `buffer` of length `m.byteLength` bytes
 
-### `crypto_stream_xor_final(state, out)`
+## `crypto_stream_xor_final(state, out)`
 ![sodium-native][node]
 ```js
 sodium.crypto_stream_xor_final(state)
@@ -121,7 +121,7 @@ sodium.crypto_stream_xor_final(state)
 Finalize a given xor state, zeroing out the state.
 * `state` must be a buffer of length `crypto_stream_xor_STATEBYTES` bytes
 
-### `crypto_stream_chacha20_xor_init`
+## `crypto_stream_chacha20_xor_init`
 ![sodium-native][node]
 ```js
 var state = Buffer.alloc(crypto_stream_chacha20_xor_STATEBYTES)
@@ -132,7 +132,7 @@ Initialise a new xor state with a nonce `n` and key `k`.
 * `state` must be a buffer of length `crypto_stream_chacha20_xor_STATEBYTES` bytes
 * `n` is must be buffer of `crypto_stream_chacha20_NONCEBYTES` bytes
 * `k` is must be buffer of `crypto_stream_chacha20_KEYBYTES` bytes
-### `crypto_stream_chacha20_xor_update`
+## `crypto_stream_chacha20_xor_update`
 ![sodium-native][node]
 ```js
 sodium.crypto_stream_chacha20_xor_update(state, c, m)
@@ -143,7 +143,7 @@ Update a hash state with a given input.
 * `m` should be a `buffer`
 * `c` should be a `buffer` of length `m.byteLength` bytes
 
-### `crypto_stream_chacha20_xor_final(state, out)`
+## `crypto_stream_chacha20_xor_final(state, out)`
 ![sodium-native][node]
 ```js
 sodium.crypto_stream_chacha20_xor_final(state)

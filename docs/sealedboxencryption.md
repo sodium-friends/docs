@@ -13,6 +13,7 @@ Bindings for the crypto_box_seal API. [See the libsodium crypto_box_seal docs fo
 ***
 ## `crypto_box_seal`
 ![sodium-native][node]
+
 Keypairs can be generated with `crypto_box_keypair()` or `crypto_box_seed_keypair()`.
 
 ``` js

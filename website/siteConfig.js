@@ -9,8 +9,8 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
-const users = [
-  {
+const users = []
+/*  {
     caption: 'User1',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/image.jpg'.
@@ -18,7 +18,7 @@ const users = [
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },
-];
+];*/
 
 const siteConfig = {
   title: 'sodium-native', // Title for your website.
@@ -54,9 +54,9 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
-  favicon: 'img/favicon.ico',
+  headerIcon: 'img/kindpng_574766.png',
+  footerIcon: 'img/favicon-196x196.png',
+  favicon: 'img/favicon-196x196.png',
 
   /* Colors for website */
   colors: {

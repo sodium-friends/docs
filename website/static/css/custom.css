@@ -87,16 +87,20 @@ a {
 .navigationSlider .slidingNav ul a[href*='github'] {
     font-size: 0;
 }
-  
-  .navigationSlider .slidingNav ul a[href*='github']::before {
+
+.navigationSlider .slidingNav ul a[href*='github']::before {
     content: '';
     width: 32px;
     height: 32px;
-    background: url('/docusaurus/img/github-brands.svg');
+    background: url('/docs/img/github-brands.svg');
 }
 
 h2 + p img {
   display: inline-block;
+}
+
+img.logo {
+  width: inherit !important;
 }
 
 img[alt="sodium-native"] {
@@ -109,4 +113,12 @@ img[alt="sodium-javascript"] {
 
 ul img {
   vertical-align: middle;
+}
+
+#footer .sitemap > div {
+  margin: 0 56px;
+}
+
+#footer .sitemap {
+  max-width: 988px;
 }
