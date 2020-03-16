@@ -19,6 +19,7 @@ Some JavaScript modules using sodium-native. See the full list [here](https://ww
 * [fastify-secure-session](https://www.npmjs.com/package/fastify-secure-session): Create a secure stateless cookie session for Fastify, based on libsodium's [Secret Key Box Encryption](secretkeyboxencryption) and [fastify-cookie](https://github.com/fastify/fastify-cookie).
 * [noise-protocol](https://www.npmjs.com/package/noise-protocol): JavaScript implementation of the Noise Protocol Framework based on [libsodium](https://libsodium.gitbook.io/doc/). Note that this implementation is low level and requires knowledge of the [Noise Protocol Framework](http://noiseprotocol.org/noise.html), and is aimed to be a building block for higher-level modules wishing to implement application-specific handshakes securely.
 * [secretstream-stream](https://www.npmjs.com/package/secretstream-stream): Abstract encoding API of libsodium's [crypto_secretstream](https://download.libsodium.org/doc/secret-key_cryptography/secretstream).
+* [ElectronMail](https://github.com/vladimiry/ElectronMail) (via [fs-json-store-encryption-adapter](https://www.npmjs.com/package/fs-json-store-encryption-adapter)): Unofficial ProtonMail Desktop App.
 
 
 
