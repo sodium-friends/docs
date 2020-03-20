@@ -42,6 +42,8 @@ sodium.crypto_generichash_batch(out, inArray, [key])
 Same as `crypto_generichash`, except that this hashes an array of `buffer`'s instead of a single one.
 ***
 ## Instance API
+__No longer supported from sodium-native v3.0.0, see Stateful API below__
+
 ## `crypto_generichash_instance`
 ![sodium-native][node] ![sodium-javascript][js]
 ``` js
@@ -68,6 +70,8 @@ Finalizes the instance.
 The generated hash is stored in `out`.
 
 ## Stateful API
+__Replaces the above instance implementation from sodium-native v3.0.0__
+
 Replaces the above instance implementation in the N-API release
 ## `crypto_generichash_init`
 ![sodium-native][node]

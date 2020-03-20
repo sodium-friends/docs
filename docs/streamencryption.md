@@ -33,6 +33,8 @@ Generates a new encryption key.
 The generated key is stored in `k`.
 ***
 ## Opaque API
+__No longer supported from sodium-native v3.0.0, see Stateful API below__
+
 ## `crypto_secretstream_xchacha20poly1305_state_new`
 ![sodium-native][node]
 ``` js
@@ -95,7 +97,8 @@ sodium.crypto_secretstream_xchacha20poly1305_rekey(state)
 Rekeys the opaque `state` object.
 
 ## Stateful API
-Replaces the above instance implementation in the N-API release.
+__Replaces the above Opaque implementation from sodium-native v3.0.0__
+
 ``` js
 var state = Buffer.alloc(sodium.crypto_secretstream_xchacha20poly1305_STATEBYTES)
 ```
