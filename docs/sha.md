@@ -38,7 +38,9 @@ Hashes a value to a short hash based on a key.
 
 The generated short hash is stored in `out`.
 ***
-## Stateful API
+## Instance API
+__No longer supprted from sodium-native v3.0.0, see Stateful API below__
+
 ## `crypto_hash_sha256_instance`
 ![sodium-native][node]
 ``` js
@@ -97,7 +99,8 @@ Finalizes the instance.
 The generated hash is stored in `out`.
 
 ## Stateful API
-Replaces the above instance implementation in the N-API release
+__Replaces the above instance implementation from sodium-native v3.0.0__
+
 ## `crypto_hash_sha256_init`
 ![sodium-native][node]
 ```js

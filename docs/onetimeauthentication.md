@@ -41,6 +41,8 @@ Verifies a token.
 Returns `true` if the token could be verified. Otherwise `false`.
 ***
 ## Instance API
+__No longer supprted from sodium-native v3.0.0, see Stateful API below__
+
 ## `crypto_onetimeauth_instance`
 ![sodium-native][node]
 ``` js
@@ -66,7 +68,8 @@ Finalizes the instance.
 The generated hash is stored in `out`.
 
 ## Stateful API
-Replaces the above instance implementation in the N-API release
+__Replaces the above instance implementation from sodium-native v3.0.0__
+
 ## `crypto_onetimeauth_init`
 ![sodium-native][node]
 ```js
