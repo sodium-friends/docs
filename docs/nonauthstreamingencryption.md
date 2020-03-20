@@ -59,7 +59,7 @@ The encrypted data is stored in `c`. To decrypt, swap `c` and `m`. Also supports
 Encryption defaults to `XSalsa20`, use `crypto_stream_chacha20_xor` if you want to encrypt/decrypt with `ChaCha20` instead.
 ***
 ## Instance API
-__No longer supprted from sodium-native v3.0.0, see Stateful API below__
+__No longer supported from sodium-native v3.0.0, see Stateful API below__
 
 ## `crypto_stream_xor_instance`
 ![sodium-native][node] ![sodium-javascript][js]

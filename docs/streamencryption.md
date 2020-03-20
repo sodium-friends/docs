@@ -33,7 +33,7 @@ Generates a new encryption key.
 The generated key is stored in `k`.
 ***
 ## Opaque API
-__No longer supprted from sodium-native v3.0.0, see Stateful API below__
+__No longer supported from sodium-native v3.0.0, see Stateful API below__
 
 ## `crypto_secretstream_xchacha20poly1305_state_new`
 ![sodium-native][node]

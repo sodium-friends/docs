@@ -39,7 +39,7 @@ Hashes a value to a short hash based on a key.
 The generated short hash is stored in `out`.
 ***
 ## Instance API
-__No longer supprted from sodium-native v3.0.0, see Stateful API below__
+__No longer supported from sodium-native v3.0.0, see Stateful API below__
 
 ## `crypto_hash_sha256_instance`
 ![sodium-native][node]
