@@ -11,7 +11,7 @@ Bindings for the padding API. [See the libsodium padding docs for more informati
 ``` js
 var paddedLength = sodium.sodium_pad(buf, unpaddedLength, blocksize)
 ```
-Pads `buf` with random data from index `unpaddedLength` up to closest multiple of `blocksize`.
+Pads `buf` with `0x80` followed by `0x00` bytes from index `unpaddedLength` up to closest multiple of `blocksize`.
 * `buf` must be a `buffer`
 * `unpaddedLength` must be an integer at most `buf.length`
 * `blocksize` must be an integer greater than 1, but at most `buf.length`
