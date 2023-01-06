@@ -15,7 +15,7 @@ Bindings for the crypto_secretstream API. [See the libsodium crypto_secretstream
 * `crypto_secretstream_xchacha20poly1305_TAGBYTES` - NOTE: Unofficial constant
 * `crypto_secretstream_xchacha20poly1305_STATEBYTES`
 
-**Message tags (buffer)**
+**Message tags (integer)**
 * `crypto_secretstream_xchacha20poly1305_TAG_MESSAGE`
 * `crypto_secretstream_xchacha20poly1305_TAG_PUSH`
 * `crypto_secretstream_xchacha20poly1305_TAG_REKEY`
@@ -146,7 +146,7 @@ Decrypts a message with optional additional data `ad`, and writes message tag to
 * `tag` should be a `buffer` of length `crypto_secretstream_xchacha20poly1305_TAGBYTES`
 * `ad` is optional and should be `null` or `buffer`. Included in the computation of the authentication tag appended to the m
 
-Note that `tag` should be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of decrypted bytes written to `m`.
+Note that `tag[0]` will be one of the `crypto_secretstream_xchacha20poly1305_TAG_*` constants. Returns number of decrypted bytes written to `m`.
 ***
 ## `crypto_secretstream_xchacha20poly1305_rekey`
 ![sodium-native][node]
