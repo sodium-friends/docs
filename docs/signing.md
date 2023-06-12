@@ -19,7 +19,7 @@ Bindings for the crypto_sign API. [See the libsodium crypto_sign docs for more i
 ## `crypto_sign_seed25519_keypair`
 ![sodium-native][node] ![sodium-javascript][js]
 ``` js
-sodium.crypto_sign_seed25519_keypair(pk, sk, seed)
+sodium.crypto_sign_seed_keypair(pk, sk, seed)
 ```
 Creates a new keypair based on a `seed`.
 * `pk` should be a `buffer` of length `crypto_sign_PUBLICKEYBYTES`
