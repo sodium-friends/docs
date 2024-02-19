@@ -36,7 +36,7 @@ console.log('Encrypted message:', ciphertext)
 
 var plainText = Buffer.alloc(ciphertext.length - sodium.crypto_secretbox_MACBYTES)
 
-if (!sodium.crypto_secretox_open_easy(plainText, ciphertext, nonce, key)) {
+if (!sodium.crypto_secretbox_open_easy(plainText, ciphertext, nonce, key)) {
     console.log('Decryption failed!')
 } else {
     console.log('Decrypted message:', plainText, '(' + plainText.toString() + ')')
